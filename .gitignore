@@ -10,7 +10,7 @@ sync/
 # My personal vocabulary
 dict/pinyin.joy.dict.yaml
 
-# Other files should not be managed
+# Other files that should not be included in this repository
 installation.yaml
 Rime.sublime-workspace
 user.yaml
