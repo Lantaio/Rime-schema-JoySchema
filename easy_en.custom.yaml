@@ -1,0 +1,16 @@
+patch:
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ Eng, Abc ] # 定义模式切换名称，Eng为英文自动补全模式，Abc为ascii模式。
+
+  punctuator:
+    full_shape:
+      __include: punctuation:/full_shape
+    half_shape:
+      __include: punctuation:/ascii_style
+    symbols:
+      __include: symbols:/punctuator/symbols # 导入扩展符号表
+
+
+  recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$' # 触发输入扩展符号的正则表达式

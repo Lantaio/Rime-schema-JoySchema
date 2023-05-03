@@ -1,0 +1,122 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: luna_pinyin_simp
+  name: 朙月拼音·简体
+  version: "0.22"
+  author:
+    - 佛振 <chen.sst@gmail.com>
+  description: |
+    朙月拼音，簡体字輸出模式。
+  dependencies:
+    - stroke # 笔画反查时依赖五笔输入法
+    # - easy_en # 中英文混输时依赖easy_en输入法
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    reset: 1
+    states: [ 漢字, 汉字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@custom_phrase
+#   - table_translator@english # 中英文混输时载入取名为english的英文码表
+    - reverse_lookup_translator
+    - script_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra: # 模糊音
+    - erase/^xx$/
+    - abbrev/^([a-z]).+$/$1/
+    - abbrev/^([zcs]h).+$/$1/
+    - derive/^([nl])ve$/$1ue/
+    - derive/^([jqxy])u/$1v/
+    - derive/un$/uen/
+    - derive/ui$/uei/
+    - derive/iu$/iou/
+    - derive/([aeiou])ng$/$1gn/
+    - derive/([dtngkhrzcs])o(u|ng)$/$1o/
+    - derive/ong$/on/
+    - derive/ao$/oa/
+    - derive/([iu])a(o|ng?)$/a$1$2/
+
+translator:
+  dictionary: joy_pinyin # 指示此输入法使用自定制词库。注释此行则使用默认词库。
+  prism: luna_pinyin_simp
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
+
+# english:  # 中英文混输时英文码表设置项
+#   dictionary: easy_en
+#   spelling_hints: 9
+#   enable_completion: true  # 是否启用英文输入联想补全
+#   enable_sentence: false
+#   initial_quality: -1
+
+reverse_lookup:
+  dictionary: stroke
+  enable_completion: true
+  prefix: "`"
+  suffix: "'"
+  tips: 〔笔画〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+  comment_format:
+    - xform/([nl])v/$1ü/
+
+# simplifier:
+#   option_name: zh_simp
+
+punctuator:
+  import_preset: symbols # 导入扩展符号表
+
+key_binder:
+  import_preset: default
+  # bindings:
+  #   - { when: always, accept: Control+Shift+9, toggle: zh_simp }
+  #   - { when: always, accept: Control+Shift+parenleft, toggle: zh_simp }
+
+recognizer:
+  import_preset: default
+  patterns:
+    punct: '^/([0-9]0?|[A-Za-z]+)$' # 触发输入扩展符号的正则表达式
+    reverse_lookup: "`[a-z]*'?$" # 触发笔画反查的正则表达式
