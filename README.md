@@ -6,7 +6,7 @@
 <a id="English" />
 
 ## Description
-My Rime user_data folder. Includes some customized input schemas and some extended vocabularies.
+My Rime user_data folder in Windows OS. Includes some customized input schemas and some extended vocabularies.
 
 [Back to Doc Title](#docTitle) | [Back to top](#top)
 
@@ -15,6 +15,6 @@ My Rime user_data folder. Includes some customized input schemas and some extend
 <a id="简体中文" />
 
 ## 概述
-我的Rime输入法user_data目录。包含一些自定制输入方案以及一些扩展词库。
+我的Win系统中的Rime输入法user_data目录。包含一些自定制输入方案以及一些扩展词库。
 
 [回到文档标题](#docTitle) | [回到顶部](#top)
