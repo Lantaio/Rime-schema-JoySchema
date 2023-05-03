@@ -6,7 +6,7 @@
 <a id="English" />
 
 ## Description
-My Rime user_data folder in Windows OS. Includes some customized input schemas and some extended vocabularies.
+My Rime user_data folder in Win OS. Includes some customized input schemas and some extended vocabularies.
 
 [Back to Doc Title](#docTitle) | [Back to top](#top)
 
