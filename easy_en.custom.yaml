@@ -12,5 +12,4 @@ patch:
     symbols:
       __include: symbols:/punctuator/symbols # 导入扩展符号表
 
-
   recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$' # 触发输入扩展符号的正则表达式
