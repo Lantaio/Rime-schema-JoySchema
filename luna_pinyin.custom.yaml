@@ -13,4 +13,22 @@ patch:
   #   enable_sentence: false
   #   initial_quality: -1
 
+speller/algebra: # 模糊音
+    - erase/^xx$/ # 第一行保留
+    # 模糊音定義先於簡拼定義，方可令簡拼支持以上模糊音
+    - abbrev/^([a-z]).+$/$1/ # 簡拼（首字母）
+    # - abbrev/^([zcs]h).+$/$1/ # 簡拼（zh, ch, sh）
+    # 以下是一組容錯拼寫，《漢語拼音》方案以前者爲正
+    - derive/^([nl])ve$/$1ue/ # nve = nue, lve = lue
+    - derive/^([jqxy])u/$1v/ # ju = jv, qu = qv, xu = xv, yu = yv
+    # - derive/un$/uen/ # gun = guen
+    # - derive/ui$/uei/ # gui = guei
+    # - derive/iu$/iou/ # jiu = jiou
+    # 自動糾正一些常見的按鍵錯誤
+    # - derive/([aeiou])ng$/$1gn/  # dagn => dang
+    # - derive/([dtngkhrzcs])o(u|ng)$/$1o/ # zho => zhong|zhou
+    # - derive/ong$/on/ # zhonguo => zhong guo
+    # - derive/ao$/oa/ # hoa => hao
+    # - derive/([iu])a(o|ng?)$/a$1$2/ # tain => tian
+
   translator/dictionary: luna_pinyin.ex # 指示此输入法使用自定制词库。注释此行则使用默认词库。

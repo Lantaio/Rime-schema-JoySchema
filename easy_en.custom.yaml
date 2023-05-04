@@ -13,3 +13,5 @@ patch:
       __include: symbols:/punctuator/symbols # 导入扩展符号表
 
   recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$' # 触发输入扩展符号的正则表达式
+
+  speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA # 删除最后的'-'和'_'，作为符号直接上屏
