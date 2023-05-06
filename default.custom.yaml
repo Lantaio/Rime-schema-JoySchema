@@ -2,7 +2,7 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.14.3
   generator: "Rime::SwitcherSettings"
-  modified_time: "Tue May  2 20:08:56 2023"
+  modified_time: "Fri May  5 15:49:42 2023"
   rime_version: 1.5.3
 patch:
   key_binder:
@@ -10,7 +10,10 @@ patch:
   "key_binder/bindings/+":
     - {accept: "Shift+Shift_L", send: 2, when: has_menu}
     - {accept: "Shift+Shift_R", send: 3, when: has_menu}
-  "menu/page_size": 3
+
+  menu:
+    page_size: 3
+
   schema_list:
     - {schema: luna_pinyin_fluency}
     - {schema: easy_en}
