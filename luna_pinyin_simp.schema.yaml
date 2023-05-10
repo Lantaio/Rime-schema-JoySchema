@@ -73,7 +73,7 @@ speller:
     # - derive/([iu])a(o|ng?)$/a$1$2/ # tain => tian
 
 translator:
-  dictionary: joy_pinyin # 指示此输入法使用自定制词库。注释此行则使用默认词库。
+  dictionary: joy_pinyin # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
   prism: luna_pinyin_simp
   preedit_format:
     - xform/([nl])v/$1ü/

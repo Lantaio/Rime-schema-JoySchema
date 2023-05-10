@@ -1,0 +1,9 @@
+<encoding#> UTF-8
+pinyin.hanyu.dict.yaml 汉语大词典词库。
+pinyin.guangfosubway.dict.yaml 广佛地铁站名词库。
+pinyin.extended.dict.yaml 第三方整理的扩展词库。
+pinyin.poetry.dict.yaml 诗词名句词库。
+pinyin.cn_en.dict.yaml 中英文混合词词库。
+pinyin.chaizi.dict.yaml 拆字字库。
+pinyin.stock.dict.yaml 沪深股票基金词库。
+pinyin.cantonese.dict.yaml 粤语词库。

@@ -7,11 +7,11 @@ build/
 # Sync folder
 sync/
 
-# My personal vocabulary
-dict/pinyin.joy.dict.yaml
+# Files containing my personal data.
+installation.yaml
+pinyin.joy.dict.yaml
+user.yaml
 
 # Other files that should not be included in this repository
-installation.yaml
+descript.ion
 Rime.sublime-workspace
-user.yaml
-weasel.custom.yaml

@@ -31,4 +31,4 @@ patch:
     # - derive/ao$/oa/ # hoa => hao
     # - derive/([iu])a(o|ng?)$/a$1$2/ # tain => tian
 
-  translator/dictionary: luna_pinyin.ex # 指示此输入法使用自定制词库。注释此行则使用默认词库。
+  translator/dictionary: luna_pinyin.ex # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
