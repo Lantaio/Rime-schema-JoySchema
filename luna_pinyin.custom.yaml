@@ -10,7 +10,7 @@ patch:
     - name: full_shape
       states: [ 半角, 全角 ]
     - name: simplification
-      reset: 0
+      reset: 0 # 重置为繁体中文
       states: [ 漢字, 汉字 ]
     - name: ascii_punct
       states: [ 。，, ．， ]
