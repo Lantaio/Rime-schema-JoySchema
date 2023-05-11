@@ -1,7 +1,19 @@
 patch:
-  # schema/name: 朙月拼音·繁體
+  schema/name: 朙月拼音·繁體
   # schema/dependencies/+:
   #   - easy_en  # 中英文混输时依赖easy_en输入法
+
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 中文, 西文 ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: simplification
+      reset: 0
+      states: [ 漢字, 汉字 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
 
   # engine/translators/+:
   #   - table_translator@english # 中英文混输时载入取名为english的英文码表
