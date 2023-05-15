@@ -8,11 +8,11 @@ patch:
   key_binder:
     bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_comma_period", "key_bindings:/numbered_mode_switch"]}
   "key_binder/bindings/+":
-    - {accept: "Shift+Shift_L", send: 2, when: has_menu}
-    - {accept: "Shift+Shift_R", send: 3, when: has_menu}
+    - {accept: "Shift+Shift_L", send: 2, when: has_menu} # 设置左Shift键上屏第2候选
+    - {accept: "Shift+Shift_R", send: 3, when: has_menu} # 设置右Shift键上屏第3候选
 
   menu:
-    page_size: 3
+    page_size: 3 # 候选项数目
 
   schema_list:
     - {schema: luna_pinyin_fluency}
@@ -22,4 +22,4 @@ patch:
     - {schema: luna_pinyin}
   "switcher/caption": "～Rime选项菜单～"
   "switcher/hotkeys":
-    - "Control+Shift+ampersand"
+    - "Control+Shift+ampersand" # 即设置Ctrl+Shift+7作为呼出选项菜单的热键

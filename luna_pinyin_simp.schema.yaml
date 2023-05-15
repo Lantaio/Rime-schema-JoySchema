@@ -25,31 +25,31 @@ switches:
   - name: ascii_punct
     states: [ 。，, ．， ]
 
-engine:
-  processors:
-    - ascii_composer
-    - recognizer
-    - key_binder
-    - speller
-    - punctuator
-    - selector
-    - navigator
-    - express_editor
-  segmentors:
-    - ascii_segmentor
-    - matcher
-    - abc_segmentor
-    - punct_segmentor
-    - fallback_segmentor
-  translators:
-    - punct_translator
+engine: # 輸入引擎設定，即掛接組件的「處方」
+  processors: # 一、這批組件處理各類按鍵消息
+    - ascii_composer # 處理西文模式及中西文切換
+    - recognizer # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
+    - key_binder # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
+    - speller # 拼寫處理器，接受字符按鍵，編輯輸入碼
+    - punctuator # 句讀處理器，將單個字符按鍵直接映射爲文字符號
+    - selector # 選字處理器，處理數字選字鍵、上、下候選定位、換頁鍵
+    - navigator # 處理輸入欄內的光標移動鍵
+    - express_editor # 編輯器，處理空格、回車上屏、回退鍵等
+  segmentors: # 二、這批組件識別不同內容類型，將輸入碼分段
+    - ascii_segmentor # 標識西文段落
+    - matcher # 標識符合特定規則的段落，如網址、反查等
+    - abc_segmentor # 標識常規的文字段落
+    - punct_segmentor # 標識句讀段落
+    - fallback_segmentor # 標識其他未標識段落
+  translators: # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
+    - punct_translator # 轉換標點符號
     - table_translator@custom_phrase
 #   - table_translator@english # 中英文混输时载入取名为english的英文码表
-    - reverse_lookup_translator
-    - script_translator
-  filters:
-    - simplifier
-    - uniquifier
+    - reverse_lookup_translator # 反查翻譯器，用另一種編碼方案查碼
+    - script_translator # 腳本翻譯器，用於拼音等基於音節表的輸入方案
+  filters: # 四、這批組件過濾翻譯的結果
+    - simplifier # 繁簡轉換
+    - uniquifier # 過濾重複的候選字，有可能來自繁簡轉換
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
