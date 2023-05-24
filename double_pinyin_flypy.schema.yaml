@@ -86,7 +86,7 @@ speller:
     #- abbrev/^(.).+$/$1/
 
 translator:
-  dictionary: joy_pinyin
+  dictionary: joy_pinyin # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
   prism: double_pinyin_flypy
   preedit_format:
     - xform/([bpmfdtnljqx])n/$1iao/
@@ -142,4 +142,5 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "`[a-z]*'?$"
+    punct: '^/([0-9]0?|[A-Za-z]+)$' # 触发输入扩展符号的正则表达式
+    reverse_lookup: "`[a-z]*'?$" # 触发笔画反查的正则表达式

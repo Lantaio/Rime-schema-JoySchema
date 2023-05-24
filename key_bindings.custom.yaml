@@ -1,14 +1,14 @@
 patch:
   numbered_mode_switch:
     __append:
-      - { when: always, accept: Control+Shift+6, toggle: extended_charset }
+      - { when: always, accept: Control+Shift+6, toggle: full_shape }
       - { when: always, accept: Control+Shift+8, select: .next }
       - { when: always, accept: Control+Shift+9, toggle: simplification }
-      - { when: always, accept: Control+Shift+0, toggle: full_shape }
-      - { when: always, accept: Control+Shift+asciicircum, toggle: extended_charset }
+      - { when: always, accept: Control+Shift+0, toggle: extended_charset }
+      - { when: always, accept: Control+Shift+asciicircum, toggle: full_shape }
       - { when: always, accept: Control+Shift+asterisk, select: .next }
       - { when: always, accept: Control+Shift+parenleft, toggle: simplification }
-      - { when: always, accept: Control+Shift+parenright, toggle: full_shape }
+      - { when: always, accept: Control+Shift+parenright, toggle: extended_charset }
 
   paging_with_comma_period:
     __append:
