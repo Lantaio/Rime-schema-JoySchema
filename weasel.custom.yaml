@@ -7,4 +7,4 @@ customization:
 patch:
   style/color_scheme: flypy
   style/font_point: 12
-  style/horizontal: false # true为横排显示，false为竖排显示。
+  style/horizontal: true # true为横排显示，false为竖排显示。
