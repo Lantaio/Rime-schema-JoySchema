@@ -42,8 +42,10 @@ menu:
 
 key_binder:
   bindings:
-    - {accept: semicolon, send: c, when: has_menu}  # 候选2 用分号
-    - {accept: apostrophe, send: e, when: has_menu} # 候选3 用单引号
+    # - {accept: semicolon, send: c, when: has_menu}  # 候选2 用分号
+    # - {accept: apostrophe, send: e, when: has_menu} # 候选3 用单引号
+    - {accept: "Shift+Shift_L", send: 2, when: has_menu} # 设置左Shift键上屏第2候选
+    - {accept: "Shift+Shift_R", send: 3, when: has_menu} # 设置右Shift键上屏第3候选
 
 punctuator:
   full_shape:
@@ -76,7 +78,7 @@ punctuator:
     "!": 一
     "@": 二
     "#": 三
-    "$": [ 四, ￥]
+    "$": [ 四, ￥, "$", "€", "£" ]
     "%": [ 五, 百分之 ]
     "^": 六
     "&": 七
@@ -124,12 +126,11 @@ punctuator:
     "d": 第
     "h": 号
     ".": 点
-
     # shift + key
     "!": 壹
     "@": 贰
     "#": 叁
-    "$": [ 肆, ￥]
+    "$": [ 肆, ￥, "$", "€", "£" ]
     "%": [ 伍, 百分之 ]
     "^": 陆
     "&": 柒
