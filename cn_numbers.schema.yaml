@@ -18,14 +18,16 @@ schema:
   schema_id: cn_numbers
   name: 中文数字
   version: "1.2"
-  description: 快捷输入大写数字
+  description: 快捷输入中文数字
 
 switches:
   - name: full_shape
+    reset: 1
     states: [ 一二三, 壹贰叁 ]
 
 engine:
   processors:
+    - ascii_composer
     - key_binder
     - punctuator
     - selector
@@ -41,11 +43,14 @@ menu:
   alternative_select_keys: "acegi"
 
 key_binder:
+  import_preset: default
   bindings:
-    # - {accept: semicolon, send: c, when: has_menu}  # 候选2 用分号
-    # - {accept: apostrophe, send: e, when: has_menu} # 候选3 用单引号
-    - {accept: "Shift+Shift_L", send: 2, when: has_menu} # 设置左Shift键上屏第2候选
-    - {accept: "Shift+Shift_R", send: 3, when: has_menu} # 设置右Shift键上屏第3候选
+    __append:
+      - {accept: "Shift+Shift_L", send: c, when: has_menu} # 设置左Shift键上屏第2候选
+      - {accept: "Shift+Shift_R", send: e, when: has_menu} # 设置右Shift键上屏第3候选
+
+ascii_composer:
+  import_preset: default
 
 punctuator:
   full_shape:

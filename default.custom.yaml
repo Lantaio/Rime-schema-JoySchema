@@ -2,24 +2,22 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.14.3
   generator: "Rime::SwitcherSettings"
-  modified_time: "Fri May  5 15:49:42 2023"
+  modified_time: "Wed Jun 14 23:42:11 2023"
   rime_version: 1.5.3
 patch:
   key_binder:
     bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_comma_period", "key_bindings:/numbered_mode_switch"]}
   "key_binder/bindings/+":
-    - {accept: "Shift+Shift_L", send: 2, when: has_menu} # 设置左Shift键上屏第2候选
-    - {accept: "Shift+Shift_R", send: 3, when: has_menu} # 设置右Shift键上屏第3候选
-
+    - {accept: "Shift+Shift_L", send: 2, when: has_menu}
+    - {accept: "Shift+Shift_R", send: 3, when: has_menu}
   menu:
-    page_size: 3 # 候选项数目
-
+    page_size: 3
   schema_list:
     - {schema: luna_pinyin_fluency}
     - {schema: easy_en}
-    - {schema: double_pinyin_flypy}
     - {schema: luna_pinyin_simp}
     - {schema: luna_pinyin}
+    - {schema: cn_numbers}
   "switcher/caption": "～Rime选项菜单～"
   "switcher/hotkeys":
-    - "Control+Shift+ampersand" # 即设置Ctrl+Shift+7作为呼出选项菜单的热键
+    - "Control+Shift+ampersand"
