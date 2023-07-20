@@ -14,10 +14,10 @@
 #
 
 ---
-name: luna_pinyin.ex
+name: luna_pinyin.mass
 version: "2023.4.28"
 sort: by_weight
-use_preset_vocabulary: true # 使用Rime输入法预置的八股文詞庫（即essay.txt）
+use_preset_vocabulary: true # 是否使用Rime输入法预置的八股文詞庫（即essay.txt）
 import_tables:
   - luna_pinyin # 在程序安装目录输入法预置的词库
   - pinyin.cantonese # 粤语词库
