@@ -56,8 +56,9 @@ speller:
   delimiter: " '"
   algebra: # 模糊音
     - erase/^xx$/ # 第一行保留
-    # 模糊音定義先於簡拼定義，方可令簡拼支持以上模糊音
-    - abbrev/^([a-z]).+$/$1/ # 簡拼（首字母）
+    # 注意：模糊音定義先於簡拼定義，方可令簡拼支持以上模糊音
+    - abbrev/^([abd-rt-y]).+$/$1/ # 簡拼（首字母）
+    - abbrev/^([zcs])([^h]).+$/$1/ # 简拼（z，c，s）
     - abbrev/^([zcs]h).+$/$1/ # 簡拼（zh, ch, sh）
     # 以下是一組容錯拼寫，《漢語拼音》方案以前者爲正
     - derive/^([nl])ve$/$1ue/ # nve = nue, lve = lue
