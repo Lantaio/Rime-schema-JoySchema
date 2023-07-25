@@ -6,10 +6,7 @@ customization:
   rime_version: 1.5.3
 patch:
   key_binder:
-    bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_comma_period", "key_bindings:/numbered_mode_switch"]}
-  "key_binder/bindings/+":
-    - {accept: "Shift+Shift_L", send: 2, when: has_menu}
-    - {accept: "Shift+Shift_R", send: 3, when: has_menu}
+    bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_comma_period", "key_bindings:/select_word_with_shift_key", "key_bindings:/numbered_mode_switch"]}
   menu:
     page_size: 3
   schema_list:

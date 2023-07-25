@@ -8,7 +8,7 @@ schema:
   author:
     - 佛振 <chen.sst@gmail.com>
   description: |
-    朙月拼音，簡体字輸出模式。
+    朙月拼音，簡体字输入方案。
   dependencies:
     - stroke # 笔画反查时依赖五笔输入法
     # - easy_en # 中英文混输时依赖easy_en输入法
@@ -16,12 +16,12 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ 中文, 西文 ]
+    states: [ 中文, 英文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
   - name: simplification
-    reset: 1 # 重置为简体中文
-    states: [ 漢字, 汉字 ]
+    reset: 1 # 重置为简体字输入模式
+    states: [ 繁體, 简体 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -55,10 +55,12 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
   algebra: # 模糊音
-    - erase/^xx$/ # 第一行保留
+    - erase/^xx$/ # 第一行保留（启用简拼功能时删除重复键入无效）
     # 注意：模糊音定義先於簡拼定義，方可令簡拼支持以上模糊音
-    - abbrev/^([abd-rt-y]).+$/$1/ # 簡拼（首字母）
-    - abbrev/^([zcs])([^h]).+$/$1/ # 简拼（z，c，s）
+    # - abbrev/^([a-z]).+$/$1/ # 簡拼（首字母）
+    - abbrev/^([a-z])[^h]+$/$1/ # 簡拼（首字母，后续字母不是h）
+    # - abbrev/^([abd-rt-y]).+$/$1/ # 簡拼（除z、c、s之外的首字母）
+    # - abbrev/^([zcs])[^h]+$/$1/ # 简拼（z，c，s）
     - abbrev/^([zcs]h).+$/$1/ # 簡拼（zh, ch, sh）
     # 以下是一組容錯拼寫，《漢語拼音》方案以前者爲正
     - derive/^([nl])ve$/$1ue/ # nve = nue, lve = lue
@@ -85,9 +87,9 @@ custom_phrase:
   dictionary: ""
   user_dict: custom_phrase
   db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
+  enable_completion: false # 是否开启补全提示
+  enable_sentence: false # 是否开启造句功能
+  initial_quality: 99
 
 # english:  # 中英文混输时英文码表设置项
 #   dictionary: easy_en
