@@ -1,10 +1,10 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.14.3
+  distribution_version: 0.15.0.0
   generator: "Weasel::UIStyleSettings"
-  modified_time: "Tue Apr 11 11:58:16 2023"
-  rime_version: 1.5.3
+  modified_time: "Sun Jul 30 19:37:11 2023"
+  rime_version: 1.8.5
 patch:
-  style/color_scheme: flypy
-  style/font_point: 12
-  style/horizontal: true # true为横排显示，false为竖排显示。
+  "style/color_scheme": flypy
+  "style/font_point": 12
+  "style/horizontal": true

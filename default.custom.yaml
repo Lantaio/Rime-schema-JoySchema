@@ -1,20 +1,17 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.14.3
+  distribution_version: 0.15.0.0
   generator: "Rime::SwitcherSettings"
-  modified_time: "Wed Jun 14 23:42:11 2023"
-  rime_version: 1.5.3
+  modified_time: "Sun Jul 30 19:16:44 2023"
+  rime_version: 1.8.5
 patch:
   key_binder:
     bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_comma_period", "key_bindings:/select_word_with_shift_key", "key_bindings:/numbered_mode_switch"]}
   menu:
     page_size: 3
   schema_list:
-    - {schema: luna_pinyin_fluency}
     - {schema: easy_en}
-    - {schema: luna_pinyin_simp}
-    - {schema: luna_pinyin}
-    - {schema: cn_numbers}
+    - {schema: joy_pinyin}
   "switcher/caption": "～Rime选项菜单～"
   "switcher/hotkeys":
     - "Control+Shift+ampersand"

@@ -2,13 +2,13 @@
 # encoding: utf-8
 
 schema:
-  schema_id: luna_pinyin_simp
-  name: 朙月拼音·简体
+  schema_id: joy_pinyin
+  name: 欢喜拼音
   version: "0.22"
   author:
-    - 佛振 <chen.sst@gmail.com>
+    - 迷思 (lantaio@yeah.net)
   description: |
-    朙月拼音，簡体字输入方案。
+    欢喜拼音，默认为簡体字输入方案。
   dependencies:
     - stroke # 笔画反查时依赖五笔输入法
     # - easy_en # 中英文混输时依赖easy_en输入法
@@ -27,7 +27,7 @@ switches:
 
 engine: # 輸入引擎設定，即掛接組件的「處方」
   processors: # 一、這批組件處理各類按鍵消息
-    - ascii_composer # 處理西文模式及中西文切換
+    - ascii_composer # 處理英文模式及中英文切換
     - recognizer # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     - key_binder # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
     - speller # 拼寫處理器，接受字符按鍵，編輯輸入碼
@@ -77,7 +77,7 @@ speller:
 
 translator:
   dictionary: joy_pinyin # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
-  prism: luna_pinyin_simp
+  prism: joy_pinyin
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
