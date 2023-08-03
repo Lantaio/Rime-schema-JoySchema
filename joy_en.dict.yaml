@@ -1,0 +1,14 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 挂载英文输入方案的词库
+#
+
+---
+name: joy_en
+version: "20230803"
+sort: by_weight
+import_tables:
+  - en_lite # 轻量版英文词库
+  - en_lite_ext # 英文补充词库
+...

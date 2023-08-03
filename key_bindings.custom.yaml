@@ -19,3 +19,8 @@ patch:
     __append:
       - {accept: "Shift+Shift_L", send: 2, when: has_menu}
       - {accept: "Shift+Shift_R", send: 3, when: has_menu}
+
+  select_word_with_caps_semicolon_key:
+    __append:
+      - {accept: "Caps_Lock", send: 2, when: has_menu}
+      - {accept: "semicolon", send: 3, when: has_menu}
