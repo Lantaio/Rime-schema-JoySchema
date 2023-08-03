@@ -2,7 +2,7 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.15.0.0
   generator: "Rime::SwitcherSettings"
-  modified_time: "Sun Jul 30 19:16:44 2023"
+  modified_time: "Thu Aug  3 19:33:51 2023"
   rime_version: 1.8.5
 patch:
   key_binder:
@@ -10,8 +10,8 @@ patch:
   menu:
     page_size: 3
   schema_list:
-    - {schema: easy_en}
     - {schema: joy_pinyin}
+    - {schema: joy_en}
   "switcher/caption": "～Rime选项菜单～"
   "switcher/hotkeys":
     - "Control+Shift+ampersand"
