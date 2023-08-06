@@ -15,15 +15,15 @@ schema:
 
 switches:
   - name: ascii_mode
-    reset: 0
+    reset: 0  # 重置为中文输入模式
     states: [ 中文, 英文 ]
   - name: full_shape
-    states: [ 半角, 全角 ]
+    states: [ 🌙, 🌕 ]  # 半角 / 全角
   - name: simplification
     reset: 1  # 重置为简体字输入模式
     states: [ 繁體, 简体 ]
   - name: emoji
-    states: [ "🈚︎", "🈶️" ]
+    states: [ "🌚", "🌝" ]  # 关闭 / 开启
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -45,18 +45,21 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
     - punct_translator  # 轉換標點符號
+    - lua_translator@date_translator  # 时间、日期、星期，依赖rime.lua文件。
     - table_translator@custom_phrase
     - table_translator@english  # 中英文混输时载入取名为english的英文码表
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
+    - lua_translator@number_translator  # 数字、金额大写
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
   filters:  # 四、這批組件過濾翻譯的結果
     - simplifier@emoji  # Emoji
     - simplifier  # 繁簡轉換
+    - lua_filter@autocap_filter  # 英文自动大写
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
-  delimiter: " '"
+  delimiter: " '"  # 第一位"空格"是拼音之间的分隔符；第二位"'"表示可以手动输入单引号来分割拼音。
   algebra:  # 模糊音
     - erase/^xx$/  # 第一行保留（启用简拼功能时删除重复键入无效）
     # 注意：模糊音定義先於簡拼定義，方可令簡拼支持以上模糊音
@@ -93,6 +96,13 @@ custom_phrase:
   enable_completion: false  # 是否开启补全提示
   enable_sentence: false  # 是否开启造句功能
   initial_quality: 99
+
+date_translator:  # Lua 配置: 日期、时间、星期、ISO 8601、时间戳的触发关键字
+  date: rq       # 日期： 2022-11-29
+  time: sj       # 时间： 18:13
+  week: xq       # 星期： 星期二
+  datetime: dt   # ISO 8601： 2022-11-29T18:13:11+08:00
+  timestamp: ts  # 时间戳： 1669716794
 
 emoji:
   opencc_config: emoji.json
@@ -136,5 +146,6 @@ recognizer:
   # import_preset: default
   patterns:
     punct: '^/([0-9]0?|[A-Za-z]+)$'  # 触发输入扩展符号的正则表达式
+    number: "^R[0-9]+[.]?[0-9]*"  # 触发数字、金额大写的正则表达式
     reverse_lookup: "`[a-z]*'?$"  # 触发笔画反查的正则表达式
-    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # 触发识别URL的正则表达式
