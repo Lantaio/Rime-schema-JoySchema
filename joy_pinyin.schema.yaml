@@ -22,6 +22,8 @@ switches:
   - name: simplification
     reset: 1  # 重置为简体字输入模式
     states: [ 繁體, 简体 ]
+  - name: emoji
+    states: [ "🈚︎", "🈶️" ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -48,6 +50,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
   filters:  # 四、這批組件過濾翻譯的結果
+    - simplifier@emoji  # Emoji
     - simplifier  # 繁簡轉換
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換
 
@@ -91,6 +94,12 @@ custom_phrase:
   enable_sentence: false  # 是否开启造句功能
   initial_quality: 99
 
+emoji:
+  opencc_config: emoji.json
+  option_name: emoji
+  tips: none
+  inherit_comment: false
+
 english:  # 中英文混输时英文码表设置项
   dictionary: joy_en
   spelling_hints: 9
@@ -98,6 +107,8 @@ english:  # 中英文混输时英文码表设置项
   enable_sentence: false  # 是否启用造句功能
   enable_user_dict: false  # 是否启用用户词库
   initial_quality: -1
+  comment_format:  # 自定义提示码
+    - xform/.*//  # 清空提示码
 
 reverse_lookup:
   dictionary: stroke

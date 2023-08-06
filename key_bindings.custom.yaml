@@ -1,14 +1,16 @@
-patch:
-  numbered_mode_switch:
+patch:  # 键位名称参考网址https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
+  numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到5~9，最常用的切换键用食指和中指按，也是为了降低和其它软件的冲突。
     __append:
-      - { when: always, accept: Control+Shift+6, toggle: full_shape }
+      # - { when: always, accept: Control+Shift+4, toggle: extended_charset }
+      - { when: always, accept: Control+Shift+5, toggle: full_shape }
+      - { when: always, accept: Control+Shift+6, toggle: simplification }
       - { when: always, accept: Control+Shift+8, select: .next }
-      - { when: always, accept: Control+Shift+9, toggle: simplification }
-      - { when: always, accept: Control+Shift+0, toggle: extended_charset }
-      - { when: always, accept: Control+Shift+asciicircum, toggle: full_shape }
+      - { when: always, accept: Control+Shift+9, toggle: emoji }
+      # - { when: always, accept: Control+Shift+dollar, toggle: extended_charset }
+      - { when: always, accept: Control+Shift+percent, toggle: full_shape }
+      - { when: always, accept: Control+Shift+asciicircum, toggle: simplification }
       - { when: always, accept: Control+Shift+asterisk, select: .next }
-      - { when: always, accept: Control+Shift+parenleft, toggle: simplification }
-      - { when: always, accept: Control+Shift+parenright, toggle: extended_charset }
+      - { when: always, accept: Control+Shift+parenleft, toggle: emoji }
 
   paging_with_comma_period:
     __append:
@@ -19,8 +21,3 @@ patch:
     __append:
       - {accept: "Shift+Shift_L", send: 2, when: has_menu}
       - {accept: "Shift+Shift_R", send: 3, when: has_menu}
-
-  select_word_with_caps_semicolon_key:
-    __append:
-      - {accept: "Caps_Lock", send: 2, when: has_menu}
-      - {accept: "semicolon", send: 3, when: has_menu}
