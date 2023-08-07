@@ -25,6 +25,7 @@ switches:
   - name: emoji
     states: [ "🌚", "🌝" ]  # 关闭 / 开启
   - name: ascii_punct
+    reset: 0  # 重置为中文标点模式
     states: [ 。，, ．， ]
 
 engine:  # 輸入引擎設定，即掛接組件的「處方」
@@ -92,16 +93,16 @@ translator:
 custom_phrase:
   dictionary: ""
   user_dict: custom_phrase
-  db_class: stabledb
+  db_class: stabledb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
   enable_completion: false  # 是否开启补全提示
-  enable_sentence: false  # 是否开启造句功能
+  enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
   initial_quality: 99
 
 date_translator:  # Lua 配置: 日期、时间、星期、ISO 8601、时间戳的触发关键字
-  date: rq       # 日期： 2022-11-29
-  time: sj       # 时间： 18:13
-  week: xq       # 星期： 星期二
-  datetime: dt   # ISO 8601： 2022-11-29T18:13:11+08:00
+  date: rq  # 日期： 2022-11-29
+  time: sj  # 时间： 18:13
+  week: xq  # 星期： 星期二
+  datetime: dt  # ISO 8601： 2022-11-29T18:13:11+08:00
   timestamp: ts  # 时间戳： 1669716794
 
 emoji:
@@ -112,10 +113,13 @@ emoji:
 
 english:  # 中英文混输时英文码表设置项
   dictionary: joy_en
+  user_dict: joy_en
+  db_class: userdb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
   spelling_hints: 9
-  enable_completion: true  # 是否启用英文输入联想补全，必须开启
-  enable_sentence: false  # 是否启用造句功能
-  enable_user_dict: false  # 是否启用用户词库
+  enable_completion: true  # 是否启用补全提示，此处开启后英文候选的位置更合理
+  enable_encoder: false  #是否自动造词
+  enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
+  enable_user_dict: true  # 是否开启用户词典，以记录动态字频和用户词词频
   initial_quality: -1
   comment_format:  # 自定义提示码
     - xform/.*//  # 清空提示码
@@ -143,9 +147,8 @@ key_binder:
   #   __append: key_bindings:/select_word_with_shift_key
 
 recognizer:
-  # import_preset: default
+  import_preset: default
   patterns:
     punct: '^/([0-9]0?|[A-Za-z]+)$'  # 触发输入扩展符号的正则表达式
-    number: "^R[0-9]+[.]?[0-9]*"  # 触发数字、金额大写的正则表达式
+    number: "^D[0-9]+[.]?[0-9]*"  # 触发数字、金额大写的正则表达式
     reverse_lookup: "`[a-z]*'?$"  # 触发笔画反查的正则表达式
-    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # 触发识别URL的正则表达式

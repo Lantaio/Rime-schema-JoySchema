@@ -7,8 +7,13 @@ customization:
 patch:
   key_binder:
     bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_comma_period", "key_bindings:/select_word_with_shift_key", "key_bindings:/numbered_mode_switch"]}
+
   menu:
     page_size: 3
+
+  recognizer/patterns:
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # 触发识别URL的正则表达式
+
   schema_list:
     - {schema: joy_pinyin}
     - {schema: joy_en}
