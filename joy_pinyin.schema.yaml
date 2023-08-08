@@ -23,7 +23,7 @@ switches:
     reset: 1  # 重置为简体字输入模式
     states: [ 繁體, 简体 ]
   - name: emoji
-    states: [ "🌚", "🌝" ]  # 关闭 / 开启
+    states: [ 🖤, 💖 ]  # 禁用 / 启用
   - name: ascii_punct
     reset: 0  # 重置为中文标点模式
     states: [ 。，, ．， ]
@@ -34,6 +34,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
     - speller  # 拼寫處理器，接受字符按鍵，編輯輸入碼
+    - lua_processor@select_character  # 以词定字
     - punctuator  # 句讀處理器，將單個字符按鍵直接映射爲文字符號
     - selector  # 選字處理器，處理數字選字鍵、上、下候選定位、換頁鍵
     - navigator  # 處理輸入欄內的光標移動鍵
@@ -143,8 +144,9 @@ punctuator:
 
 key_binder:
   import_preset: default
-  # bindings:
-  #   __append: key_bindings:/select_word_with_shift_key
+  # Lua 配置: 以词定字（上屏当前候选项的第一个或最后一个字），和中括号翻页有冲突
+  select_first_character: "bracketleft"  # 左中括号 [
+  select_last_character: "bracketright"  # 右中括号 ]
 
 recognizer:
   import_preset: default
