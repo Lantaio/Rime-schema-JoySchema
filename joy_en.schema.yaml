@@ -1,4 +1,4 @@
-﻿# Rime schema
+# Rime schema
 # vim: set sw=2 sts=2 et:
 # encoding: utf-8
 
@@ -15,7 +15,7 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ Eng, Abc ]
+    states: [ 🆗, 🆎 ]  # English word / keyboard direct input
 
 engine:
   processors:
@@ -37,7 +37,7 @@ engine:
     - table_translator
     - punct_translator
   filters:
-    - lua_filter@autocap_filter  # 英文自动大写
+    # - lua_filter@autocap_filter  # 英文自动大写
     - uniquifier
 
 speller:
