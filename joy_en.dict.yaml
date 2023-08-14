@@ -6,7 +6,7 @@
 
 ---
 name: joy_en
-version: "20230803"
+version: "2023.8.3"
 sort: by_weight
 import_tables:
   - en_lite # 轻量版英文词库

@@ -15,7 +15,7 @@
 
 ---
 name: pinyin.cantonese
-version: "2023.4.30"
+version: "2023.8.12"
 sort: by_weight
 use_preset_vocabulary: false
 ...

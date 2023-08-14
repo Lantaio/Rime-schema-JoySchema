@@ -14,7 +14,7 @@
 # 转化应当大写的单词
 ---
 name: en_lite
-version: "20230803"
+version: "2023.8.3"
 sort: by_weight
 ...
 # +_+
