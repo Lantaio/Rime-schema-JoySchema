@@ -1,4 +1,4 @@
-﻿ime schema
+# Rime schema
 # vim: set sw=2 sts=2 et:
 # encoding: utf-8
 
@@ -63,5 +63,4 @@ punctuator:
     __include: symbols:/punctuator/symbols # 导入扩展符号表
 
 recognizer:
-  patterns:
-    punct: '^/([0-9]0?|[A-Za-z]+)$' # 触发输入扩展符号的正则表达式
+  import_preset: default

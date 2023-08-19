@@ -62,31 +62,15 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"  # 第一位"空格"是拼音之间的分隔符；第二位"'"表示可以手动输入单引号来分割拼音。
-  algebra:  # 模糊音
-    - erase/^xx$/  # 第一行保留（启用简拼功能时删除重复键入无效）
-    # 注意：模糊音定義先於簡拼定義，方可令簡拼支持以上模糊音
-    # - abbrev/^([a-z]).+$/$1/  # 簡拼（首字母）
-    - abbrev/^([a-z])[^h]+$/$1/  # 簡拼（首字母，后续字母不是h）
-    # - abbrev/^([abd-rt-y]).+$/$1/  # 簡拼（除z、c、s之外的首字母）
-    # - abbrev/^([zcs])[^h]+$/$1/  # 简拼（z，c，s）
-    - abbrev/^([zcs]h).+$/$1/  # 簡拼（zh, ch, sh）
-    # 以下是一組容錯拼寫，《漢語拼音》方案以前者爲正
-    - derive/^([nl])ve$/$1ue/  # nve = nue, lve = lue
-    - derive/^([jqxy])u/$1v/  # ju = jv, qu = qv, xu = xv, yu = yv
-    # - derive/un$/uen/  # gun = guen
-    # - derive/ui$/uei/  # gui = guei
-    # - derive/iu$/iou/  # jiu = jiou
-    # 自動糾正一些常見的按鍵錯誤
-    # - derive/([aeiou])ng$/$1gn/  # dagn => dang
-    # - derive/([dtngkhrzcs])o(u|ng)$/$1o/  # zho => zhong|zhou
-    # - derive/ong$/on/  # zhonguo => zhong guo
-    # - derive/ao$/oa/  # hoa => hao
-    # - derive/([iu])a(o|ng?)$/a$1$2/  # tain => tian
+  algebra:  # 替代
+    __patch:
+      - pinyin:/abbreviation  # 简拼规则
+      - pinyin:/spelling_correction  # 容错拼写
 
 translator:
   dictionary: joy_pinyin  # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
   prism: joy_pinyin
-  preedit_format:
+  preedit_format:  # 在候选框显示正确的拼音
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
@@ -151,6 +135,5 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    punct: '^/([0-9]0?|[A-Za-z]+)$'  # 触发输入扩展符号的正则表达式
     number: "^D[0-9]+[.]?[0-9]*"  # 触发数字、金额大写的正则表达式
     reverse_lookup: "`[a-z]*'?$"  # 触发笔画反查的正则表达式
