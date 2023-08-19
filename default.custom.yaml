@@ -12,7 +12,7 @@ patch:
     page_size: 3  # 每页的候选项个数
 
   recognizer/patterns:
-    punct: '^/([0-9]0?|[A-Za-z]+)$'  # 触发输入扩展符号的正则表达式
+    punct: '^;([0-9]0?|[A-Za-z]+)$'  # 触发输入扩展符号的正则表达式
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # 触发识别URL的正则表达式
 
   schema_list:

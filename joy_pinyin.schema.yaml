@@ -55,9 +55,9 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
   filters:  # 四、這批組件過濾翻譯的結果
     - simplifier@emoji  # Emoji
-    - simplifier  # 繁簡轉換
+    - simplifier  # 繁簡轉換（必需）
     # - lua_filter@autocap_filter  # 英文自动大写
-    - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換
+    - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換（必需）
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
