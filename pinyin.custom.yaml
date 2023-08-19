@@ -1,0 +1,12 @@
+# Rime configuration - pinyin
+# encoding: utf-8
+
+patch:
+  abbreviation:
+    __append:
+      - abbrev/^([a-z])[^h]+$/$1/  # 簡拼（首字母，后续字母不是h）
+      - abbrev/^([zcs]h).+$/$1/  # 簡拼（zh, ch, sh）
+  spelling_correction:
+    __append:
+      - derive/^([nl])ve$/$1ue/  # nve = nue, lve = lue
+      - derive/^([jqxy])u/$1v/  # ju = jv,
