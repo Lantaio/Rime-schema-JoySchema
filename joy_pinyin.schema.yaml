@@ -4,11 +4,13 @@
 schema:
   schema_id: joy_pinyin
   name: 欢喜拼音
-  version: "2023.8.14"
+  version: "2023.8.20"
   author:
     - 迷思 (lantaio@yeah.net)
   description: |
     欢喜拼音，默认为簡体字输入方案。
+    使用引号和冒号来翻页。
+    使用逗号和句号来选择第2和第3候选项。
   dependencies:
     - stroke  # 笔画反查时依赖五笔输入法
     - joy_en  # 中英文混输时依赖joy_en输入法

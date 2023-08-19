@@ -5,11 +5,13 @@
 schema:
   schema_id: joy_en
   name: Joy English
-  version: "2023.8.3"
+  version: "2023.8.20"
   author:
     - Lantaio (lantaio@yeah.net)
   description: |
     An English input schema use a light weight dictionary.
+    Use semicolon and colon for paging.
+    Use comma and period to select the 2 and 3 candidate.
     一个使用轻量级词库的英文输入方案。
 
 switches:

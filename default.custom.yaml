@@ -6,7 +6,7 @@ customization:
   rime_version: 1.8.5
 patch:
   key_binder:
-    bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_comma_period", "key_bindings:/select_word_with_shift_key", "key_bindings:/numbered_mode_switch"]}
+    bindings: {__patch: ["key_bindings:/move_by_word_with_tab", "key_bindings:/paging_with_semicolon_colon", "key_bindings:/select_word_with_comma_period", "key_bindings:/numbered_mode_switch"]}
 
   menu:
     page_size: 3  # 每页的候选项个数

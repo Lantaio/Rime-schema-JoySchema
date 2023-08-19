@@ -18,7 +18,17 @@ patch:
       - { when: has_menu, accept: comma, send: Page_Up }
       - { when: has_menu, accept: period, send: Page_Down }
 
+  paging_with_semicolon_colon:
+    __append:
+      - { when: has_menu, accept: Shift+colon, send: Page_Up }
+      - { when: has_menu, accept: semicolon, send: Page_Down }
+
+  select_word_with_comma_period:
+    __append:
+      - { when: has_menu, accept: comma, send: 2 }
+      - { when: has_menu, accept: period, send: 3 }
+
   select_word_with_shift_key:
     __append:
-      - {accept: "Shift+Shift_L", send: 2, when: has_menu}
-      - {accept: "Shift+Shift_R", send: 3, when: has_menu}
+      - {when: has_menu, accept: "Shift+Shift_L", send: 2}
+      - {when: has_menu, accept: "Shift+Shift_R", send: 3}
