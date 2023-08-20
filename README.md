@@ -18,4 +18,4 @@
 ## Description
 My Rime user_data folder in Win OS. Includes some customized input schemas and some extended vocabularies.
 
-[Back to Title](#English) | [select language](#language)
+[back to title](#English) | [select language](#language)
