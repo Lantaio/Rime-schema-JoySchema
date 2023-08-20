@@ -23,12 +23,13 @@ patch:
       - { when: has_menu, accept: Shift+colon, send: Page_Up }
       - { when: has_menu, accept: semicolon, send: Page_Down }
 
-  select_word_with_comma_period:
+  select_with_comma_period_slash:
     __append:
       - { when: has_menu, accept: comma, send: 2 }
       - { when: has_menu, accept: period, send: 3 }
+      - { when: has_menu, accept: slash, send: 4 }
 
-  select_word_with_shift_key:
+  select_with_shift_key:
     __append:
       - {when: has_menu, accept: "Shift+Shift_L", send: 2}
       - {when: has_menu, accept: "Shift+Shift_R", send: 3}

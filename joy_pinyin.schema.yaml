@@ -10,7 +10,7 @@ schema:
   description: |
     欢喜拼音，默认为簡体字输入方案。
     使用引号和冒号来翻页。
-    使用逗号和句号来选择第2和第3候选项。
+    使用逗号、句号和斜杠来选择第2、第3和第4个候选项。
   dependencies:
     - stroke  # 笔画反查时依赖五笔输入法
     - joy_en  # 中英文混输时依赖joy_en输入法
@@ -64,10 +64,10 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"  # 第一位"空格"是拼音之间的分隔符；第二位"'"表示可以手动输入单引号来分割拼音。
-  algebra:  # 替代
+  algebra:  # 替代规则
     __patch:
       - pinyin:/abbreviation  # 简拼规则
-      - pinyin:/spelling_correction  # 容错拼写
+      - pinyin:/spelling_correction  # 容错拼写规则
 
 translator:
   dictionary: joy_pinyin  # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
