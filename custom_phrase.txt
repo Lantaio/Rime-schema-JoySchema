@@ -42,13 +42,5 @@
 不	b
 你	n
 
-我们	w m
-他们	t m
-那个	n g
-那些	n x
 叒	yyy
 又双叒叕	yyyy
-哈哈	h h
-看看	k k
-因为	y w
-所以	s y
