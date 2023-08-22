@@ -18,29 +18,28 @@
 # 比如 Amazon 被纠错为「a ma zong 阿妈粽」，
 # 期望的 Amazon 跑到第二个候选项了，所以这里给它固定死喽。
 #
-# version: "20230803"
+# version: "2023.8.22"
 #
 # 此行之后不能写注释
 
-
-欻	chua
-噷	hm
-
-我	w
-人	r
-他	t	2
-她	t	1
-有	y
-哦	o
+不	b
 的	d	2
 都	d	1
 个	g
 和	h	2
 或	h	1
 了	l
-在	z
-不	b
 你	n
+哦	o
+人	r
+是	s
+他	t	2
+她	t	1
+我	w
+有	y
+在	z
 
+欻	chua
+噷	hm
 叒	yyy
 又双叒叕	yyyy
