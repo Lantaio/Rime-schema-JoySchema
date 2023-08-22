@@ -11,7 +11,7 @@ schema:
   description: |
     An English input schema use a light weight dictionary.
     Use semicolon and colon for paging.
-    Use comma and period to select the 2 and 3 candidate.
+    Use comma, period and slash to select the 2, 3 and 4 candidate.
     一个使用轻量级词库的英文输入方案。
 
 switches:
