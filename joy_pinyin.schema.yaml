@@ -111,7 +111,7 @@ english:  # 中英文混输时英文码表设置项
   comment_format:  # 自定义提示码
     - xform/.*//  # 清空提示码
 
-reverse_lookup:
+reverse_lookup:  # 反查
   dictionary: stroke
   enable_completion: true
   prefix: "`"
@@ -122,9 +122,6 @@ reverse_lookup:
   comment_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
-
-# simplifier:
-#   option_name: zh_simp
 
 punctuator:
   import_preset: symbols  # 导入扩展符号表
@@ -138,5 +135,5 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    number: "^D[0-9]+[.]?[0-9]*"  # 触发数字、金额大写的正则表达式
-    reverse_lookup: "`[a-z]*'?$"  # 触发笔画反查的正则表达式
+    number: "^D[0-9]+[.]?[0-9]*"  # 大写D开头触发数字、金额大写的正则表达式
+    reverse_lookup: "`[a-z]*'?$"  # '`'号开头触发笔画反查的正则表达式
