@@ -114,7 +114,7 @@ english:  # 中英文混输时英文码表设置项
 reverse_lookup:  # 反查
   dictionary: stroke
   enable_completion: true
-  prefix: "`"
+  prefix: "~"
   suffix: "'"
   tips: 〔笔画〕
   preedit_format:
@@ -135,5 +135,5 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    number: "^D[0-9]+[.]?[0-9]*"  # 大写D开头触发数字、金额大写的正则表达式
-    reverse_lookup: "`[a-z]*'?$"  # '`'号开头触发笔画反查的正则表达式
+    number: "^D[0-9]+[.]?[0-9]*"  # 'D'开头触发数字、金额大写的正则表达式
+    reverse_lookup: "~[a-z]*'?$"  # '~'开头触发笔画反查的正则表达式
