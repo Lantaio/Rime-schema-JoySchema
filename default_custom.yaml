@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 # 在用户使用「输入法设定」调整设置时，小狼毫会格式化 default.custom.yaml，删除所有注释。
-# 目前建议的自定义方法：在此文件修改，之后在 default.custom.yaml 用 `__include` 引入。示例 weasel.custom.yaml 如下：
+# 目前建议的自定义方法：在此文件修改，之后在 default.custom.yaml 用 `__include` 引入。示例 default.custom.yaml 如下：
 # patch:
 #   __include: default_custom:/
 
@@ -23,4 +23,4 @@ recognizer/patterns:
 
 "switcher/caption": "～Rime选项菜单～"
 "switcher/hotkeys":
-  - "Control+Shift+ampersand"  # 即Ctrl+Shift+7作为选项菜单的快捷键
+  - "Control+Shift+ampersand"  # 即Ctrl+Shift+7作为打开选项菜单的快捷键
