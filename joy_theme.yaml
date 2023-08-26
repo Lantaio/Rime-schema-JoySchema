@@ -5,10 +5,10 @@
 # 在用户使用「输入法设定」调整设置时，小狼毫会格式化 weasel.custom.yaml，删除所有注释。
 # 目前建议的自定义方法：复制此本文件并修改，之后在 weasel.custom.yaml 用 `__include` 引入。示例 weasel.custom.yaml 如下：
 # patch:
-#   "preset_color_schemes/+"
-#     __include: weasel_style:/preset_color_schemes
+#   "preset_color_schemes/+"  # 需要'+'号，表示在原有主题列表的基础上添加新的主题
+#     __include: joy_theme:/preset_color_schemes
 #   "style/+":
-#     __include: weasel_style:/style
+#     __include: joy_theme:/style
 
 
 # 全部 style 选项
@@ -17,7 +17,7 @@
 # Weasel 版本：15.0, CI #137 <https://github.com/rime/weasel/actions/runs/5912109600>
 # Commit: db79168
 
-style:  # 此处为完整列表及其缺省值，不要在此修改，在后面创建具体方案。
+style:  # 此处为完整列表及其缺省值，不要在此修改，看后面joy_style部分的说明。
   # 字体设定
   # 字体1[:起始码位:结束码位:字重:字形][,字体2 ...]，详情请参考 <https://github.com/rime/weasel/wiki/字體設定>
   # 字体会依次 fallback
@@ -73,10 +73,10 @@ style:  # 此处为完整列表及其缺省值，不要在此修改，在后面�
     round_corner: 4  # 高亮区域圆角；又名 hilited_corner_radius
 
 
-# 以下是一个示例方案
+# 以下是一个具体方案
 # 使用方法：在 weasel.custom.yaml 中添加如下两行：
-# "style":
-#   __include: "joy_theme:/joy_horizontal"
+# "style/+":
+#   __include: "joy_theme:/joy_style"
 joy_style:
   font_face: "Segoe UI Emoji:1f600, Microsoft YaHei UI"
   font_point: 12
@@ -84,18 +84,17 @@ joy_style:
   label_format: "%s."
   paging_on_scroll: true
   layout:
-    align_type: center
     max_width: 1000
     max_height: 600
     # type: horizontal  # 候选项横向排列，注释此行则为竖向排列
     border_width: 2
     margin_x: 10
     margin_y: 10
-    # spacing: 10
-    candidate_spacing: 6
+    spacing: 6
+    # candidate_spacing: 6  # 候选项之间的间隔
     hilite_spacing: 3
-    corner_radius: 5
-    round_corner: 5
+    corner_radius: 6
+    round_corner: 6
 
 
 # 全部 color_schemes 选项，点击小狼毫「输入法设定」可以预览皮肤效果
@@ -105,7 +104,7 @@ joy_style:
 # [RIME 西米](https://fxliang.github.io/RimeSeeMe/)
 
 preset_color_schemes:
-  scheme_name:  # 需要在 `style/color_schema` 指定的值
+  scheme_name:  # 需要在 `style/color_schema` 指定的值。这是一个样例列表，具体方案参考joy_light部分
     name:  # 方案设置中显示的配色名称
     author:  # 配色作者名称
     color_format:  # 颜色格式：argb；rgba；abgr
@@ -138,33 +137,33 @@ preset_color_schemes:
     prevpage_color:
 
   joy_light:
-    name: 明媚欢喜／Joy Light
+    name: 春光乍喜／Joy Light
     author: Lantaio Joy
     color_format: rgba
     # 默认
     back_color: 0xF8F5F0  # 背景（浅米色）
     border_color: 0xC6C6C6  # 边框（浅灰色）
     comment_text_color: 0x989898  # 注释（灰色）
-    label_color: 0x32C032  # 标签（青绿色）
+    label_color: 0x3AC63A  # 标签（青绿色）
     # shadow_color: 0x00000000  # 阴影
-    text_color: 0x000000  # 已经确定的文字（黑色）
+    text_color: 0x808080  # 已经确定的文字（灰色）
     # 候选区域
     # candidate_back_color:
     # candidate_border_color:
     # candidate_shadow_color:
-    candidate_text_color: 0x2A82FC  # 候选项（蓝色）
+    candidate_text_color: 0x0A80F8  # 候选项（蓝色）
     # 高亮区域
     # hilited_back_color:
     hilited_comment_text_color: 0x989898  # 高亮候选注释（灰色）
-    hilited_label_color: 0x32C032  # 高亮标签（青绿色）
+    hilited_label_color: 0x3AC63A  # 高亮标签（青绿色）
     # hilited_mark_color: 0xF6B240  # 高亮记号（橙色）
     # hilited_shadow_color:
-    hilited_text_color: 0x2A82FC  # 高亮文字（蓝色）
+    hilited_text_color: 0x0A80F8  # 高亮代码（蓝色）
     # 高亮的候选区域
     # hilited_candidate_back_color:
     # hilited_candidate_border_color:
     # hilited_candidate_shadow_color:
-    hilited_candidate_text_color: 0xDA382A  # 高亮候选（红色）
+    hilited_candidate_text_color: 0xC60666  # 高亮候选（玫瑰红）
     # 翻页
     nextpage_color: 0xF6B240  # 向后翻页（橙色）
     prevpage_color: 0xF6B240  # 向前翻页（橙色）

@@ -2,11 +2,11 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.15.0.0
   generator: "Weasel::UIStyleSettings"
-  modified_time: "Tue Aug 22 23:07:31 2023"
+  modified_time: "Sat Aug 26 19:35:02 2023"
   rime_version: 1.8.5
 patch:
-  style:
-    __include: "joy_theme:/joy_style"
-  preset_color_schemes:
+  "preset_color_schemes/+":
     __include: "joy_theme:/preset_color_schemes"
+  "style/+":
+    __include: "joy_theme:/joy_style"
   "style/color_scheme": joy_light
