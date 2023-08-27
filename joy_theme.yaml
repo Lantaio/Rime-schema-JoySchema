@@ -80,6 +80,7 @@ style:  # 此处为完整列表及其缺省值，不要在此修改，看后面j
 joy_style:
   font_face: "Segoe UI Emoji:1f600, Microsoft YaHei UI"
   font_point: 12
+  label_font_point: 12
   comment_font_point: 11
   label_format: "%s."
   paging_on_scroll: true
@@ -91,7 +92,7 @@ joy_style:
     margin_x: 10
     margin_y: 10
     spacing: 6
-    # candidate_spacing: 6  # 候选项之间的间隔
+    candidate_spacing: 6  # 候选项之间的间隔
     hilite_spacing: 3
     corner_radius: 6
     round_corner: 6
@@ -144,7 +145,7 @@ preset_color_schemes:
     back_color: 0xF8F5F0  # 背景（浅米色）
     border_color: 0xC6C6C6  # 边框（浅灰色）
     comment_text_color: 0x989898  # 注释（灰色）
-    label_color: 0x3AC63A  # 标签（青绿色）
+    label_color: 0x33B433  # 标签（青绿色）
     # shadow_color: 0x00000000  # 阴影
     text_color: 0x808080  # 已经确定的文字（灰色）
     # 候选区域
@@ -155,7 +156,7 @@ preset_color_schemes:
     # 高亮区域
     # hilited_back_color:
     hilited_comment_text_color: 0x989898  # 高亮候选注释（灰色）
-    hilited_label_color: 0x3AC63A  # 高亮标签（青绿色）
+    hilited_label_color: 0x33B433  # 高亮标签（青绿色）
     # hilited_mark_color: 0xF6B240  # 高亮记号（橙色）
     # hilited_shadow_color:
     hilited_text_color: 0x0A80F8  # 高亮代码（蓝色）
