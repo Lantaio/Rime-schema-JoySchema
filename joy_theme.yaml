@@ -92,7 +92,7 @@ joy_style:
     margin_x: 10
     margin_y: 10
     spacing: 6
-    candidate_spacing: 6  # 候选项之间的间隔
+    candidate_spacing: 6
     hilite_spacing: 3
     corner_radius: 6
     round_corner: 6
@@ -147,7 +147,7 @@ preset_color_schemes:
     comment_text_color: 0x989898  # 注释（灰色）
     label_color: 0x33B433  # 标签（青绿色）
     # shadow_color: 0x00000000  # 阴影
-    text_color: 0x808080  # 已经确定的文字（灰色）
+    text_color: 0x32659A # 已经确定的文字（藏蓝色）
     # 候选区域
     # candidate_back_color:
     # candidate_border_color:
