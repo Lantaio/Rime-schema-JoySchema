@@ -3,6 +3,7 @@
 
 -- 自动大写英文词汇
 autocap_filter = require("autocap_filter")
+-- autocap_translator = require("autocap_translator")
 
 -- 日期时间，可在方案中配置触发关键字。
 date_translator = require("date_translator")

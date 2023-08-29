@@ -54,6 +54,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - table_translator@english  # 中英文混输时载入取名为english的英文码表
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
     - lua_translator@number_translator  # 数字、金额大写
+    # - lua_translator@autocap_translator  # 数字、金额大写
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
   filters:  # 四、這批組件過濾翻譯的結果
     - simplifier@emoji  # Emoji
