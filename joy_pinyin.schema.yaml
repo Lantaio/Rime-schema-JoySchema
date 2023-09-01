@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: 欢喜拼音
-  version: "2023.8.20"
+  version: "2023.8.31"
   author:
     - 迷思 (lantaio@yeah.net)
   description: |
@@ -25,18 +25,18 @@ switches:
     reset: 1  # 重置为简体字输入模式
     states: [ 繁體, 简体 ]
   - name: emoji
-    states: [ 💜, ❤ ]  # 禁用 / 启用
+    states: [ 🖤, ❤ ]  # 禁用 / 启用
   - name: ascii_punct
     reset: 0  # 重置为中文标点模式
-    states: [ 。，, ．， ]
+    states: [ ￥, $ ]
 
 engine:  # 輸入引擎設定，即掛接組件的「處方」
   processors:  # 一、這批組件處理各類按鍵消息
     - ascii_composer  # 處理英文模式及中英文切換
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
+    - lua_processor@select_character  # 用'['和']'来以词定字
     - speller  # 拼寫處理器，接受字符按鍵，編輯輸入碼
-    - lua_processor@select_character  # 以词定字
     - punctuator  # 句讀處理器，將單個字符按鍵直接映射爲文字符號
     - selector  # 選字處理器，處理數字選字鍵、上、下候選定位、換頁鍵
     - navigator  # 處理輸入欄內的光標移動鍵
@@ -49,17 +49,17 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
     - punct_translator  # 轉換標點符號
-    - lua_translator@date_translator  # 时间、日期、星期，依赖rime.lua文件。
-    - table_translator@custom_phrase
-    - table_translator@english  # 中英文混输时载入取名为english的英文码表
+    - lua_translator@date_translator  # 时间、日期、星期，调用lua目录对应程序
+    - table_translator@custom_phrase  # 自定义词典，配合词典优先级实现常用字固顶功能
+    - lua_translator@number_translator  # 大写数字、金额翻译器，调用lua目录对应程序
+    # - lua_translator@autocap_translator  # 大写英文翻译器，调用lua目录对应程序
+    - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
-    - lua_translator@number_translator  # 数字、金额大写
-    # - lua_translator@autocap_translator  # 数字、金额大写
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
   filters:  # 四、這批組件過濾翻譯的結果
-    - simplifier@emoji  # Emoji
+    - simplifier@emoji  # Emoji过滤器
     - simplifier  # 繁簡轉換（必需）
-    # - lua_filter@autocap_filter  # 英文自动大写
+    # - lua_filter@autocap_filter  # 大写英文过滤器
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換（必需）
 
 speller:
@@ -99,12 +99,12 @@ emoji:
   tips: none
   inherit_comment: false
 
-english:  # 中英文混输时英文码表设置项
+english:  # 中英文混输的英文词典设置项
   dictionary: joy_en
   user_dict: joy_en
   db_class: userdb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
   spelling_hints: 9
-  enable_completion: true  # 是否启用补全提示，此处开启后英文候选的位置更合理
+  enable_completion: true  # 是否启用补全提示（开启后英文候选的位置更合理）
   enable_encoder: false  #是否自动造词
   enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
   enable_user_dict: true  # 是否开启用户词典，以记录动态字频和用户词词频
@@ -130,11 +130,11 @@ punctuator:
 key_binder:
   import_preset: default
   # Lua 配置: 以词定字（上屏当前候选项的第一个或最后一个字），和中括号翻页有冲突
-  select_first_character: "bracketleft"  # 左中括号 [
-  select_last_character: "bracketright"  # 右中括号 ]
+  select_first_character: "bracketleft"  # 以词定字，用'['键选择第1个字
+  select_last_character: "bracketright"  # 以词定字，用']'键选择最后1个字
 
 recognizer:
   import_preset: default
   patterns:
-    number: "^D[0-9]+[.]?[0-9]*"  # 'D'开头触发数字、金额大写的正则表达式
+    number: "^N[0-9]+[.]?[0-9]*"  # 'N'开头触发大写数字、金额的正则表达式
     reverse_lookup: "~[a-z]*'?$"  # '~'开头触发笔画反查的正则表达式
