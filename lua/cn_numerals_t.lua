@@ -94,8 +94,8 @@ local function number2zh(num,t)
 	return result:gsub(wordFigure[1] .. wordFigure[1],wordFigure[1])
 end
 
-local function number_translatorFunc(num)
-	local numberPart=splitNumPart(num)
+local function number_translatorFunc(str)
+	local numberPart=splitNumPart(str)
 	local result={}
 	if numberPart.dot~="" then
 		table.insert(result,{number2cnChar(numberPart.int,0,{"万", "亿"},{"〇","一","十","点"})..number2zh(numberPart.dec,0),"〔数字小写〕"})
@@ -109,19 +109,19 @@ local function number_translatorFunc(num)
 	return result
 end
 
--- 触发模式为任意大写字母（除了 U，U 用在 Unicode 了）开头，可在 recognizer/patterns 中自定义
-local function number_translator(input, seg)
-    local str, num, numberPart
-    if string.match(input, "^([A-TV-Z]+%d+)(%.?)(%d*)$") ~= nil then
-        str = string.gsub(input, "^(%a+)", "")
-        numberPart = number_translatorFunc(str)
-        if #numberPart > 0 then
-            for i = 1, #numberPart do
-                yield(Candidate(input, seg.start, seg._end, numberPart[i][1], numberPart[i][2]))
-            end
-        end
-    end
+-- 触发模式为任意大写字母开头，可在 recognizer/patterns 中自定义
+local function cn_numerals_t(input, seg)
+	local str, num, numberPart
+	if string.match(input, "^([A-Z]+%d+)(%.?)(%d*)$") ~= nil then
+		str = string.gsub(input, "^(%a+)", "")
+		numberPart = number_translatorFunc(str)
+		if #numberPart > 0 then
+			for i = 1, #numberPart do
+				yield(Candidate(input, seg.start, seg._end, numberPart[i][1], numberPart[i][2]))
+			end
+		end
+	end
 end
 
 -- print(#number_translatorFunc(3355.433))
-return number_translator
+return cn_numerals_t

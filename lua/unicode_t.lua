@@ -1,7 +1,7 @@
 -- Unicode
 -- 示例：输入 U62fc 得到「拼」
 -- 复制自： https://github.com/shewer/librime-lua-script/blob/main/lua/component/unicode.lua
-local function unicode(input, seg, env)
+local function unicode_t(input, seg, env)
 	local ucodestr = seg:has_tag("unicode") and input:match("U(%x+)")
 	if ucodestr and #ucodestr > 1 then
 		local code = tonumber(ucodestr, 16)
@@ -16,4 +16,4 @@ local function unicode(input, seg, env)
 	end
 end
 
-return unicode
+return unicode_t

@@ -8,7 +8,7 @@
 
 	大写时无法动态调整词频
 --]]
-local function autocap_filter(input, env)
+local function cap_en_f(input, env)
 	local code = env.engine.context.input -- 输入码
 	local codeLen = #code
 	local codeAllUCase = false
@@ -59,4 +59,4 @@ local function autocap_filter(input, env)
 	end
 end
 
-return autocap_filter
+return cap_en_f
