@@ -5,7 +5,7 @@
 schema:
   schema_id: joy_en
   name: Joy English
-  version: "2023.8.20"
+  version: "2023.9.8"
   author:
     - Lantaio (lantaio@yeah.net)
   description: |
@@ -38,19 +38,44 @@ engine:
   translators:
     - punct_translator
     - table_translator
+    # - lua_translator@*cap_en_t  # 大写英文翻译器，调用lua目录对应程序
   filters:
-    # - lua_filter@autocap_filter  # 英文自动大写
+    - lua_filter@*cap_en_f  # 大写英文过滤器
     - uniquifier
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"
+  algebra:
+    __include: capital_algebra
+
+capital_algebra:  # 派生出首字母大写或全部大写英文的规则
+  # 派生无任何非字母数字字符的拼写
+  - derive/[^a-zA-Z0-9]//
+  # 禁用非英文、数字开头的编码
+  - erase/^[\W|_].+$/
+  # 全小写
+  - derive/^.+$/\L$0/
+  # 全大写
+  - derive/^.+$/\U$0/
+  # 首字母大写
+  - derive/^./\U$0/
+  # 前 2~10 个字母大写
+  - derive/^([a-z]{2})/\U$1/
+  - derive/^([a-z]{3})/\U$1/
+  - derive/^([a-z]{4})/\U$1/
+  - derive/^([a-z]{5})/\U$1/
+  # - derive/^([a-z]{6})/\U$1/
+  # - derive/^([a-z]{7})/\U$1/
+  # - derive/^([a-z]{8})/\U$1/
+  # - derive/^([a-z]{9})/\U$1/
+  # - derive/^([a-z]{10})/\U$1/
 
 translator:
   dictionary: joy_en
   prism: joy_en
   spelling_hints: 9
-  comment_format:  # 自定义提示码
+  # comment_format:  # 自定义提示码
     # - xform/.*//  # 清空提示码
 
 key_binder:
