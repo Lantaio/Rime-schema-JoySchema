@@ -35,7 +35,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - ascii_composer  # 處理英文模式及中英文切換
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
-    - lua_processor@select_character  # 用'['和']'来以词定字
+    - lua_processor@*select_character_p  # 用'['和']'来以词定字
     - speller  # 拼寫處理器，接受字符按鍵，編輯輸入碼
     - punctuator  # 句讀處理器，將單個字符按鍵直接映射爲文字符號
     - selector  # 選字處理器，處理數字選字鍵、上、下候選定位、換頁鍵
@@ -49,17 +49,17 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
     - punct_translator  # 轉換標點符號
-    - lua_translator@date_translator  # 时间、日期、星期，调用lua目录对应程序
     - table_translator@custom_phrase  # 自定义词典，配合词典优先级实现常用字固顶功能
-    - lua_translator@number_translator  # 大写数字、金额翻译器，调用lua目录对应程序
-    # - lua_translator@autocap_translator  # 大写英文翻译器，调用lua目录对应程序
+    - lua_translator@*date_t  # 时间、日期、星期，调用lua目录对应程序
+    - lua_translator@*cn_numerals_t  # 大写数字、金额翻译器，调用lua目录对应程序
     - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
+    # - lua_translator@*cap_en_t  # 大写英文翻译器，调用lua目录对应程序
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
   filters:  # 四、這批組件過濾翻譯的結果
     - simplifier@emoji  # Emoji过滤器
     - simplifier  # 繁簡轉換（必需）
-    # - lua_filter@autocap_filter  # 大写英文过滤器
+    - lua_filter@*cap_en_f  # 大写英文过滤器
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換（必需）
 
 speller:
@@ -112,7 +112,7 @@ english:  # 中英文混输的英文词典设置项
   comment_format:  # 自定义提示码
     - xform/.*//  # 清空提示码
 
-reverse_lookup:  # 反查
+reverse_lookup:  # 笔画反查拼音
   dictionary: stroke
   enable_completion: true
   prefix: "~"
