@@ -5,9 +5,9 @@
 
 config_version: '1.6'
 
-patch:
-  punctuator/import_preset: symbols
-  recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$'  # '^'表示“开头”，'/'即表示“以/号开头”，可改为其它符号
+# patch:
+#   punctuator/import_preset: symbols
+#   recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$'  # '^'表示“开头”，'/'即表示“以/号开头”，可改为其它符号
 
 punctuator:
   full_shape:
@@ -44,7 +44,7 @@ punctuator:
     ';xz': [ ♈, ♉, ♊, ♋, ♌, ♍, ♎, ♏, ♐, ♑, ♒, ♓ ]
     ';xzm': [ 白羊座, 金牛座, 雙子座, 巨蟹座, 獅子座, 室女座, 天秤座, 天蠍座, 人馬座, 摩羯座, 寶瓶座, 雙魚座 ]
     ';seg': [ 白羊宮, 金牛宮, 雙子宮, 巨蟹宮, 獅子宮, 室女宮, 天秤宮, 天蠍宮, 人馬宮, 摩羯宮, 寶瓶宮, 雙魚宮 ]
-# 星號
+# 星號、雪花
     ';xh': [ ✱, ✲, ❆, ❅, ❋, ❊, ✼, ✻, ❄, ✡, ❇, ✴, ✳, ✥, ✣, ✢ ]
 # 五角星
     ';wjx': [ ★, ☆, ✦, ✧, ✪, ✩, ✰, ✯, ✮, ✭, ✬, ✫, ⛤, ⛥, ⛦, ⛧ ]
