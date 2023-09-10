@@ -1,0 +1,382 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# Pinyin Extended Dictionary(GuangFo subway station) - 明月拼音廣佛地鐵站擴充詞庫
+#
+#   迷思 <lantaio@yeah.net>
+#
+# 部署位置：
+# ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+#
+# 重新部署後生效
+#
+
+---
+name: pinyin_guangfosubway
+version: "2023.9.11"
+sort: original
+use_preset_vocabulary: false
+...
+
+白江	bai jiang
+白馬崗	bai ma gang
+白雲城市中心	bai yun cheng shi zhong xin
+白雲大道北	bai yun da dao bei
+白雲東平	bai yun dong ping
+白雲公園	bai yun gong yuan
+白雲文化廣場	bai yun wen hua guang chang
+白雲站	bai yun zhan
+板橋	ban qiao
+寶崗大道	bao gang da dao
+保盈大道	bao ying da dao
+北滘新城	bei jiao xin cheng
+北京路	bei jing lu
+濱江東路	bin jiang dong lu
+彩虹橋	cai hong qiao
+倉邊路	cang bian lu
+槎頭	cha tou
+長湴	chang ban
+昌崗	chang gang
+長平	chang ping
+長壽路	chang shou lu
+長洲	chang zhou
+朝安	chao an
+車陂	che bei
+車陂南	che bei nan
+陳村	chen cun
+陳村北	chen cun bei
+陳村新城	chen cun xin cheng
+陳家祠	chen jia ci
+陳頭崗	chen tou gang
+赤草	chi cao
+赤崗	chi gang
+赤沙	chi sha
+赤沙滘	chi sha jiao
+創意園	chuang yi yuan
+從化客運站	cong hua ke yun zhan
+大幹圍	da gan wei
+大觀南路	da guan nan lu
+大金鐘	da jin zhong
+大劇院	da ju yuan
+大沙地	da sha di
+大沙東	da sha dong
+大石	da shi
+大塘	da tang
+大學城北	da xue cheng bei
+大學城南	da xue cheng nan
+大涌	da yong
+登洲	deng zhou
+低湧	di yong
+東風	dong feng
+東湖	dong hu
+東平	dong ping
+東圃	dong pu
+東沙	dong sha
+東山口	dong shan kou
+動物園	dong wu yuan
+東曉南	dong xiao nan
+東涌	dong yong
+鵝掌坦	e zhang tan
+二沙島	er sha dao
+芳村	fang cun
+芳村大道東	fang cun da dao dong
+方石	fang shi
+飛鵝嶺	fei e ling
+飛沙角	fei sha jiao
+飛翔公園	fei xiang gong yuan
+鳳崗	feng gang
+鳳凰南路	feng huang nan lu
+鳳凰新村	feng huang xin cun
+楓下	feng xia
+婦兒中心	fu er zhong xin
+崗貝	gang bei
+崗頂	gang ding
+高塘石	gao tang shi
+高增	gao zeng
+公園前	gong yuan qian
+官湖	guan hu
+官洲	guan zhou
+廣鋼新城	guang gang xin cheng
+廣隆	guang long
+廣園新村	guang yuan xin cun
+廣州北站	guang zhou bei zhan
+廣州大道中	guang zhou da dao zhong
+廣州東站	guang zhou dong zhan
+廣州火車站	guang zhou huo che zhan
+廣州開發區	guang zhou kai fa qu
+廣州南站	guang zhou nan zhan
+廣州塔	guang zhou ta
+廣州新城西	guang zhou xin cheng xi
+桂城	gui cheng
+海傍	hai bang
+海心沙	hai xin sha
+海珠廣場	hai zhu guang chang
+漢溪長隆	han xi chang long
+鶴洞	he dong
+鶴洞東	he dong dong
+鶴南	he nan
+河沙	he sha
+何棠下	he tang xia
+恆福路	heng fu lu
+橫瀝	heng li
+橫沙	heng sha
+洪聖沙	hong sheng sha
+紅衛	hong wei
+湖湧	hu yong
+花城大道	hua cheng da dao
+花城廣場北	hua cheng guang chang bei
+花城街	hua cheng jie
+花城路	hua cheng lu
+花地灣	hua di wan
+花都廣場	hua du guang chang
+花都汽車城	hua du qi che cheng
+花果山公園	hua guo shan gong yuan
+花卉世界	hua hui shi jie
+華景路	hua jing lu
+華林寺	hua lin si
+華師	hua shi
+黃邊	huang bian
+黃村	huang cun
+凰崗	huang gang
+黃閣	huang ge
+黃閣汽車城	huang ge qi che cheng
+黃花崗	huang hua gang
+黃陂	huang pi
+黃埔大道	huang pu da dao
+黃埔客運港	huang pu ke yun gang
+黃沙	huang sha
+會江	hui jiang
+機場北	ji chang bei
+機場東	ji chang dong
+機場南	ji chang nan
+季華園	ji hua yuan
+紀念堂	ji nian tang
+姬堂	ji tang
+嘉禾望崗	jia he wang gang
+加莊	jia zhuang
+建設六馬路	jian she liu ma lu
+江南西	jiang nan xi
+江泰路	jiang tai lu
+江夏	jiang xia
+滘口	jiao kou
+蕉門	jiao men
+滘心	jiao xin
+金峯	jin feng
+金光大道	jin guang da dao
+金坑	jin keng
+金融高新區	jin rong gao xin qu
+金洲	jin zhou
+京溪路	jing xi lu
+京溪南方醫院	jing xi nan fang yi yuan
+景雲路	jing yun lu
+聚龍	ju long
+菊樹	ju shu
+客村	ke cun
+科豐路	ke feng lu
+柯木塱	ke mu lang
+科學城	ke xue cheng
+科韻路	ke yun lu
+坑貝	keng bei
+坑口	keng kou
+魁奇路	kui qi lu
+瀾石	lan shi
+樂嘉路	le jia lu
+礌崗	lei gang
+裏橫路	li heng lu
+瀝滘	li jiao
+蓮塘	lian tang
+獵德	lie de
+烈士陵園	lie shi ling yuan
+林和西	lin he xi
+林頭	lin tou
+林嶽東	lin yue dong
+林嶽西	lin yue xi
+嶺南廣場	ling nan guang chang
+流花路	liu hua lu
+龍洞	long dong
+龍歸	long gui
+龍潭	long tan
+龍溪	long xi
+鷺江	lu jiang
+侖頭	lun tou
+羅衝圍	luo chong wei
+蘿崗	luo gang
+洛溪	luo xi
+綠島湖	lv dao hu
+馬鞍山公園	ma an shan gong yuan
+馬場	ma chang
+馬瀝	ma li
+馬務	ma wu
+美的大道	mei di da dao
+梅東路	mei dong lu
+梅花園	mei hua yuan
+廟頭路	miao tou lu
+磨碟沙	mo die sha
+南村萬博	nan cun wan bo
+南崗	nan gang
+南桂路	nan gui lu
+南海神廟	nan hai shen miao
+南航新村	nan hang xin cun
+南橫	nan heng
+南漖	nan jiao
+南浦	nan pu
+南浦西	nan pu xi
+南沙客運港	nan sha ke yun gang
+南石路	nan shi lu
+南涌	nan yong
+南洲	nan zhou
+南莊	nan zhuang
+農講所	nong jiang suo
+農林下路	nong lin xia lu
+琶洲	pa zhou
+番禺廣場	pan yu guang chang
+番禺客運站	pan yu ke yun zhan
+彭邊	peng bian
+普君北路	pu jun bei lu
+千燈湖	qian deng hu
+清布	qing bu
+慶豐	qing feng
+慶盛	qing sheng
+清塘	qing tang
+區莊	qu zhuang
+人和	ren he
+如意坊	ru yi fang
+三溪	san xi
+三元里	san yuan li
+沙貝	sha bei
+沙村	sha cun
+沙崗	sha gang
+沙河	sha he
+沙河頂	sha he ding
+廈滘	sha jiao
+沙溪	sha xi
+沙湧	sha yong
+沙園	sha yuan
+山田	shan tian
+上步	shang bu
+上湧公園	shang yong gong yuan
+神崗	shen gang
+深井	shen jing
+神舟路	shen zhou lu
+石壁	shi bi
+市二宮	shi er gong
+市廣路	shi guang lu
+世紀蓮	shi ji lian
+石井	shi jing
+石樑	shi liang
+石牌南	shi pai nan
+石牌橋	shi pai qiao
+石碁	shi qi
+市橋	shi qiao
+石潭	shi tan
+石灣	shi wan
+石圍塘	shi wei tang
+石溪	shi xi
+石洲	shi zhou
+署前路	shu qian lu
+雙崗	shuang gang
+水西	shui xi
+水西北	shui xi bei
+寺右新馬路	si you xin ma lu
+松溪	song xi
+蘇元	su yuan
+太和	tai he
+太平	tai ping
+潭村	tan cun
+坦尾	tan wei
+湯村	tang cun
+棠東	tang dong
+塘坑	tang keng
+棠溪	tang xi
+棠下	tang xia
+淘金	tao jin
+體育西路	ti yu xi lu
+體育中心	ti yu zhong xin
+體育中心南	ti yu zhong xin nan
+天河東	tian he dong
+天河公園	tian he gong yuan
+天河客運站	tian he ke yun zhan
+天河路	tian he lu
+天河南	tian he nan
+天河智慧城	tian he zhi hui cheng
+天平架	tian ping jia
+田心村	tian xin cun
+亭崗	ting gang
+同德	tong de
+同福西	tong fu xi
+同和	tong he
+同濟路	tong ji lu
+團一大廣場	tuan yi da guang chang
+灣華	wan hua
+萬頃沙	wan qing sha
+萬勝圍	wan sheng wei
+旺村	wang cun
+韋湧	wei yong
+文衝	wen chong
+文化公園	wen hua gong yuan
+五鳳	wu feng
+五山	wu shan
+五羊邨	wu yang cun
+西場	xi chang
+西村	xi cun
+西塱	xi lang
+西門口	xi men kou
+西洲	xi zhou
+夏良	xia liang
+夏茅	xia mao
+夏園	xia yuan
+冼村	xian cun
+暹崗	xian gang
+仙湧	xian yong
+香雪	xiang xue
+小北	xiao bei
+曉港	xiao gang
+蕭崗	xiao gang
+小金鐘	xiao jin zhong
+小坪	xiao ping
+謝村	xie cun
+新城東	xin cheng dong
+新港東	xin gang dong
+新和	xin he
+新南	xin nan
+新沙	xin sha
+新市墟	xin shi xu
+新塘	xin tang
+新造	xin zao
+潯峯崗	xun feng gang
+燕崗	yan gang
+燕塘	yan tang
+楊箕	yang ji
+一德路	yi de lu
+逸景路	yi jing lu
+永泰	yong tai
+裕豐圍	yu feng wei
+魚珠	yu zhu
+員村	yuan cun
+員崗	yuan gang
+越秀公園	yue xiu gong yuan
+雲臺花園	yun tai hua yuan
+云溪公園	yun xi gong yuan
+增城廣場	zeng cheng guang chang
+張槎	zhang cha
+朝陽	zhao yang
+鎮龍	zhen long
+鎮龍北	zhen long bei
+鎮龍西	zhen long xi
+知識城	zhi shi cheng
+植物園	zhi wu yuan
+鍾村	zhong cun
+中大	zhong da
+中大南門	zhong da nan men
+鍾崗	zhong gang
+鍾落潭	zhong luo tan
+中山八	zhong shan ba
+中新	zhong xin
+朱村	zhu cun
+珠村	zhu cun
+珠江新城	zhu jiang xin cheng
+竹料	zhu liao
+梓元崗	zi yuan gang
+祖廟	zu miao

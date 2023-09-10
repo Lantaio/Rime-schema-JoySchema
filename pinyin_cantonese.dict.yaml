@@ -1,0 +1,415 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# Pinyin Extended Dictionary(cantonese) - 明月拼音粵語擴充詞庫
+#
+#   迷思 <lantaio@yeah.net>
+#
+# 部署位置：
+# ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+#
+# 重新部署後生效
+#
+
+---
+name: pinyin_cantonese
+version: "2023.9.11"
+sort: original
+use_preset_vocabulary: false
+...
+
+吖嘛	a ma
+阿吱阿咗	a zhi a zuo
+嗌交	ai jiao
+巴閉	ba bi
+八卦	ba gua
+巴士	ba shi
+巴喳	ba zha
+白撞	bai zhuang
+幫襯	bang chen
+磅水	bang shui
+爆大鍋	bao da guo
+爆曬棚	bao shai peng
+煲粥	bao zhou
+俾返	bi fan
+鼻哥	bi ge
+鼻哥竉	bi ge long
+弊傢伙	bi jia huo
+俾人坤	bi ren kun
+邊度	bian du
+邊個話噶	bian ge hua ga
+邊有啊	bian you a
+睬你都傻	cai ni dou sha
+嘈交	cao jiao
+嘈冤巴閉	cao yuan ba bi
+茶煲	cha bao
+潮爆	chao bao
+潮人	chao ren
+扯貓尾	che mao wei
+襯到絕	chen dao jue
+癡孖筋	chi ma jin
+黐閪線	chi se xian
+癡線	chi xian
+沖涼	chong liang
+穿窿	chuan long
+吹水	chui shui
+吹水唔抹嘴	chui shui wu mo zui
+蠢到死	chun dao si
+大鍋	da guo
+打喊露	da han lu
+打交	da jiao
+大佬	da lao
+打冷震	da leng zhen
+大肶	da pi
+打牙較	da ya jiao
+氹氹轉	dang dang zhuan
+氹人	dang ren
+到咗未	dao zuo wei
+得啖笑	de dan xiao
+得唔得	de wu de
+得唔得噶	de wu de ga
+得閒	de xian
+等埋	deng mai
+等埋我	deng mai wo
+等唔切	deng wu qie
+等陣	deng zhen
+第日	di ri
+睇唔出	di wu chu
+點解	dian jie
+點算	dian suan
+點知	dian zhi
+爹哋	die di
+疊埋心水	die mai xin shui
+喋曬糖咁款	die shai tang gan kuan
+頂肺	ding fei
+定過抬油	ding guo tai you
+頂你個肺	ding ni ge fei
+頂唔順	ding wu shun
+頂嘴	ding zui
+釘咗	ding zuo
+丟架	diu jia
+呃人	e ren
+奀妹	en mei
+奀挑鬼命	en tiao gui ming
+二打六	er da liu
+二五仔	er wu zai
+發爛咋	fa lan za
+發生咩事	fa sheng mie shi
+返到嚟	fan dao li
+返到未	fan dao wei
+反骨仔	fan gu zai
+返嚟啦	fan li la
+返屋企	fan wu qi
+方死冇人知	fang si mao ren zhi
+狒狒哋	fei fei di
+肥佬	fei lao
+粉腸	fen chang
+瞓覺	fen jiao
+咁	gan
+咁點算	gan dian suan
+咁都得	gan dou de
+咁啱	gan yan
+咁滯	gan zhi
+搞錯	gao cuo
+搞掂	gao dian
+搞乜啊	gao mie a
+嗰度	ge du
+嗰個	ge ge
+個腦生喺屎忽度	ge nao sheng xi shi hu du
+隔夜粥	ge ye zhou
+梗係	geng xi
+孤寒	gu han
+掛住	gua zhu
+憨居	han ju
+好便	hao bian
+好攰	hao gui
+好味	hao wei
+核突	he tu
+話曬	hua shai
+話時話	hua shi hua
+黃朝白晏	huang chao bai yan
+雞咁腳	ji gan jiao
+雞肶	ji pi
+家姐	jia jie
+架喇	jia la
+講咩	jiang mie
+講咩啊	jiang mie a
+冚家產	kan jia chan
+坤人	kun ren
+楋手唔成勢	la shou wu cheng shi
+老細	lao xi
+叻唔切	le wu qie
+冷衫	leng shan
+理得佢	li de qu
+嚟講	li jiang
+嚟啦	li la
+碌葛	lu ge
+落答	luo da
+籮底橙	luo di cheng
+落狗屎	luo gou shi
+落嚟	luo li
+籮柚	luo you
+麻麻地	ma ma di
+媽咪	ma mi
+埋冷	mai leng
+賣剩蔗	mai sheng zhe
+冇得彈	mao de dan
+冇得傾	mao de qing
+冇計	mao ji
+茂裏	mao li
+冇嚟正經	mao li zheng jing
+冇錢	mao qian
+冇曬	mao shai
+冇事	mao shi
+冇問題	mao wen ti
+冇嘢	mao ye
+蒙查查	meng cha cha
+掹掹緊	meng meng jin
+懵盛盛	meng sheng sheng
+咪住	mi zhu
+面珠躉	mian zhu dun
+乜都得	mie dou dei
+咩事	mie shi
+咩嘢	mie ye
+木嘴	mu zui
+呢啲	ne di
+呢度	ne du
+你哋	ni di
+你好嘢	ni hao ye
+你話事	ni hua shi
+你老屎	ni lao shi
+你想點就點	ni xiang dian jiu dian
+唸唸	nian nian
+唸嘢	nian ye
+嬲到爆	niao dao bao
+撲街	pu jie
+蒲頭	pu tou
+企理	qi li
+千祈唔好	qian qi wu hao
+慳錢	qian qian
+傾偈	qing ji
+窮到出汁	qiong dao chu zhi
+窮到窿	qiong dao long
+求祈	qiu qi
+佢哋	qu di
+忍唔住	ren wu zhu
+塞緊車	sai jin che
+傻更更	sha geng geng
+傻佬	sha lao
+傻閪癡癡	sha se chi chi
+曬冷	shai leng
+捨得	she de
+神神哋	shen shen di
+生人唔生膽	sheng ren wu sheng dan
+事但	shi dan
+識得	shi de
+食得啦	shi de la
+蝕底	shi di
+食飯	shi fan
+屎忽	shi hu
+屎忽鬼	shi hu gui
+屎潰	shi kui
+使乜	shi mie
+食咩啊	shi mie a
+駛人唔駛本	shi ren wu shi ben
+食死貓	shi si mao
+食碗麪反碗底	shi wan mian fan wan di
+食唔落	shi wu luo
+使唔使	shi wu shi
+溼滯	shi zhi
+識做	shi zuo
+食咗飯未啊	shi zuo fan wei a
+收嗲	shou dia
+手緊	shou jin
+收皮	shou pi
+閂門	shuan men
+死雞撐飯蓋	si ji cheng fan ge
+死牛一邊頸	si niu yi bian jing
+死蛇爛鱔	si she lan shan
+縮骨	suo gu
+索油	suo you
+騰雞	teng ji
+踢曬腳	ti shai jiao
+聽日	ting ri
+同埋	tong mai
+偷呃拐騙	tou e guai pian
+玩嘢	wan ye
+未得住	wei de zhu
+未返到	wei fan dao
+未有咁快住	wei you gan kuai zhu
+搵工	wen gong
+搵錢	wen qian
+搵人	wen ren
+瘟瘟噔噔	wen wen deng deng
+搵嘢	wen ye
+我哋	wo di
+唔睬你	wu cai ni
+唔得閒	wu de xian
+唔憤氣	wu fen qi
+唔使	wu shi
+唔識	wu shi
+唔系	wu xi
+唔係掛	wu xi gua
+唔信	wu xin
+唔啱	wu yan
+唔啱數	wu yan shu
+唔知想點	wu zhi xiang dian
+唔鐘意	wu zhong yi
+喺邊啊	xi bian a
+噏得就噏	xi de jiu xi
+喺度	xi du
+戲飛	xi fei
+細佬	xi lao
+細妹	xi mei
+係咪	xi mi
+錫錫	xi xi
+呷醋	xia cu
+閒閒哋	xian xian di
+鹹魚翻身	xian yu fan shen
+泄埋	xie mai
+泄曬	xie shai
+新嚟新豬肉	xin li xin zhu rou
+行差搭錯	xing cha da cuo
+型到跌渣	xing dao die zha
+行得未啊	xing de wei a
+行街	xing jie
+墟冚	xu kan
+尋日	xun ri
+尋晚	xun wan
+牙煙	ya yan
+眼瞓	yan fen
+啱瞓醒	yan fen xing
+啱曬	yan shai
+啱先	yan xian
+啱啱	yan yan
+晏驟	yan zhou
+一啲啲	yi di di
+一舊雲	yi jiu yun
+一身蟻	yi shen yi
+意頭	yi tou
+飲到湯	yin dao tang
+硬頸	ying jing
+有冇	you mao
+有冇搞錯	you mao gao cuo
+有排	you pai
+又係喔	you xi wo
+預埋你果份	yu mai ni guo fen
+運桔	yun ju
+運滯	yun zhi
+咋嘛	za ma
+早抖	zao dou
+揸拿	zha na
+揸住	zha zhu
+盞鬼	zhan gui
+着數	zhao shu
+朝早	zhao zao
+着草	zhe cao
+爭咁遠	zheng gan yuan
+仲有	zhong you
+周身唔聚財	zhou shen wu ju cai
+煮飯	zhu fan
+撞到正	zhuang dao zheng
+走雞	zou ji
+走佬	zou lao
+做緊咩	zuo jin mie
+捱更抵夜	ai geng di ye
+擺明車馬	bai ming che ma
+嘈喧巴閉	cao xuan ba bi
+巢咪媽錳	chao mi ma meng
+吹須睩眼	chui xu lu yan
+大安旨意	da an zhi yi
+眈天望地	dan tian wang de
+的起心肝	de qi xin gan
+典牀典席	dian chuang dian xi
+點紅點綠	dian hong dian lv
+刁僑扭擰	diao qiao niu ning
+疊埋心水	die mai xin shui
+定過臺油	ding guo tai you
+督眼督鼻	du yan du bi
+惡屎棱登	e shi leng deng
+肥肥白白	fei fei bai bai
+乾手淨腳	gan shou jing jiao
+搞三搞四	gao san gao si
+隔籬鄰舍	ge li lin she
+狗咬狗骨	gou yao gou gu
+古靈精怪	gu ling jing guai
+鬼五馬六	gui wu ma liu
+滾紅滾綠	gun hong gun lv
+喊苦喊弗	han ku han fu
+行行企企	hang hang qi qi
+好聲好氣	hao sheng hao qi
+好食懶飛	hao shi lan fei
+好衰唔衰	hao shuai wu shuai
+黑古勒特	hei gu le te
+黑口黑麪	hei kou hei mian
+橫風橫雨	heng feng heng yu
+橫街窄巷	heng jie zhai xiang
+話口未完	hua kou wei wan
+雞手鴨腳	ji shou ya jiao
+雞同鴨講	ji tong ya jiang
+雞啄唔斷	ji zhuo wu duan
+夾手夾腳	jia shou jia jiao
+家頭細務	jia tou xi wu
+姐手姐腳	jie shou jie jiao
+九唔搭八	jiu wu da ba
+苦過弟弟	ku guo di di
+苦口苦面	ku kou ku mian
+闊佬懶理	kuo lao lan li
+攬身攬勢	lan shen lan shi
+老貓燒須	lao mao shao xu
+臨急開坑	lin ji kai keng
+臨時臨急	lin shi lin ji
+零星落索	ling xing luo suo
+龍精虎猛	long jing hu meng
+窿窿啦啦	long long la la
+眉精眼企	mei jing yan qi
+面紅面綠	mian hong mian lv
+乜乜物物	mie mie wu wu
+七國咁亂	qi guo gan luan
+氣呵氣喘	qi he qi chuan
+翹埋雙腳	qiao mai shuang jiao
+日光日白	ri guang ri bai
+砂煲兄弟	sha bao xiong di
+沙塵白霍	sha chen bai huo
+霎熟狗頭	sha shu gou tou
+蛇頭鼠眼	she tou shu yan
+神神化化	shen shen hua hua
+身水身汗	shen shui shen han
+生安白造	sheng an bai zao
+失魂落魄	shi hun luo po
+失驚無神	shi jing wu shen
+勢兇夾狼	shi xiong jia lang
+手滕腳震	shou teng jiao zhen
+水過鴨背	shui guo ya bei
+水靜河飛	shui jing he fei
+似模似樣	si mo si yang
+死死地氣	si si di qi
+思思縮縮	si si suo suo
+損手爛腳	sun shou lan jiao
+天時暑熱	tian shi shu re
+貼錯門神	tie cuo men shen
+頭暈身慶	tou yun shen qing
+唔臭米氣	wu chou mi qi
+烏燈黑火	wu deng hei huo
+無端白事	wu duan bai shi
+烏哩單刀	wu li dan dao
+烏哩馬岔	wu li ma cha
+係威係勢	xi wei xi shi
+笑口噬噬	xiao kou shi shi
+心大心細	xin da xin xi
+牙屎黎硒	ya shi li xi
+醃尖聲悶	yan jian sheng men
+眼闊肚窄	yan kuo du zhai
+也文也武	ye wen ye wu
+一手一腳	yi shou yi jiao
+陰聲細氣	yin sheng xi qi
+冤崩爛臭	yuan beng lan chou
+詐顛扮傻	zha dian ban sha
+整古做怪	zheng gu zuo guai
+整色整水	zheng se zheng shui
+知樫識儉	zhi jian shi jian
+豬朋狗友	zhu peng gou you
+走夾唔抖	zou jia wu dou
+阻手阻腳	zu shou zu jiao
