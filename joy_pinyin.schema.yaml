@@ -73,10 +73,11 @@ speller:
 translator:
   dictionary: joy_pinyin  # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
   prism: joy_pinyin
-  packs:
+  packs:  # 扩充词库列表，注释掉某个词库并重新部署即可屏蔽那个词库。
     - pinyin_a_stock  # 中国股票名称词库
     - pinyin_cantonese  # 粤语词库
     - pinyin_guangfosubway  # 广佛地铁站名词库
+    - pinyin_poetry  # 诗词词库
   preedit_format:  # 在候选框显示正确的拼音
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
