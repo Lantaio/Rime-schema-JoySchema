@@ -1,7 +1,7 @@
 # Rime dictionary
 # encoding: utf-8
 #
-# Pinyin Extended Dictionary(Chinese Classical Poetry) - 拼音詩詞擴充詞庫
+# Pinyin Extended Dictionary(Chinese Classical Poetry) - 拼音古詩詞擴充詞庫
 #
 # 项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
 #
@@ -14,7 +14,7 @@
 #
 
 ---
-name: pinyin_poetry
+name: pinyin_gushici
 version: "2023.9.11"
 sort: original
 use_preset_vocabulary: false
