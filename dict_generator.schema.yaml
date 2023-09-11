@@ -1,0 +1,21 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: dict_generator
+  name: 词典生成器
+  version: "2023.9.11"
+  author:
+    - 迷思 (lantaio@yeah.net)
+  description: |
+    此方案仅作为生成词典之用，并非输入法方案。
+    1. 须要选用此方案
+    2. 打开dict_generator.schema.yaml（即此方案代码），按照注释的说明来操作
+    3. 生成完所需的词库之后可以删除build目录中所有dict_generator文件。
+    具体参考
+    https://github.com/rime/home/wiki/DictionaryPack
+
+translator:
+  dictionary: dict_generator  # 2. 注意：每次都须要修改并保存此词库，然后重新部署，才可以触发生成下面的词库！
+  packs:
+    - pinyin_a_stock  # 1. 将此处替换为要处理的词库名称。注意：被处理的词库须要有音节部分，例如：拼音词条须要有对应的拼音。
