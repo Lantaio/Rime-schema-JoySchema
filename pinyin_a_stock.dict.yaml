@@ -1,9 +1,9 @@
 # Rime dictionary
 # encoding: utf-8
 #
-# Pinyin Extended Dictionary(Stock) - 明月拼音股票基金擴充詞庫
+# Pinyin Extended Dictionary(Stock) - 拼音股票基金擴充詞庫
 #
-#   迷思 <lantaio@yeah.net>
+# 项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
 #
 # 部署位置：
 # ~/.config/ibus/rime  (Linux)
