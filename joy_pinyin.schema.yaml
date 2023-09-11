@@ -89,7 +89,7 @@ custom_phrase:
   dictionary: ""
   user_dict: custom_phrase
   db_class: stabledb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
-  enable_completion: false  # 是否开启补全提示
+  enable_completion: false  # 是否开启逐键提示
   enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
   initial_quality: 99  # 此词库的优先级
 
@@ -111,7 +111,7 @@ english:  # 中英文混输的英文词典设置项
   user_dict: joy_en
   db_class: userdb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
   spelling_hints: 9
-  enable_completion: true  # 是否启用补全提示（开启后英文候选的位置更合理）
+  enable_completion: true  # 是否开启逐键提示（开启后英文候选的位置更合理）
   enable_encoder: false  #是否自动造词
   enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
   enable_user_dict: true  # 是否开启用户词典，以记录动态字频和用户词词频
