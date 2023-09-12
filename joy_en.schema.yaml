@@ -73,7 +73,6 @@ capital_algebra:  # 派生出首字母大写或全部大写英文的规则
 
 translator:
   dictionary: joy_en
-  prism: joy_en
   spelling_hints: 9
   # comment_format:  # 自定义提示码
     # - xform/.*//  # 清空提示码
