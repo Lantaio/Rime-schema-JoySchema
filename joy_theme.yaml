@@ -73,29 +73,29 @@ style:  # 此处为完整列表及其缺省值，不要在此修改，看后面j
     round_corner: 4  # 高亮区域圆角；又名 hilited_corner_radius
 
 
-# 以下是一个具体方案
+# 以下是一个具体方案，被weasel.custom.yaml引用。
 # 使用方法：在 weasel.custom.yaml 中添加如下两行：
 # "style/+":
 #   __include: "joy_theme:/joy_style"
 joy_style:
   font_face: "Segoe UI Emoji:1f600, Microsoft YaHei UI"
   font_point: 12
-  label_font_point: 12
+  label_font_point: 11
   comment_font_point: 11
   label_format: "%s."
   paging_on_scroll: true
   layout:
-    max_width: 1000
-    max_height: 600
-    # type: horizontal  # 候选项横向排列，注释此行则为竖向排列
+    max_width: 250
+    max_height: 100
+    type: horizontal  # 候选项横向排列，注释此行则为竖向排列
     border_width: 2
     margin_x: 10
     margin_y: 10
     spacing: 6
-    candidate_spacing: 6
+    candidate_spacing: 8
     hilite_spacing: 3
-    corner_radius: 6
-    round_corner: 6
+    corner_radius: 10
+    round_corner: 10
 
 
 # 全部 color_schemes 选项，点击小狼毫「输入法设定」可以预览皮肤效果
@@ -137,13 +137,17 @@ preset_color_schemes:
     nextpage_color:
     prevpage_color:
 
+# 以下是一个具体方案，被weasel.custom.yaml引用。
+# 使用方法：在 weasel.custom.yaml 中添加如下两行：
+# "preset_color_schemes/+":  # 需要'+'号，表示在原有主题列表的基础上添加新的主题
+#   __include: joy_theme:/preset_color_schemes
   joy_light:
     name: 春光乍喜／Joy Light
     author: Lantaio Joy
     color_format: rgba
     # 默认
-    back_color: 0xF8F5F0  # 背景（浅米色）
-    border_color: 0xC6C6C6  # 边框（浅灰色）
+    back_color: 0xF8F5F0  # 背景（老蕾丝色0xF8F5F0）
+    border_color: 0xDCCCBC  # 边框（棕黄色）
     comment_text_color: 0x989898  # 注释（灰色）
     label_color: 0x33B433  # 标签（青绿色）
     # shadow_color: 0x00000000  # 阴影
