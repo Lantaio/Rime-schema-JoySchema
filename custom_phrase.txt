@@ -27,8 +27,7 @@
 哦	o
 人	r
 是	s
-他	t	2
-她	t	1
+他	t
 我	w
 有	y
 在	z
@@ -36,4 +35,3 @@
 欻	chua
 噷	hm
 叒	yyy
-又双叒叕	yyyy
