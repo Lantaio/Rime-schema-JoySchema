@@ -9,7 +9,6 @@ sync/
 # Files
 # Files containing my personal data.
 installation.yaml
-symbols.custom.yaml
 joy.symbols.custom.yaml
 user.yaml
 # Other files that should not be included in this repository
