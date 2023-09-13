@@ -14,7 +14,7 @@
 #
 
 ---
-name: pinyin_guangfoditie
+name: joy.pinyin_guangfoditie
 version: "2023.9.11"
 sort: original
 use_preset_vocabulary: false

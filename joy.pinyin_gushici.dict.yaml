@@ -14,7 +14,7 @@
 #
 
 ---
-name: pinyin_gushici
+name: joy.pinyin_gushici
 version: "2023.9.11"
 sort: original
 use_preset_vocabulary: false
