@@ -9,16 +9,16 @@
 key_binder:
   bindings:
     __patch:
+      - "joy.keybindings:/paging_with_semicolon_colon"
+      - "joy.keybindings:/select_with_comma_period_slash"
+      - "joy.keybindings:/numbered_mode_switch"
       - "key_bindings:/move_by_word_with_tab"
-      - "key_bindings:/paging_with_semicolon_colon"
-      - "key_bindings:/select_with_comma_period_slash"
-      - "key_bindings:/numbered_mode_switch"
 
 menu:
   page_size: 4  # 候选框的候选项个数
 
 recognizer/patterns/+:
-  punct: '^;([0-9]0?|[A-Za-z]+)$'  # 输入扩展符号的正则表达式
+  punct: "^;([0-9]0?|[A-Za-z]+)$"  # 输入扩展符号的正则表达式
 
 "switcher/caption": "～Rime选项菜单～"
 "switcher/hotkeys":

@@ -5,7 +5,7 @@ customization:
   modified_time: "Mon Sep 11 18:23:21 2023"
   rime_version: 1.8.5
 patch:
-  __include: "default_custom:/"
+  __include: "joy.default:/"
   schema_list:
     - {schema: joy_pinyin}
     - {schema: joy_en}
