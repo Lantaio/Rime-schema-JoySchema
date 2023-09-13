@@ -67,8 +67,8 @@ speller:
   delimiter: " '"  # 第一位"空格"是拼音之间的分隔符；第二位"'"表示可以手动输入单引号来分割拼音。
   algebra:  # 替代规则
     __patch:
-      - pinyin:/abbreviation  # 简拼规则
-      - pinyin:/spelling_correction  # 容错拼写规则
+      - joy.pinyin.algebra:/abbreviation  # 简拼规则
+      - joy.pinyin.algebra:/spelling_correction  # 容错拼写规则
 
 translator:
   dictionary: joy_pinyin  # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
