@@ -2,7 +2,7 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.15.0.0
   generator: "Weasel::UIStyleSettings"
-  modified_time: "Tue Sep 12 17:18:46 2023"
+  modified_time: "Wed Sep 13 22:45:15 2023"
   rime_version: 1.8.5
 patch:
   "preset_color_schemes/+":
