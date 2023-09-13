@@ -11,10 +11,10 @@ config_version: '1.6'
 
 punctuator:
   full_shape:
-    __include: punctuation:/full_shape
+    __include: joy.punctuation:/full_shape
 
   half_shape:
-    __include: punctuation:/half_shape
+    __include: joy.punctuation:/half_shape
 
   symbols:
 #符號、電腦

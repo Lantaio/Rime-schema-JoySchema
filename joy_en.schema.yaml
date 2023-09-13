@@ -82,11 +82,11 @@ key_binder:
 
 punctuator:
   full_shape:
-    __include: punctuation:/full_shape
+    __include: joy.punctuation:/full_shape
   half_shape:
-    __include: punctuation:/ascii_style
+    __include: joy.punctuation:/ascii_style
   symbols:
-    __include: symbols:/punctuator/symbols # 导入扩展符号表
+    __include: joy.symbols:/punctuator/symbols # 导入扩展符号表
 
 recognizer:
   import_preset: default

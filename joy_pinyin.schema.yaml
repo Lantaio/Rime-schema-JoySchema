@@ -132,7 +132,7 @@ reverse_lookup:  # 笔画反查拼音
     - xform/([nl])ue/$1üe/
 
 punctuator:
-  import_preset: symbols  # 导入扩展符号表
+  import_preset: joy.symbols  # 导入扩展符号表
 
 key_binder:
   import_preset: default

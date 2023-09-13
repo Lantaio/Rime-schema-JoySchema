@@ -17,6 +17,12 @@ key_binder:
 menu:
   page_size: 4  # 候选框的候选项个数
 
+punctuator:
+  full_shape:
+    __include: joy.punctuation:/full_shape
+  half_shape:
+    __include: joy.punctuation:/half_shape
+
 recognizer/patterns/+:
   punct: "^;([0-9]0?|[A-Za-z]+)$"  # 输入扩展符号的正则表达式
 
