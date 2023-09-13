@@ -1,7 +1,16 @@
 # Rime dictionary
 # encoding: utf-8
 #
-# 挂载英文输入方案的词库
+# 英文主词库（引入2个轻量级的英文词库）
+#
+# 项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
+#
+# 部署位置：
+# ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+#
+# 於重新部署後生效
 #
 
 ---
