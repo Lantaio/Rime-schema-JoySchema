@@ -6,7 +6,7 @@ customization:
   rime_version: 1.8.5
 patch:
   "preset_color_schemes/+":
-    __include: "joy_theme:/preset_color_schemes"
+    __include: "joy.theme:/preset_color_schemes"
   "style/+":
-    __include: "joy_theme:/joy_style"
+    __include: "joy.theme:/joy_style"
   "style/color_scheme": joy_light

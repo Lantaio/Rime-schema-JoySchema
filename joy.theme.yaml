@@ -6,9 +6,9 @@
 # 目前建议的自定义方法：复制此本文件并修改，之后在 weasel.custom.yaml 用 `__include` 引入。示例 weasel.custom.yaml 如下：
 # patch:
 #   "preset_color_schemes/+":  # 需要'+'号，表示在原有主题列表的基础上添加新的主题
-#     __include: joy_theme:/preset_color_schemes
+#     __include: joy.theme:/preset_color_schemes
 #   "style/+":
-#     __include: joy_theme:/style
+#     __include: joy.theme:/style
 
 
 # 全部 style 选项
@@ -76,7 +76,7 @@ style:  # 此处为完整列表及其缺省值，不要在此修改，看后面j
 # 以下是一个具体方案，被weasel.custom.yaml引用。
 # 使用方法：在 weasel.custom.yaml 中添加如下两行：
 # "style/+":
-#   __include: "joy_theme:/joy_style"
+#   __include: "joy.theme:/joy_style"
 joy_style:
   font_face: "Segoe UI Emoji:1f600, Microsoft YaHei UI"
   font_point: 12
@@ -91,9 +91,9 @@ joy_style:
     border_width: 2
     margin_x: 10
     margin_y: 10
-    spacing: 6
+    # spacing: 8
     candidate_spacing: 8
-    hilite_spacing: 3
+    # hilite_spacing: 3
     corner_radius: 10
     round_corner: 10
 
@@ -140,13 +140,13 @@ preset_color_schemes:
 # 以下是一个具体方案，被weasel.custom.yaml引用。
 # 使用方法：在 weasel.custom.yaml 中添加如下两行：
 # "preset_color_schemes/+":  # 需要'+'号，表示在原有主题列表的基础上添加新的主题
-#   __include: joy_theme:/preset_color_schemes
+#   __include: joy.theme:/preset_color_schemes
   joy_light:
     name: 春光乍喜／Joy Light
     author: Lantaio Joy
     color_format: rgba
     # 默认
-    back_color: 0xF8F5F0  # 背景（老蕾丝色0xF8F5F0）
+    back_color: 0xF8F5F0  # 背景（浅黄桂花色0xF8F5F0）
     border_color: 0xDCCCBC  # 边框（棕黄色）
     comment_text_color: 0x989898  # 注释（灰色）
     label_color: 0x33B433  # 标签（青绿色）
