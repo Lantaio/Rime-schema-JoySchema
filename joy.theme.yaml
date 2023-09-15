@@ -146,7 +146,7 @@ preset_color_schemes:
     author: Lantaio Joy
     color_format: rgba
     # 默认
-    back_color: 0xFAF7F2 # 背景（浅黄色0xF8F5F0）
+    back_color: 0xF9F6F1  # 背景（浅黄色0xF8F5F0）
     border_color: 0xDCCCBC  # 边框（棕黄色）
     comment_text_color: 0x989898  # 注释（灰色）
     label_color: 0x33B433  # 标签（青绿色）
