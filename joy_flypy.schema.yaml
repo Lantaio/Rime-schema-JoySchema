@@ -1,0 +1,204 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: joy_flypy
+  name: 💕欢喜双拼
+  version: "0.18"
+  author:
+    - 双拼方案为小鹤双拼
+    - 迷思 (lantaio@yeah.net) 创作Rime输入方案
+  description: |
+    欢喜小鹤双拼，默认为簡体字输入模式。
+    使用引号和冒号来翻页。
+    使用逗号、句号和斜杠来选择第2、第3和第4个候选项。
+  dependencies:
+    - stroke  # 笔画反查时依赖笔画输入法
+    - joy_en  # 中英文混输时依赖joy_en输入法
+
+switches:
+  - name: ascii_mode
+    reset: 0  # 重置为中文输入模式
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    states: [ 🌙, 🌕 ]  # 半角 / 全角
+  - name: simplification
+    reset: 1  # 重置为简体字输入模式
+    states: [ 繁體, 简体 ]
+  - name: emoji
+    states: [ 🖤, ❤ ]  # 禁用 / 启用
+  - name: ascii_punct
+    reset: 0  # 重置为中文标点模式
+    states: [ ￥, $ ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - lua_processor@*select_character_p  # 用'['和']'来以词定字
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@custom_phrase  # 自定义词典，配合词典优先级实现常用字固顶功能
+    - lua_translator@*date_t  # 时间、日期、星期，调用lua目录对应程序
+    - lua_translator@*cn_numerals_t  # 大写数字、金额翻译器，调用lua目录对应程序
+    - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
+    - reverse_lookup_translator
+    - script_translator
+  filters:
+    - simplifier@emoji  # Emoji过滤器
+    - simplifier
+    - lua_filter@*cap_en_f  # 大写英文过滤器
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  delimiter: " '"
+  algebra:  # 替代规则
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe])([ioun])$/$1$1$2/
+    - xform/^([aoe])(ng)?$/$1$1$2/
+    - xform/iu$/Q/
+    - xform/(.)ei$/$1W/
+    - xform/uan$/R/
+    - xform/[uv]e$/T/
+    - xform/un$/Y/
+    - xform/^sh/U/
+    - xform/^ch/I/
+    - xform/^zh/V/
+    - xform/uo$/O/
+    - xform/ie$/P/
+    - xform/i?ong$/S/
+    - xform/ing$|uai$/K/
+    - xform/(.)ai$/$1D/
+    - xform/(.)en$/$1F/
+    - xform/(.)eng$/$1G/
+    - xform/[iu]ang$/L/
+    - xform/(.)ang$/$1H/
+    - xform/ian$/M/
+    - xform/(.)an$/$1J/
+    - xform/(.)ou$/$1Z/
+    - xform/[iu]a$/X/
+    - xform/iao$/N/
+    - xform/(.)ao$/$1C/
+    - xform/ui$/V/
+    - xform/in$/B/
+    - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
+    #- abbrev/^(.).+$/$1/
+
+translator:
+  dictionary: luna_pinyin # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
+  prism: joy_flypy
+  packs:  # 扩充词库列表，注释掉某个词库并重新部署即可屏蔽那个词库。
+    - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
+    - joy.pinyin_yueyu  # 粤语词库
+    - joy.pinyin_gushici  # 古诗词词库
+    - joy.pinyin_guangfoditie  # 广佛地铁站名词库
+    # - joy.pinyin_foshan  # 佛山城市信息词库
+    # - joy.pinyin_guangzhou  # 广州城市信息词库
+  preedit_format:  # 在候选框显示正确的拼音
+    - xform/([bpmfdtnljqx])n/$1iao/
+    - xform/(\w)g/$1eng/
+    - xform/(\w)q/$1iu/
+    - xform/(\w)w/$1ei/
+    - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
+    - xform/(\w)t/$1ve/
+    - xform/(\w)y/$1un/
+    - xform/([dtnlgkhvuirzcs])o/$1uo/
+    - xform/(\w)p/$1ie/
+    - xform/([jqx])s/$1iong/
+    - xform/(\w)s/$1ong/
+    - xform/(\w)d/$1ai/
+    - xform/(\w)f/$1en/
+    - xform/(\w)h/$1ang/
+    - xform/(\w)j/$1an/
+    - xform/([gkhvuirzcs])k/$1uai/
+    - xform/(\w)k/$1ing/
+    - xform/([jqxnl])l/$1iang/
+    - xform/(\w)l/$1uang/
+    - xform/(\w)z/$1ou/
+    - xform/([gkhvuirzcs])x/$1ua/
+    - xform/(\w)x/$1ia/
+    - xform/(\w)c/$1ao/
+    - xform/([dtgkhvuirzcs])v/$1ui/
+    - xform/(\w)b/$1in/
+    - xform/(\w)m/$1ian/
+    - xform/([aoe])\1(\w)/$1$2/
+    - "xform/(^|[ '])v/$1zh/"
+    - "xform/(^|[ '])i/$1ch/"
+    - "xform/(^|[ '])u/$1sh/"
+    - xform/([jqxy])v/$1u/
+    - xform/([nl])v/$1ü/
+
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
+  enable_completion: false  # 是否开启逐键提示
+  enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
+  initial_quality: 2  # 此词库的优先级
+
+date_translator:  # Lua 配置: 日期、时间、星期、ISO 8601、时间戳的触发关键字
+  date: rq  # 日期： 2022-11-29
+  time: sj  # 时间： 18:13
+  week: xq  # 星期： 星期二
+  datetime: dt  # ISO 8601： 2022-11-29T18:13:11+08:00
+  timestamp: ts  # 时间戳： 1669716794
+
+emoji:
+  opencc_config: emoji.json
+  option_name: emoji
+  tips: none
+  inherit_comment: false
+
+english:  # 中英文混输的英文词典设置项
+  dictionary: joy_en
+  user_dict: joy_en
+  db_class: userdb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
+  spelling_hints: 9
+  enable_completion: true  # 是否开启逐键提示（开启后英文候选的位置更合理）
+  enable_encoder: false  #是否自动造词
+  enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
+  enable_user_dict: true  # 是否开启用户词典，以记录动态字频和用户词词频
+  initial_quality: -1
+  comment_format:  # 自定义提示码
+    - xform/.*//  # 清空提示码
+
+reverse_lookup:
+  dictionary: stroke
+  enable_completion: true
+  prefix: "~"
+  suffix: "'"
+  tips: 〔笔画〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+  comment_format:  # 提示码显示正确的拼音
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/  # 此项是我添加的
+
+punctuator:
+  import_preset: joy.symbols # 导入扩展符号表
+
+key_binder:
+  import_preset: default
+  # Lua 配置: 以词定字（上屏当前候选项的第一个或最后一个字），和中括号翻页有冲突
+  select_first_character: "bracketleft"  # 以词定字，用'['键选择第1个字
+  select_last_character: "bracketright"  # 以词定字，用']'键选择最后1个字
+
+recognizer:
+  import_preset: default
+  patterns:
+    number: "^N[0-9]+[.]?[0-9]*"  # 'N'开头触发大写数字、金额的正则表达式
+    reverse_lookup: "~[a-z]*'?$" # 触发笔画反查的正则表达式
