@@ -53,7 +53,6 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - lua_translator@*date_t  # 时间、日期、星期，调用lua目录对应程序
     - lua_translator@*cn_numerals_t  # 大写数字、金额翻译器，调用lua目录对应程序
     - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
-    # - lua_translator@*cap_en_t  # 大写英文翻译器，调用lua目录对应程序
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
   filters:  # 四、這批組件過濾翻譯的結果
@@ -127,9 +126,9 @@ reverse_lookup:  # 笔画反查拼音
   tips: 〔笔画〕
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
-  comment_format:
+  comment_format:  # 提示码显示正确的拼音
     - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
+    - xform/([nl])ue/$1üe/  # 此项是我添加的
 
 punctuator:
   import_preset: joy.symbols  # 导入扩展符号表
