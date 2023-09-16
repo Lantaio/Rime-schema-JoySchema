@@ -131,7 +131,7 @@ reverse_lookup:  # 笔画反查拼音
     - xform/([nl])ue/$1üe/  # 此项是我添加的
 
 punctuator:
-  import_preset: joy.symbols  # 导入扩展符号表
+  import_preset: default
 
 key_binder:
   import_preset: default
