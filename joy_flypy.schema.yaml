@@ -201,4 +201,4 @@ recognizer:
   import_preset: default
   patterns:
     number: "^N[0-9]+[.]?[0-9]*"  # 'N'开头触发大写数字、金额的正则表达式
-    reverse_lookup: "~[a-z]*'?$" # 触发笔画反查的正则表达式
+    reverse_lookup: "~[a-z]*'?$" # '~'开头触发笔画反查的正则表达式
