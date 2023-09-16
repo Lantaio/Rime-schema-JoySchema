@@ -101,13 +101,13 @@ speller:
 translator:
   dictionary: luna_pinyin # 指示此输入方案使用自定制词库。注释此行则使用默认词库。
   prism: joy_flypy
-  packs:  # 扩充词库列表，注释掉某个词库并重新部署即可屏蔽那个词库。
-    - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
-    - joy.pinyin_yueyu  # 粤语词库
-    - joy.pinyin_gushici  # 古诗词词库
-    - joy.pinyin_guangfoditie  # 广佛地铁站名词库
-    # - joy.pinyin_foshan  # 佛山城市信息词库
-    # - joy.pinyin_guangzhou  # 广州城市信息词库
+  # packs:  # 扩充词库列表，注释掉某个词库并重新部署即可屏蔽那个词库。
+  #   - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
+  #   - joy.pinyin_yueyu  # 粤语词库
+  #   - joy.pinyin_gushici  # 古诗词词库
+  #   - joy.pinyin_guangfoditie  # 广佛地铁站名词库
+  #   - joy.pinyin_foshan  # 佛山城市信息词库
+  #   - joy.pinyin_guangzhou  # 广州城市信息词库
   preedit_format:  # 在候选框显示正确的拼音
     - xform/([bpmfdtnljqx])n/$1iao/
     - xform/(\w)g/$1eng/
