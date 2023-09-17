@@ -12,6 +12,7 @@ schema:
     欢喜小鹤双拼，默认为簡体字输入模式。
     使用引号和冒号来翻页。
     使用逗号、句号和斜杠来选择第2、第3和第4个候选项。
+    项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
   dependencies:
     - stroke  # 笔画反查时依赖笔画输入法
     - joy_en  # 中英文混输时依赖joy_en输入法
