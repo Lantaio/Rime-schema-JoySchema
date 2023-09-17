@@ -176,7 +176,7 @@ english:  # 中英文混输的英文词典设置项
   comment_format:  # 自定义提示码
     - xform/.*//  # 清空提示码
 
-reverse_lookup:
+reverse_lookup:  # 笔画反查拼音
   dictionary: stroke
   enable_completion: true
   prefix: "~"
