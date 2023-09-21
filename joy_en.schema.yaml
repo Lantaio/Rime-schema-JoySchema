@@ -38,7 +38,6 @@ engine:
   translators:
     - punct_translator
     - table_translator
-    # - lua_translator@*cap_en_t  # 大写英文翻译器，调用lua目录对应程序
   filters:
     - lua_filter@*cap_en_f  # 大写英文过滤器
     - uniquifier
