@@ -9,4 +9,3 @@ use_preset_vocabulary: false
 import_tables:
   - joy_pinyin
 ...
-
