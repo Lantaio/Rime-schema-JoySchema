@@ -39,7 +39,7 @@
 #
 
 ---
-name: pinyin.poetry
+name: pinyin_poetry
 version: "2013.11.21"
 sort: by_weight
 use_preset_vocabulary: false

@@ -19,7 +19,7 @@
 #
 
 ---
-name: pinyin.hanyu
+name: pinyin_hanyu
 version: "2013.11.01"
 sort: by_weight
 use_preset_vocabulary: false
