@@ -145,11 +145,11 @@ translator:
 
 custom_phrase:
   dictionary: ""
-  user_dict: custom_phrase
+  user_dict: joy_custom_phrase
   db_class: stabledb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
   enable_completion: false  # 是否开启逐键提示
   enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
-  initial_quality: 2  # 此词库的优先级
+  initial_quality: 20  # 此词库的优先级
 
 date_translator:  # Lua 配置: 日期、时间、星期、ISO 8601、时间戳的触发关键字
   date: rq  # 日期： 2022-11-29
