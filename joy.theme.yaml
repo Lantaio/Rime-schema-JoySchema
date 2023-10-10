@@ -82,7 +82,6 @@ joy_style:
   font_point: 12
   label_font_point: 11
   comment_font_point: 11
-  label_format: "%s."
   paging_on_scroll: true
   layout:
     max_width: 250
