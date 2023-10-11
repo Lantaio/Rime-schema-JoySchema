@@ -4,7 +4,7 @@
 schema:
   schema_id: dict_generator
   name: 词典生成器
-  version: "2023.9.11"
+  version: "2023.10.11"
   author:
     - 迷思 (lantaio@yeah.net)
   description: |
