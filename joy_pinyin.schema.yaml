@@ -4,17 +4,17 @@
 schema:
   schema_id: joy_pinyin
   name: 😍欢喜拼音
-  version: "2023.10.11"
+  version: "2023.10.15"
   author:
     - 迷思 (lantaio@yeah.net)
   description: |
     欢喜拼音，默认为簡体字输入模式。
-    使用引号和冒号来翻页。
-    使用逗号、句号和斜杠来选择第2、第3和第4个候选项。
+    使用句号和大于号来翻页。
+    使用逗号、引号和斜杠来选择第2、第3和第4个候选项。
     项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
   dependencies:
-    - stroke  # 笔画反查时依赖笔画输入法
     - joy_en  # 中英文混输时依赖joy_en输入法
+    - stroke  # 笔画反查时依赖笔画输入法
 
 switches:
   - name: ascii_mode
@@ -50,7 +50,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
     - punct_translator  # 轉換標點符號
-    - table_translator@custom_phrase  # 自定义词典，配合词典优先级实现常用字固顶功能
+    - table_translator@custom_phrase  # 自定义词典，用词典优先级实现常用字固顶功能
     - lua_translator@*date_t  # 时间、日期、星期，调用lua目录对应程序
     - lua_translator@*cn_numerals_t  # 大写数字、金额翻译器，调用lua目录对应程序
     - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
@@ -74,10 +74,11 @@ translator:
   dictionary: luna_pinyin  # 指示此输入方案使用默认词库。
   prism: joy_pinyin
   packs:  # 扩充词库列表，注释掉某个词库并重新部署即可屏蔽那个词库。
-    - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
+    - joy.pinyin_cn_en  # 中英混合词库
     - joy.pinyin_yueyu  # 粤语词库
-    - joy.pinyin_gushici  # 古诗词词库
     - joy.pinyin_guangfoditie  # 广佛地铁站名词库
+    - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
+    - joy.pinyin_gushici  # 古诗词词库
     - joy.pinyin_foshan  # 佛山城市信息词库
     - joy.pinyin_guangzhou  # 广州城市信息词库
   preedit_format:  # 在候选框显示正确的拼音

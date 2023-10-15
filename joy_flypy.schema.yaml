@@ -4,18 +4,18 @@
 schema:
   schema_id: joy_flypy
   name: 💕欢喜双拼
-  version: "2023.10.11"
+  version: "2023.10.15"
   author:
     - 双拼方案为小鹤双拼
     - 迷思 (lantaio@yeah.net) 创作Rime输入方案
   description: |
     欢喜小鹤双拼，默认为簡体字输入模式。
-    使用引号和冒号来翻页。
-    使用逗号、句号和斜杠来选择第2、第3和第4个候选项。
+    使用句号和大于号来翻页。
+    使用逗号、引号和斜杠来选择第2、第3和第4个候选项。
     项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
   dependencies:
-    - stroke  # 笔画反查时依赖笔画输入法
     - joy_en  # 中英文混输时依赖joy_en输入法
+    - stroke  # 笔画反查时依赖笔画输入法
 
 switches:
   - name: ascii_mode
@@ -103,10 +103,11 @@ translator:
   dictionary: luna_pinyin # 指示此输入方案使用自默认词库。
   prism: joy_flypy
   packs:  # 扩充词库列表，注释掉某个词库并重新部署即可屏蔽那个词库。
-    - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
+    - joy.pinyin_cn_en  # 中英混合词库
     - joy.pinyin_yueyu  # 粤语词库
-    - joy.pinyin_gushici  # 古诗词词库
     - joy.pinyin_guangfoditie  # 广佛地铁站名词库
+    - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
+    - joy.pinyin_gushici  # 古诗词词库
     - joy.pinyin_foshan  # 佛山城市信息词库
     - joy.pinyin_guangzhou  # 广州城市信息词库
   preedit_format:  # 在候选框显示正确的拼音
