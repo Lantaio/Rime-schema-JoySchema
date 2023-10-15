@@ -1,0 +1,83 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# Luna Pinyin Extended Dictionary(Chinese&English) - 明月拼音中英混合擴充詞庫
+#
+# 项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
+#
+# 部署位置：
+# ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+#
+# 於重新部署後生效
+#
+
+---
+name: joy.pinyin_cn_en
+version: "2023.10.13"
+sort: original
+use_preset_vocabulary: false
+...
+
+AA制	a a zhi
+ATM機	a ti men ji
+A片	a pian
+A盤	a pan
+A股	a gu
+B淋巴細胞	bi lin ba xi bao
+B盤	bi pan
+B細胞	bi xi bao
+B股	bi gu
+B超	bi chao
+C盤	ci pan
+C語言	ci yu yan
+D盤	di pan
+E盤	e pan
+F盤	fu pan
+G盤	gu pan
+G點	gu dian
+H盤	hu pan
+H股	hu gu
+J盤	ji pan
+K寶	kei bao
+K歌	kei ge
+K粉	kei fen
+K金	kei jin
+POS機	pi o si ji
+QQ會員	qiu qiu hui yuan
+QQ羣	qiu qiu qun
+QQ號	qiu qiu hao
+QQ號碼	qiu qiu hao ma
+QQ空間	qiu qiu kong jian
+QQ郵箱	qiu qiu you xiang
+Q幣	qiu bi
+T型臺	ti xing tai
+T恤	ti xu
+T恤衫	ti xu shan
+T淋巴細胞	ti lin ba xi bao
+T細胞	ti xi bao
+X光	xi guang
+X刀	xi dao
+X射線	xi she xian
+X染色體	xi ran se ti
+Y染色體	yai ran se ti
+z變換	zi bian huan
+z逆變換	zi ni bian huan
+α射線	a er fa she xian
+α粒子	a er fa li zi
+β射線	bei ta she xian
+β粒子	bei ta li zi
+γ刀	ga ma dao
+γ射線	ga ma she xian
+三K黨	san kei dang
+傻B	sha bi
+卡拉OK	ka la o kei
+哆啦A夢	duo la a meng
+單邊z變換	dan bian zi bian huan
+智能ABC	zhi neng a bi ci
+牛B	niu bi
+裝B	zhuang bi
+逗B	dou bi
+阿Q	a qiu
+阿Q正傳	a qiu zheng zhuan
