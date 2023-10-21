@@ -110,7 +110,7 @@ local function number_translatorFunc(str)
 end
 
 -- 触发模式为任意大写字母开头，可在 recognizer/patterns 中自定义
-local function cn_numerals_t(input, seg)
+local function cn_numerals(input, seg)
 	local str, num, numberPart
 	if string.match(input, "^([A-Z]+%d+)(%.?)(%d*)$") ~= nil then
 		str = string.gsub(input, "^(%a+)", "")
@@ -124,4 +124,4 @@ local function cn_numerals_t(input, seg)
 end
 
 -- print(#number_translatorFunc(3355.433))
-return cn_numerals_t
+return cn_numerals

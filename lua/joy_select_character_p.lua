@@ -44,7 +44,7 @@ local function utf8_sub(s, i, j)
 	end
 end
 
-local function select_character_p(key, env)
+local function select_character(key, env)
 	local engine = env.engine
 	local context = engine.context
 	local commit_text = context:get_commit_text()
@@ -72,4 +72,4 @@ local function select_character_p(key, env)
 	return 2 -- kNoop
 end
 
-return select_character_p
+return select_character

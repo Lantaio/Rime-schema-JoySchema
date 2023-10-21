@@ -8,13 +8,13 @@
 
 	大写时无法动态调整词频
 --]]
-local function cap_en_f(input, env)
+local function cap_en_filter(input, env)
 	local code = env.engine.context.input -- 输入码
 	local codeLen = #code
 	local codeAllUCase = false
 	local codeUCase = false
 	-- 不转换：
-	if codeLen == 1 or       -- 码长为 1
+	if --codeLen == 1 or       -- 码长为 1
 		code:find("^[%l%p]") -- 输入码首位为小写字母或标点
 	then                     -- 输入码不满足条件不判断候选项
 		for cand in input:iter() do
@@ -59,4 +59,4 @@ local function cap_en_f(input, env)
 	end
 end
 
-return cap_en_f
+return cap_en_filter
