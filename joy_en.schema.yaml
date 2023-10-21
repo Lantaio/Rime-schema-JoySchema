@@ -5,13 +5,13 @@
 schema:
   schema_id: joy_en
   name: 😎Joy English
-  version: "2023.9.13"
+  version: "2023.10.18"
   author:
     - Lantaio (lantaio@yeah.net)
   description: |
     An English input schema use a light weight dictionary.
-    Use semicolon and colon for paging.
-    Use comma, period and slash to select the 2, 3 and 4 candidate.
+    Use period and greater for paging.
+    Use comma, semicolon and slash to select the 2, 3 and 4 candidate.
     一个使用轻量级词库的英文输入方案。
 
 switches:
@@ -39,7 +39,7 @@ engine:
     - punct_translator
     - table_translator
   filters:
-    - lua_filter@*cap_en_f  # 大写英文过滤器
+    - lua_filter@*joy_cap_en_f  # 大写英文过滤器
     - uniquifier
 
 speller:
