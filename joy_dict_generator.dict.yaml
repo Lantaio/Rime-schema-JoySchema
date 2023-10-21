@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 ---
-name: dict_generator
+name: joy_dict_generator
 version: '2023.10.13'
 sort: original
 use_preset_vocabulary: false
