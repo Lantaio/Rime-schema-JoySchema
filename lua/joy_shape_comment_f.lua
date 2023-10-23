@@ -1,4 +1,4 @@
-local function comment_filter(input, env)
+local function shape_comment_filter(input, env)
 	for cand in input:iter() do
 		if cand.comment:find("全角") then
 			cand.comment = cand.comment:gsub("〔全角〕", "🌕️")
@@ -9,4 +9,4 @@ local function comment_filter(input, env)
 	end
 end
 
-return comment_filter
+return shape_comment_filter
