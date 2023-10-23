@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: 😍欢喜拼音
-  version: "2023.10.18"
+  version: "2023.10.23"
   author:
     - 迷思 (lantaio@yeah.net)
   description: |
@@ -37,7 +37,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
-    - lua_processor@*joy_period
+    - lua_processor@*joy_period_eraser_p  # 英文句号后跟中文句号时删除前面的英文句号
     - speller  # 拼寫處理器，接受字符按鍵，編輯輸入碼
     - punctuator  # 句讀處理器，將單個字符按鍵直接映射爲文字符號
     - selector  # 選字處理器，處理數字選字鍵、上、下候選定位、換頁鍵
@@ -62,7 +62,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - simplifier  # 繁簡轉換（必需）
     - lua_filter@*joy_cap_en_f  # 大写英文过滤器
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換（必需）
-    - lua_filter@*joy_comment_f  # 注释过滤器，更改“全角”，“半角”等注释
+    - lua_filter@*joy_shape_comment_f  # 注释过滤器，更改“全角”，“半角”等注释
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA

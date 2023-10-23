@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_flypy
   name: 💕欢喜双拼
-  version: "2023.10.18"
+  version: "2023.10.23"
   author:
     - 双拼方案为小鹤双拼
     - 迷思 (lantaio@yeah.net) 创作Rime输入方案
@@ -62,7 +62,7 @@ engine:
     - simplifier
     - lua_filter@*joy_cap_en_f  # 大写英文过滤器
     - uniquifier
-    - lua_filter@*joy_comment_f  # 注释过滤器，更改默认的“全角”和“半角”注释
+    - lua_filter@*joy_shape_comment_f  # 注释过滤器，更改默认的“全角”和“半角”注释
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
