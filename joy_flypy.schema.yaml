@@ -61,8 +61,8 @@ engine:
     - simplifier@emoji  # Emoji过滤器
     - simplifier
     - lua_filter@*joy_cap_en_f  # 大写英文过滤器
-    - uniquifier
     - lua_filter@*joy_shape_comment_f  # 注释过滤器，更改默认的“全角”和“半角”注释
+    - uniquifier
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
