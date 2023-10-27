@@ -177,5 +177,5 @@ app_options:
   appname.exe:  # 带 .exe 的进程名，全小写
     ascii_mode: true  # 是否为英文模式
     inline_preedit: true  # 行内显示预编辑区。当前版本小狼毫将 inline_preedit 设定为 false 时，会在输入时预插入一个空格，这在 Firefox 等应用中会引发问题，需要在此处为这些应用单独指定 inline_preedit。refer <https://github.com/rime/weasel/issues/946>
-  appname2.exe:
-    ascii_mode: false  # 是否为英文模式
+  win32calc.exe:  # 计算器
+    ascii_mode: true  # 是否为英文模式

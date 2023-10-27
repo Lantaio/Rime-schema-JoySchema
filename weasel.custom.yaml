@@ -5,6 +5,8 @@ customization:
   modified_time: "Wed Sep 13 22:45:15 2023"
   rime_version: 1.8.5
 patch:
+  "app_options/+":
+    __include: "joy.theme:/app_options"
   "preset_color_schemes/+":
     __include: "joy.theme:/preset_color_schemes"
   "style/+":
