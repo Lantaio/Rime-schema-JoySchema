@@ -3,26 +3,29 @@ local function period_processor(key, env)
 	local history = context.commit_history
 	-- 如果 不是ascii模式，就...
 	if not context:get_option("ascii_mode") then
+		-- 如果 没有候选框，就...
+		if not context:has_menu() then
 		-- 如果 按键是英文句点 并且 最近上屏的是数字，就...
-		if (key:repr():find('period')) and (tonumber(history:latest_text()) ~= nil) then
-			context.input = '.'
-			return 1  -- kAccepted
-		-- 否则如果 待翻译串是英文句号 并且 有候选框，就...
-		elseif (context.input == '.') and context:has_menu() then
+			if (key:repr():find('period')) and (tonumber(history:latest_text()) ~= nil)  then
+				context.input = '.'
+				return 1  -- kAccepted 表示由本程序接收并处理按键事件。
+			end
+		-- 否则（有候选框）如果 待翻译串是英文句号，就...
+		elseif (context.input == '.') then
 			--  如果 按键是数字，就...
 			if (48 <= key.keycode and key.keycode <= 57) then
-				env.engine:commit_text('.')  -- 上屏
-				context:clear()
-				return 0
-			-- 否则如果 按键是英文字母，就...
-			elseif (65 <= key.keycode and key.keycode <= 90) or (97 <= key.keycode and key.keycode <= 123) then
+				context:select(1)  -- 上屏
+				context:commit()
+				return 0  -- kRejected 表示将按键事件交回给系统继续处理
+			-- 否则（按键不是数字）如果 按键是英文字母，就...
+			elseif (65 <= key.keycode and key.keycode <= 90) or (97 <= key.keycode and key.keycode <= 122) then
 				context:commit()  -- 上屏
 				env.engine:process_key(key)
 				return 1
 			end
 		end
 	end
-	return 2 -- kNoop
+	return 2 -- kNoop 表示本程序不处理这个按键事件，交给下一个处理组件处理。
 end
 
 return period_processor
