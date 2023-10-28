@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: 😍欢喜拼音
-  version: "2023.10.23"
+  version: "2023.10.28"
   author:
     - 迷思 (lantaio@yeah.net)
   description: |
@@ -61,7 +61,6 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
   filters:  # 四、這批組件過濾翻譯的結果
     - simplifier@emoji  # Emoji过滤器
     - simplifier  # 繁簡轉換（必需）
-    # - lua_translator@*joy_period_f  # 处理数字后跟英文句点的情况
     - lua_filter@*joy_cap_en_f  # 大写英文过滤器
     - lua_filter@*joy_shape_comment_f  # 注释过滤器，更改“全角”，“半角”等注释
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換（必需）
