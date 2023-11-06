@@ -37,6 +37,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - lua_translator@*joy_date_t  # 时间、日期、星期，调用lua目录对应程序
     - table_translator
   filters:
     - lua_filter@*joy_cap_en_f  # 大写英文过滤器
@@ -75,6 +76,13 @@ translator:
   spelling_hints: 9
   # comment_format:  # 自定义提示码
     # - xform/.*//  # 清空提示码
+
+date_time:  # Lua 配置: 日期、时间、星期、ISO 8601、时间戳的触发关键字
+  date: rq  # 日期： 2022-11-29
+  time: sj  # 时间： 18:13
+  week: xq  # 星期： 星期二
+  datetime: dt  # ISO 8601： 2022-11-29T18:13:11+08:00
+  timestamp: ts  # 时间戳： 1669716794
 
 key_binder:
   import_preset: default
