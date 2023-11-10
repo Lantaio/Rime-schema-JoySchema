@@ -13,7 +13,7 @@
 
 # 全部 style 选项
 # refer：<https://github.com/rime/weasel/blob/master/RimeWithWeasel/RimeWithWeasel.cpp>
-# Update at：2023.08.20
+# updated：2023/11/10
 # Weasel 版本：15.0, CI #137 <https://github.com/rime/weasel/actions/runs/5912109600>
 # Commit: db79168
 
@@ -85,16 +85,16 @@ joy_style:
   paging_on_scroll: true
   layout:
     max_width: 250
-    max_height: 100
+    max_height: 200
     type: horizontal  # 候选项横向排列，注释此行则为竖向排列
     border_width: 2
     margin_x: 10
     margin_y: 10
-    # spacing: 8
+    spacing: 5
     candidate_spacing: 8
     # hilite_spacing: 3
     corner_radius: 10
-    round_corner: 10
+    round_corner: 8
 
 
 # 全部 color_schemes 选项，点击小狼毫「输入法设定」可以预览皮肤效果
@@ -147,10 +147,10 @@ preset_color_schemes:
     # 默认
     back_color: 0xF9F6F1  # 背景（浅黄色0xF8F5F0）
     border_color: 0xDCCCBC  # 边框（棕黄色）
-    comment_text_color: 0x989898  # 注释（灰色）
-    label_color: 0x33B433  # 标签（青绿色）
+    comment_text_color: 0xA0A0A0  # 注释（灰色）
+    label_color: 0x30C330  # 标签（青绿色）
     # shadow_color: 0x00000000  # 阴影
-    text_color: 0x32659A # 已经确定的文字（藏蓝色）
+    text_color: 0x808080 # 已经确定的文字（灰色）
     # 候选区域
     # candidate_back_color:
     # candidate_border_color:
@@ -158,11 +158,11 @@ preset_color_schemes:
     candidate_text_color: 0x0A80F8  # 候选项（蓝色）
     # 高亮区域
     # hilited_back_color:
-    hilited_comment_text_color: 0x989898  # 高亮候选注释（灰色）
-    hilited_label_color: 0x33B433  # 高亮标签（青绿色）
+    hilited_comment_text_color: 0xA0A0A0  # 高亮候选注释（灰色）
+    hilited_label_color: 0x30C330  # 高亮标签（青绿色）
     # hilited_mark_color: 0xF6B240  # 高亮记号（橙色）
     # hilited_shadow_color:
-    hilited_text_color: 0x0A80F8  # 高亮代码（蓝色）
+    hilited_text_color: 0x0A80F8  # 高亮待翻译字符串（蓝色）
     # 高亮的候选区域
     # hilited_candidate_back_color:
     # hilited_candidate_border_color:
