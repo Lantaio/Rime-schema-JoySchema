@@ -34,7 +34,7 @@ recognizer/patterns:
 
 "switcher/caption": "～Rime选项菜单～"
 "switcher/hotkeys":
-  - "Control+Shift+ampersand"  # 即Ctrl+Shift+7作为打开选项菜单的快捷键
+  - "Control+Shift+asterisk"  # 即Ctrl+Shift+8作为打开选项菜单的快捷键
 
 # ascii_composer:
 #   good_old_caps_lock: true  # true | false

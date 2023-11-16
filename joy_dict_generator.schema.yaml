@@ -3,19 +3,19 @@
 
 schema:
   schema_id: joy_dict_generator
-  name: 词典生成器
-  version: "2023.10.18"
+  name: 📕欢喜词库生成器
+  version: "2023.11.16"
   author:
     - 迷思 (lantaio@yeah.net)
   description: |
-    此方案仅作为生成词典之用，并非输入法方案。
-    1. 在方案选单中选择“词典生成器”方案
-    2. 打开joy_dict_generator.schema.yaml（即此方案代码），按照注释的说明来操作
+    此方案仅作为生成词库之用，并非输入法方案。
+    1. 打开joy_dict_generator.schema.yaml（即此方案代码），按照注释的说明来操作
+    2. 在方案选单中选择“欢喜词库生成器”方案，便会生成待处理的词库。
     3. 生成完所需的词库之后可以删除build目录中所有joy_dict_generator开头的文件。
     具体参考
     https://github.com/rime/home/wiki/DictionaryPack
 
 translator:
-  dictionary: joy_dict_generator  # 2. 先退出算法服务，然后删除build目录中dict_generator.table.bin和下面准备生成的词库的table.bin文件（如果有的话）。最后重启算法服务。
+  dictionary: joy_dict_generator  # 2. 先退出算法服务，然后删除build目录中joy_dict_generator.table.bin和下面准备生成的词库的table.bin文件（如果有的话）。最后重启算法服务。
   packs:
-    - joy.pinyin_cn_en  # 1. 将此处替换为要处理的词库名称。注意：被处理的词库须要有音节部分，例如：拼音词条须要有对应的拼音。
+    - joy.pinyin_yueyu  # 1. 将此处替换为要处理的词库名称。注意：被处理的词库须要有音节部分，例如：拼音词条须要有对应的拼音。
