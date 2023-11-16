@@ -62,7 +62,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - simplifier@emoji  # Emoji过滤器
     - simplifier  # 繁簡轉換（必需）
     - lua_filter@*joy_cap_en_f  # 大写英文过滤器
-    - lua_filter@*joy_shape_comment_f  # 注释过滤器，更改“全角”，“半角”等注释
+    - lua_filter@*joy_shape_comment_f  # 注释过滤器，用图形替换“全角”，“半角”注释
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換（必需）
 
 speller:
