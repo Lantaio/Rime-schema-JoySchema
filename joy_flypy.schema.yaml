@@ -24,7 +24,7 @@ switches:
   - name: full_shape
     states: [ 🌙, 🌕 ]  # 半角 / 全角
   - name: simplification
-    reset: 1  # 重置为简体字输入模式
+    # reset: 1  # 重置为简体字输入模式
     states: [ 繁體, 简体 ]
   - name: emoji
     states: [ 🖤, ❤ ]  # 禁用 / 启用
