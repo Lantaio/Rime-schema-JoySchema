@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_flypy
   name: 💕欢喜双拼
-  version: "2023.10.28"
+  version: "2023.11.18"
   author:
     - 双拼方案为小鹤双拼
     - 迷思 (lantaio@yeah.net) 创作Rime输入方案
@@ -36,7 +36,7 @@ engine:
   processors:
     - ascii_composer
     - recognizer
-    - lua_processor@*joy_period_p  # 处理数字后跟小数点或句点的情况
+    - lua_processor@*joy_period_p  # 处理数字后跟小数点或句号的情况
     - key_binder
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
     - speller
@@ -51,7 +51,7 @@ engine:
     - punct_segmentor
     - fallback_segmentor
   translators:
-    - lua_translator@*joy_period_t  # 处理数字后跟小数点或句点的情况
+    - lua_translator@*joy_period_t  # 处理数字后跟小数点或句号的情况
     - punct_translator
     - table_translator@custom_phrase  # 自定义词典，配合词典优先级实现常用字固顶功能
     - lua_translator@*joy_date_t  # 时间、日期、星期，调用lua目录对应程序
