@@ -14,7 +14,7 @@ local function joy_period_processor(key, env)
 		if 48 <= key.keycode and key.keycode <= 57 or key:repr() == 'space' then
 			context:select(1)
 			context:commit()  -- 上屏第2个候选项（英文句点）
-			return 0  -- kRejected 表示将按键事件（此处为数字）交回给系统继续处理。
+			return 0  -- kRejected 表示将按键事件（此处为数字或空格）交回给系统继续处理。
 		-- 否则（不是上面的按键）如果 按键是句点，就...
 		elseif key:repr() == 'period' then
 			context:select(0)
@@ -24,7 +24,6 @@ local function joy_period_processor(key, env)
 		elseif (65 <= key.keycode and key.keycode <= 90) or (97 <= key.keycode and key.keycode <= 122) then
 			context:select(0)
 			context:commit()  -- 上屏默认候选项（中文句号）
-			-- env.engine:process_key(key)
 			return 2  -- kNoop 表示将按键（此处为字母）交给下一个处理组件继续处理。
 		-- 否则（不是上面的按键）如果 按键是候选按键，就...
 		elseif key:repr() == 'comma' then  -- ！注意！如果不是用这些按键上屏候选项，须修改
@@ -39,7 +38,7 @@ local function joy_period_processor(key, env)
 			context:clear()
 		end
 	end
-	-- 如果程序执行到这里还没有返回，就...
+	-- 如果程序执行到这里还没有返回值，就...
 	return 2  -- kNoop 表示将按键事件交给下一个处理组件继续处理。
 end
 
