@@ -2,15 +2,15 @@
 numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到5~9，最常用的切换键用中指和无名指按，也可降低和其它软件的快捷键冲突。
   __append:
     # - { when: always, accept: Control+Shift+4, toggle: extended_charset }
-    - { when: always, accept: Control+Shift+5, toggle: emoji }
-    - { when: always, accept: Control+Shift+6, toggle: full_shape }
-    - { when: always, accept: Control+Shift+7, toggle: simplification }
-    - { when: always, accept: Control+Shift+9, select: .next }
+    - { when: always, accept: 'Control+5', toggle: emoji }
+    - { when: always, accept: 'Control+6', toggle: full_shape }
+    - { when: always, accept: 'Control+7', toggle: simplification }
+    - { when: always, accept: 'Control+9', select: .next }
     # - { when: always, accept: Control+Shift+dollar, toggle: extended_charset }
-    - { when: always, accept: Control+Shift+asciicircum, toggle: full_shape }
-    - { when: always, accept: Control+Shift+percent, toggle: emoji }
-    - { when: always, accept: Control+Shift+ampersand, toggle: simplification }
-    - { when: always, accept: Control+Shift+parenleft, select: .next }
+    # - { when: always, accept: Control+Shift+asciicircum, toggle: full_shape }
+    # - { when: always, accept: Control+Shift+percent, toggle: emoji }
+    # - { when: always, accept: Control+Shift+ampersand, toggle: simplification }
+    # - { when: always, accept: Control+Shift+parenleft, select: .next }
 
 paging_with_comma_period:  # 用','和'.'翻页
   __append:
@@ -19,27 +19,27 @@ paging_with_comma_period:  # 用','和'.'翻页
 
 paging_with_period_greater:  # 用'.'和'>'翻页
   __append:
-    - { when: has_menu, accept: Shift+greater, send: Page_Up }
+    - { when: has_menu, accept: 'Shift+greater', send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
 
 paging_with_semicolon_colon:  # 用';'和':'翻页
   __append:
-    - { when: has_menu, accept: Shift+colon, send: Page_Up }
+    - { when: has_menu, accept: 'Shift+colon', send: Page_Up }
     - { when: has_menu, accept: semicolon, send: Page_Down }
 
 select_with_comma_period_slash:  # 用','、'.'和'/'选择第2、第3和第4个候选项
   __append:
-    - { when: has_menu, accept: comma, send: 2 }
-    - { when: has_menu, accept: period, send: 3 }
-    - { when: has_menu, accept: slash, send: 4 }
+    - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
+    - { when: has_menu, accept: period, send_sequence: '{Down}{Down}{space}' }
+    - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{Down}{space}' }
 
 select_with_comma_semicolon_slash:  # 用','、';'和'/'选择第2、第3和第4个候选项
   __append:
-    - { when: has_menu, accept: comma, send: 2 }
-    - { when: has_menu, accept: semicolon, send: 3 }
-    - { when: has_menu, accept: slash, send: 4 }
+    - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
+    - { when: has_menu, accept: semicolon, send_sequence: '{Down}{Down}{space}' }
+    - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{Down}{space}' }
 
 select_with_shift_key:  # 用左shift键和右shift键选择第2和第3个候选项
   __append:
-    - {when: has_menu, accept: "Shift+Shift_L", send: 2}
-    - {when: has_menu, accept: "Shift+Shift_R", send: 3}
+    - {when: has_menu, accept: 'Shift+Shift_L', send: 2}
+    - {when: has_menu, accept: 'Shift+Shift_R', send: 3}
