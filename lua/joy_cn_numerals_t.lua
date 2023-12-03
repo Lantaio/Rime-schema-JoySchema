@@ -1,5 +1,5 @@
 -- 来源 https://github.com/yanhuacuo/98wubi-tables > http://98wb.ysepan.com/
--- 数字、金额大写 (任意大写字母引导+数字)
+-- 数字、金额大写 ('>'开头+数字)
 
 local function splitNumPart(str)
 	local part = {}
@@ -109,11 +109,11 @@ local function number_translatorFunc(str)
 	return result
 end
 
--- 触发模式为任意大写字母开头，可在 recognizer/patterns 中自定义
+-- '>'开头触发，须要在输入方案 recognizer/patterns 中定义 cn_numerals: "^>[0-9]+[.]?[0-9]*"
 local function cn_numerals(input, seg)
 	local str, num, numberPart
-	if string.match(input, "^([A-Z]+%d+)(%.?)(%d*)$") ~= nil then
-		str = string.gsub(input, "^(%a+)", "")
+	if string.match(input, "^>(%d+)(%.?)(%d*)$") ~= nil then
+		str = string.gsub(input, "^>", "")
 		numberPart = number_translatorFunc(str)
 		if #numberPart > 0 then
 			for i = 1, #numberPart do
