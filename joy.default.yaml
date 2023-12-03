@@ -9,27 +9,27 @@
 key_binder:
   bindings:
     __patch:
-      - "joy.keybindings:/paging_with_period_greater"
-      - "joy.keybindings:/select_with_comma_semicolon_slash"
-      - "joy.keybindings:/numbered_mode_switch"
-      - "key_bindings:/move_by_word_with_tab"
+      - 'joy.keybindings:/paging_with_period_greater'
+      - 'joy.keybindings:/select_with_comma_semicolon_slash'
+      - 'joy.keybindings:/numbered_mode_switch'
+      - 'key_bindings:/move_by_word_with_tab'
 
 menu:
   # alternative_select_keys: ":,;/"  # 自定义候选项上屏的按键序列
   page_size: 4  # 候选框的候选项个数
 
 punctuator:
-  __include: "joy.symbols:/punctuator" # 导入扩展符号表
+  __include: 'joy.symbols:/punctuator' # 导入扩展符号表
 
 recognizer/patterns:
   # 中英混输时须要屏蔽默认设置中的uppercase规则
-  email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
-  punct: "^;([0-9]0?|[A-Za-z]+)$"  # ';'开头触发输入扩展符号的正则表达式
-  url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+  email: '^[A-Za-z][-_.0-9A-Za-z]*@.*$'
+  punct: '^;([0-9]0?|[A-Za-z]+)$'  # ';'开头触发输入扩展符号的正则表达式
+  url: '^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$'
 
-"switcher/caption": "～Rime选项菜单～"
+"switcher/caption": '～Rime选项菜单～'
 "switcher/hotkeys":
-  - "Control+8"  # 打开选项菜单的快捷键（候选：Control+Shift+asterisk）
+  - 'Control+8'  # 打开选项菜单的快捷键（候选：Control+Shift+asterisk）
 
 # ascii_composer:
 #   good_old_caps_lock: true  # true | false

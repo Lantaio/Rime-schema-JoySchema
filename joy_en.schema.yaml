@@ -4,14 +4,15 @@
 
 schema:
   schema_id: joy_en
-  name: 😎Joy English
-  version: "2023.10.18"
+  name: '😎Joy English'
+  version: '2023.12.3'
   author:
     - Lantaio (lantaio@yeah.net)
   description: |
     An English input schema use a light weight dictionary.
     Use period and greater for paging.
     Use comma, semicolon and slash to select the 2, 3 and 4 candidate.
+    website: https://github.com/Lantaio/Rime-schema-JoySchema
     一个使用轻量级词库的英文输入方案。
 
 switches:
@@ -23,6 +24,7 @@ engine:
   processors:
     - ascii_composer
     - recognizer
+    # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
     - key_binder
     - speller
     - punctuator
@@ -88,12 +90,12 @@ key_binder:
   import_preset: default
 
 punctuator:
-  full_shape:
-    __include: joy.punctuation:/full_shape
+  # full_shape:
+  #   __include: 'joy.punctuation:/full_shape'
   half_shape:
-    __include: joy.punctuation:/ascii_style
+    __include: 'joy.punctuation:/ascii_style'
   symbols:
-    __include: joy.symbols:/punctuator/symbols # 导入扩展符号表
+    __include: 'joy.symbols:/punctuator/symbols'  # 导入扩展符号表
 
 recognizer:
   import_preset: default

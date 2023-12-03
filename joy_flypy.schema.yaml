@@ -3,16 +3,16 @@
 
 schema:
   schema_id: joy_flypy
-  name: 💕欢喜双拼
-  version: "2023.11.18"
+  name: '💕欢喜双拼'
+  version: '2023.12.3'
   author:
-    - 双拼方案为小鹤双拼
-    - 迷思 (lantaio@yeah.net) 创作Rime输入方案
+    - '迷思 (lantaio@yeah.net) 创作Rime输入方案'
+    - '双拼方案为小鹤双拼'
   description: |
-    欢喜小鹤双拼，默认为簡体字输入模式。
+    欢喜小鹤双拼Rime输入方案。
     使用句号和大于号来翻页。
     使用逗号、引号和斜杠来选择第2、第3和第4个候选项。
-    项目地址：https://github.com/Lantaio/Rime-schema-JoySchema
+    项目网址：https://github.com/Lantaio/Rime-schema-JoySchema
   dependencies:
     - joy_en  # 中英文混输时依赖joy_en输入法
     - stroke  # 笔画反查时依赖笔画输入法
@@ -36,6 +36,7 @@ engine:
   processors:
     - ascii_composer
     - recognizer
+    # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
     - lua_processor@*joy_period_p  # 处理数字后跟小数点或句号的情况
     - key_binder
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
@@ -54,8 +55,8 @@ engine:
     - lua_translator@*joy_period_t  # 处理数字后跟小数点或句号的情况
     - punct_translator
     - table_translator@custom_phrase  # 自定义词典，配合词典优先级实现常用字固顶功能
-    - lua_translator@*joy_date_t  # 时间、日期、星期，调用lua目录对应程序
-    - lua_translator@*joy_cn_numerals_t  # 大写数字、金额翻译器，调用lua目录对应程序
+    - lua_translator@*joy_date_t  # 当前时间、日期、星期
+    - lua_translator@*joy_cn_numerals_t  # 大写数字、金额翻译器
     - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
     - reverse_lookup_translator
     - script_translator
@@ -199,11 +200,11 @@ punctuator:
 key_binder:
   import_preset: default
   # Lua 配置: 以词定字（上屏当前候选项的第一个或最后一个字），和中括号翻页有冲突
-  select_first_character: "bracketleft"  # 以词定字，用'['键选择第1个字
-  select_last_character: "bracketright"  # 以词定字，用']'键选择最后1个字
+  select_first_character: bracketleft  # 以词定字，用'['键选择第1个字
+  select_last_character: bracketright  # 以词定字，用']'键选择最后1个字
 
 recognizer:
   import_preset: default
   patterns:
-    number: "^N[0-9]+[.]?[0-9]*"  # 'N'开头触发大写数字、金额的正则表达式
+    cn_numerals: "^>[0-9]+[.]?[0-9]*"  # '>'开头触发大写数字、金额的正则表达式
     reverse_lookup: "~[a-z]*'?$" # '~'开头触发笔画反查的正则表达式
