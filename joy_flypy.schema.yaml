@@ -37,7 +37,7 @@ engine:
     - ascii_composer
     - recognizer
     # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
-    - lua_processor@*joy_period_p  # 处理数字后跟小数点或句号的情况
+    - lua_processor@*joy_period_p  # 处理数字后输入小数点或中文句号的情况
     - key_binder
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
     - speller

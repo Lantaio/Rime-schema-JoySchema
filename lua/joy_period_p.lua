@@ -1,4 +1,4 @@
--- 本程序处理数字后跟小数点或中文句号的情况
+-- 本程序处理数字后输入小数点或中文句号的情况
 local function joy_period_processor(key, env)
 	local context = env.engine.context
 	local history = context.commit_history
@@ -13,7 +13,7 @@ local function joy_period_processor(key, env)
 	elseif (context.input == '.') and not key:release() then
 		--  如果 按键是数字 或 空格键，就...
 		if tonumber(key:repr()) or key:repr() == 'space' then
-			context:select(1)  -- 上屏第2个候选项（英文句点）
+			context:select(1)  -- 上屏第2个候选项（小数点）
 			return 0  -- kRejected 表示将按键事件（此处为数字）交回给系统继续处理。
 		-- 否则（不是上面的按键）如果 按键是句点，就...
 		elseif key:repr() == 'period' then
@@ -21,7 +21,7 @@ local function joy_period_processor(key, env)
 			return 1
 		-- 否则（不是上面的按键）如果 按键是逗号键 或 回车键，就...
 		elseif key:repr() == 'comma' or key:repr() == 'Return' then
-			context:select(1)  -- 上屏第2个候选项（英文句点）
+			context:select(1)  -- 上屏第2个候选项（小数点）
 			return 1
 		-- 否则（不是上面的按键）如果 按键是英文字母，就...
 		-- ！注意！keycode值为ASCII码值，而不是键盘的keycode值！

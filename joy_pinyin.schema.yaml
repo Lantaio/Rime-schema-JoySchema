@@ -36,7 +36,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - ascii_composer  # 處理英文模式及中英文切換
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
-    - lua_processor@*joy_period_p  # 处理数字后跟小数点或句号的情况
+    - lua_processor@*joy_period_p  # 处理数字后输入小数点或中文句号的情况
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
     - speller  # 拼寫處理器，接受字符按鍵，編輯輸入碼
