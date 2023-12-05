@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_flypy
   name: '💕欢喜双拼'
-  version: '2023.12.3'
+  version: '2023.12.5'
   author:
     - '迷思 (lantaio@yeah.net) 创作Rime输入方案'
     - '双拼方案为小鹤双拼'
@@ -47,6 +47,7 @@ engine:
     - express_editor
   segmentors:
     - ascii_segmentor
+    - lua_segmentor@*joy_prompt_s  # 为触发特定规则的输入码添加提示词
     - matcher
     - abc_segmentor
     - punct_segmentor
@@ -56,7 +57,7 @@ engine:
     - punct_translator
     - table_translator@custom_phrase  # 自定义词典，配合词典优先级实现常用字固顶功能
     - lua_translator@*joy_date_t  # 当前时间、日期、星期
-    - lua_translator@*joy_cn_numerals_t  # 大写数字、金额翻译器
+    - lua_translator@*joy_cn_numerals_t  # 中文数字、金额翻译器
     - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
     - reverse_lookup_translator
     - script_translator
@@ -187,7 +188,7 @@ reverse_lookup:  # 笔画反查拼音
   enable_completion: true
   prefix: "~"
   suffix: "'"
-  tips: 〔笔画〕
+  tips: '〔笔画〕'
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
   comment_format:  # 提示码显示正确的拼音
@@ -206,5 +207,5 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    cn_numerals: "^>[0-9]+[.]?[0-9]*"  # '>'开头触发大写数字、金额的正则表达式
+    cn_numerals: '^>[0-9]+[.]?[0-9]*'  # '>'开头触发中文数字、金额的正则表达式
     reverse_lookup: "~[a-z]*'?$" # '~'开头触发笔画反查的正则表达式

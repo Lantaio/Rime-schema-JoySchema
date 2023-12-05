@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: '😍欢喜拼音'
-  version: '2023.12.3'
+  version: '2023.12.5'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
@@ -46,6 +46,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - express_editor  # 編輯器，處理空格、回車上屏、回退鍵等
   segmentors:  # 二、這批組件識別不同內容類型，將輸入碼分段
     - ascii_segmentor  # 標識西文段落
+    - lua_segmentor@*joy_prompt_s  # 为触发特定规则的输入码添加提示词
     - matcher  # 標識符合特定規則的段落，如網址、反查等
     - abc_segmentor  # 標識常規的文字段落
     - punct_segmentor  # 標識句讀段落
@@ -55,7 +56,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - punct_translator  # 轉換標點符號
     - table_translator@custom_phrase  # 自定义词典，用词典优先级实现常用字固顶功能
     - lua_translator@*joy_date_t  # 当前时间、日期、星期
-    - lua_translator@*joy_cn_numerals_t  # 大写数字、金额翻译器
+    - lua_translator@*joy_cn_numerals_t  # 中文数字、金额翻译器
     - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
@@ -129,7 +130,7 @@ reverse_lookup:  # 笔画反查拼音
   enable_completion: true
   prefix: "~"
   suffix: "'"
-  tips: 〔笔画〕
+  tips: '〔笔画〕'
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
   comment_format:  # 提示码显示正确的拼音
@@ -148,5 +149,5 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    cn_numerals: '^>[0-9]+[.]?[0-9]*'  # '>'开头触发大写数字、金额的正则表达式
+    cn_numerals: '^>[0-9]+[.]?[0-9]*'  # '>'开头触发中文数字、金额的正则表达式
     reverse_lookup: "~[a-z]*'?$"  # '~'开头触发笔画反查的正则表达式
