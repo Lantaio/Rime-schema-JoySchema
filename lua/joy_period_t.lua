@@ -1,3 +1,5 @@
+-- 本程序处理数字后输入小数点或中文句号的情况
+-- 须要和joy_period_p.lua搭配使用
 local function joy_period_translator(input, seg, env)
 	local context = env.engine.context
 	local history = context.commit_history
