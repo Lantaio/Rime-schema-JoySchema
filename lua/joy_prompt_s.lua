@@ -1,4 +1,4 @@
--- 本程序为触发特定规则的输入码添加提示词
+-- 本程序为触发特定规则的输入码添加提示功能
 local function joy_prompt_segmentor(segs, env)
 	local context = env.engine.context
 	-- local config = env.engine.schema.config
