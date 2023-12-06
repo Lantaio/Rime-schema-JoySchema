@@ -1,6 +1,9 @@
 -- 本程序为触发特定规则的输入码添加提示词
 local function joy_prompt_segmentor(segs, env)
 	local context = env.engine.context
+	-- local config = env.engine.schema.config
+	-- local punct = config:get_string('recognizer/patterns/punct'):sub(2, 2)
+	-- local cn_num = config:get_string('recognizer/patterns/cn_numerals'):sub(2, 2)
 	-- 如果 有未上屏的输入码，就...
 	if context:is_composing() then
 		if segs.input == ';' then
