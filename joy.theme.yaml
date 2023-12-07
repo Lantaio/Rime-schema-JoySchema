@@ -150,7 +150,7 @@ preset_color_schemes:
     comment_text_color: 0xA0A0A0  # 注释（灰色）
     label_color: 0x30C330  # 标签（青绿色）
     # shadow_color: 0x00000000  # 阴影
-    text_color: 0x16429E # 已经确定的文本和非高亮输入字符串（深蓝色）
+    text_color: 0x808080 # 已经确定的文本和非高亮输入字符串（灰色）
     # 候选区域
     # candidate_back_color:
     # candidate_border_color:
