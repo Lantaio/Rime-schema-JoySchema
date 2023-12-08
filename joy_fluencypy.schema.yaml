@@ -11,8 +11,8 @@ schema:
     - '迷思 (lantaio@yeah.net)'
   description: |
     欢喜拼音語句流Rime输入方案！
-    使用句号和大于号来翻页。
-    使用逗号、引号和斜杠来选择第2、第3和第4个候选项。
+    使用'.'和'Shift+.'来翻页。
+    使用','、'/'和';'来选择第2、第3和第4个候选项。
     以空格分詞、標點或回車上屏。
     项目网址：https://github.com/Lantaio/Rime-schema-JoySchema
 

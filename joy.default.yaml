@@ -10,7 +10,7 @@ key_binder:
   bindings:
     __patch:
       - 'joy.keybindings:/paging_with_period_greater'
-      - 'joy.keybindings:/select_with_comma_semicolon_slash'
+      - 'joy.keybindings:/select_with_comma_slash_semicolon'
       - 'joy.keybindings:/numbered_mode_switch'
       - 'key_bindings:/move_by_word_with_tab'
 

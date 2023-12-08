@@ -10,8 +10,8 @@ schema:
     - '双拼方案为小鹤双拼'
   description: |
     欢喜小鹤双拼Rime输入方案。
-    使用句号和大于号来翻页。
-    使用逗号、引号和斜杠来选择第2、第3和第4个候选项。
+    使用'.'和'Shift+.'来翻页。
+    使用','、'/'和';'来选择第2、第3和第4个候选项。
     项目网址：https://github.com/Lantaio/Rime-schema-JoySchema
   dependencies:
     - joy_en  # 中英文混输时依赖joy_en输入法

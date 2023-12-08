@@ -33,11 +33,11 @@ select_with_comma_period_slash:  # 用','、'.'和'/'选择第2、第3和第4个
     - { when: has_menu, accept: period, send_sequence: '{Down}{Down}{space}' }
     - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{Down}{space}' }
 
-select_with_comma_semicolon_slash:  # 用','、';'和'/'选择第2、第3和第4个候选项
+select_with_comma_slash_semicolon:  # 用','、'/'和';'选择第2、第3和第4个候选项
   __append:
     - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
-    - { when: has_menu, accept: semicolon, send_sequence: '{Down}{Down}{space}' }
-    - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{Down}{space}' }
+    - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{space}' }
+    - { when: has_menu, accept: semicolon, send_sequence: '{Down}{Down}{Down}{space}' }
 
 select_with_shift_key:  # 用左shift键和右shift键选择第2和第3个候选项
   __append:
