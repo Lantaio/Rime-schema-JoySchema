@@ -16,8 +16,8 @@ local function joy_period_processor(key, env)
 		if tonumber(key:repr()) or key:repr() == 'space' then
 			context:select(0)  -- 上屏第1个候选项（小数点）
 			return 0  -- kRejected 表示将按键事件（此处为数字）交回给系统继续处理。
-		-- 否则（不是上面的按键）如果 按键是逗号键 或 句点，就...
-		elseif key:repr() == 'comma' or key:repr() == 'period' then
+		-- 否则（不是上面的按键）如果 按键是句点，就...
+		elseif key:repr() == 'period' then
 			context:select(1)  -- 上屏第2个候选项（中文句号）
 			return 1
 		-- 否则（不是上面的按键）如果 按键是回车键，就...
