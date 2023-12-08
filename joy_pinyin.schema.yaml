@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: '😍欢喜拼音'
-  version: '2023.12.5'
+  version: '2023.12.8'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |

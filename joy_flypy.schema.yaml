@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_flypy
   name: '💕欢喜双拼'
-  version: '2023.12.5'
+  version: '2023.12.8'
   author:
     - '迷思 (lantaio@yeah.net) 创作Rime输入方案'
     - '双拼方案为小鹤双拼'
