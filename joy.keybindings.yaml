@@ -27,10 +27,10 @@ paging_with_semicolon_colon:  # 用';'和':'翻页
     - { when: has_menu, accept: 'Shift+colon', send: Page_Up }
     - { when: has_menu, accept: semicolon, send: Page_Down }
 
-select_with_comma_period_slash:  # 用','、'.'和'/'选择第2、第3和第4个候选项
+select_with_comma_semicolon_slash:  # 用','、';'和'/'选择第2、第3和第4个候选项
   __append:
     - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
-    - { when: has_menu, accept: period, send_sequence: '{Down}{Down}{space}' }
+    - { when: has_menu, accept: semicolon, send_sequence: '{Down}{Down}{space}' }
     - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{Down}{space}' }
 
 select_with_comma_slash_semicolon:  # 用','、'/'和';'选择第2、第3和第4个候选项
