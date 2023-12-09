@@ -1,7 +1,7 @@
 ---
-organizer: 曾庆耀
+collector: 曾庆耀
 created: 2023-05-03T12:04:57+08:00
-updated: 2023-12-09T12:25:12+08:00
+updated: 2023-12-09T19:33:19+08:00
 tags:
   - GNU
   - GPL
