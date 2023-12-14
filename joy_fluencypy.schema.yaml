@@ -5,12 +5,12 @@ __include: "joy_pinyin.schema:/"
 
 schema:
   schema_id: joy_fluencypy
-  name: '💝欢喜語句流'
+  name: '💝惊喜語句流'
   version: '2023.12.9'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
-    欢喜拼音語句流Rime输入方案！
+    惊喜拼音語句流Rime输入方案！
     使用'.'和'Shift+.'来翻页。
     使用','、';'和'/'来选择第2、第3和第4个候选项。
     以空格分詞、標點或回車上屏。

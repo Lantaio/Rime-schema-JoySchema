@@ -24,7 +24,6 @@ engine:
   processors:
     - ascii_composer
     - recognizer
-    # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
     - key_binder
     - speller
     - punctuator

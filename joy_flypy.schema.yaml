@@ -3,13 +3,13 @@
 
 schema:
   schema_id: joy_flypy
-  name: '💕欢喜双拼'
+  name: '💕惊喜双拼'
   version: '2023.12.9'
   author:
     - '迷思 (lantaio@yeah.net) 创作Rime输入方案'
     - '双拼方案为小鹤双拼'
   description: |
-    欢喜小鹤双拼Rime输入方案。
+    惊喜小鹤双拼Rime输入方案。
     使用'.'和'Shift+.'来翻页。
     使用','、';'和'/'来选择第2、第3和第4个候选项。
     项目网址：https://github.com/Lantaio/Rime-schema-JoySchema
