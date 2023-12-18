@@ -75,14 +75,18 @@
 
 最后，感谢网络上众多Rime输入法使用教程的作者，还有各种词库的贡献者，因为他们的热心指导和无私奉献，这个项目才得以诞生💟
 
+## 聆听你的声音
+* 如果你在使用此Rime输入法方案的过程中发现有什么问题或者缺陷，请在[Issue](https://github.com/Lantaio/Rime-schema-JoySchema/issues)中反馈情况
+* 如果有任何建议、改进或功能需求可在[Discussion](https://github.com/Lantaio/Rime-schema-JoySchema/discussions)中提出
+
 [更换语言](#语言) | [返回标题](#简体中文)
 
 ---
 
 <a id="英文" />
 
-# JoySchema
+# 😎JoySchema
 ## Description
-JoySchema, [Rime](https://github.com/rime) schemas that understands the intentions of coders! Includes some humanized input schemas and some related vocabularies.
+JoySchema, [Rime Input Method Engine](https://github.com/rime) schemas that understands the intentions of coders! Includes some humanized Rime schemas and some related vocabularies.
 
 [change language](#语言) | [back to title](#英文)
