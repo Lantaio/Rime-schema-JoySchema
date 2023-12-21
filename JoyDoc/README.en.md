@@ -7,4 +7,4 @@
 
 # 😎JoySchema
 ## Description
-JoySchema, [Rime Input Method Engine](https://github.com/rime) schemas that understands the intentions of coders! Includes some *humanized* Rime schemas and some related vocabularies.
+JoySchema, [Rime Input Method Engine](https://github.com/rime) schemas that understand the intentions of coders and researchers! Includes some *humanized* Rime schemas and some related vocabularies.
