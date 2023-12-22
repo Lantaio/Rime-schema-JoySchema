@@ -1,3 +1,7 @@
+🌏 [简体中文](JoyDoc/GNU%20GPL%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AEv3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E8%AF%91%E6%96%87.md) | [English](#英文)
+
+<a id="英文" />
+
 ### GNU GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007
