@@ -1,7 +1,6 @@
 <a id="语言" />
 
-🌏 [简体中文](https://github.com/Lantaio/Rime-schema-JoySchema/blob/classic/README.md) | [English](#英文)
-
+🌏 [简体中文](../README.md) | [English](#英文)
 
 <a id="英文" />
 
