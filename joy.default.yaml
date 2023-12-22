@@ -16,7 +16,7 @@ key_binder:
 
 menu:
   # alternative_select_keys: ":,;/"  # 自定义候选项上屏的按键序列
-  page_size: 4  # 候选框的候选项个数
+  page_size: 4  # 候选窗口的候选项个数
 
 punctuator:
   __include: 'joy.symbols:/punctuator' # 导入扩展符号表
@@ -24,7 +24,7 @@ punctuator:
 recognizer/patterns:
   # 中英混输时须要屏蔽默认设置中的uppercase规则
   email: '^[A-Za-z][-_.0-9A-Za-z]*@.*$'
-  path1: '^/[^,:\*\?"<>\|]*$'
+  path1: '^/[^,:\*\?"<>\|]*$'  # 因‘/’键也用于上屏第4个候选项，所以必须和path2分开
   path2: '^[^:\*\?"<>\|]*\\[^,:\*\?"<>\|]*$'
   punct: '^;([0-9]0?|[A-Za-z]+)$'  # ';'开头触发输入扩展符号的正则表达式
   url: '^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$'
