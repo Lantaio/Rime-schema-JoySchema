@@ -43,7 +43,7 @@
 * 如果接着按控制类按键，则按照那个控制键的功能来处理
 
 ## 许可协议
-此项目遵循[小狼毫](https://github.com/rime/weasel)（Rime for Windows）项目所使用的[GPL-v3.0](JoyDoc/GNU%20GPL%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AEv3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E8%AF%91%E6%96%87.md)开源协议。因此，你可以自由分发和修改此项目。但如果你对此项目进行了修改，则必须明确指出，并且不能再使用我的署名。
+此项目遵循[小狼毫](https://github.com/rime/weasel)（Rime for Windows）项目所使用的[GNU GPL-v3.0](JoyDoc/GNU%20GPL%E9%80%9A%E7%94%A8%E5%85%AC%E5%85%B1%E8%AE%B8%E5%8F%AF%E5%8D%8F%E8%AE%AEv3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E8%AF%91%E6%96%87.md)开源协议。因此，你可以自由分发和修改此项目。但如果你对此项目进行了修改，则必须明确指出，并且不能再使用我的署名。
 
 ## 安装步骤（以Windows为例）
 由于此项目还处于早期阶段，因此每个发布版本之间可能存在比较大的输入习惯方面的改动。因此建议你使用Release中最新的发布版。
