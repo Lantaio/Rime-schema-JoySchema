@@ -10,10 +10,10 @@
 
 ## 【译者声明】
 
-　　This is an unofficial translation of the GNU General Public License into Chinese. It was not published by the Free Software Foundation, and does not legally state the distribution terms for software that uses the GNU GPL--only [the original English text of the GNU GPL](http://www.gnu.org/licenses/gpl-3.0.html) does that. However, we hope that this translation will help Chinese speakers understand the GNU GPL better.
+　　This is an unofficial translation of the GNU General Public License into Chinese. It was not published by the Free Software Foundation, and does not legally state the distribution terms for software that uses the GNU GPL--only [the original English text of the GNU GPL](http://www.gnu.org/licenses/gpl-3.0.html) does that. However, we hope that this translation will help Chinese speakers understand the GNU GPL better.
 　　这是GNU通用公共许可协议的一份非官方中文翻译，并非自由软件基金会所发表，不适用于使用GNU通用公共许可协议发布的软件的法律声明——只有[GNU通用公共许可协议英文原版](http://www.gnu.org/licenses/gpl-3.0.html)才具有法律效力。不过我们希望本翻译能够帮助中文读者更好地理解GNU通用公共许可协议。
 
-You may publish this translation, modified or unmodified, only under the terms at [https://www.gnu.org/licenses/translations.html](https://www.gnu.org/licenses/translations.html).
+You may publish this translation, modified or unmodified, only under the terms at [https://www.gnu.org/licenses/translations.html](https://www.gnu.org/licenses/translations.html).
 
 ## 【引言】
 
@@ -196,4 +196,4 @@ You may publish this translation, modified or unmodified, only under the terms a
 翻译：阮坤良<peterrk@pku.edu.cn>
 
 参考：
-[繁体中文译本] [https://www.gnu.org/licenses/translations.html](https://www.gnu.org/licenses/translations.html)
+[繁体中文译本](https://www.gnu.org/licenses/translations.html)
