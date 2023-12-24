@@ -24,15 +24,14 @@ punctuator:
 recognizer/patterns:
   # 中英混输时须要屏蔽默认设置中的uppercase规则
   email: '^[A-Za-z][-_.0-9A-Za-z]*@.*$'
-  path1: '^/[^,:\*\?"<>\|]*$'  # 因‘/’键也用于上屏第4个候选项，所以必须和path2分开
-  path2: '^[^:\*\?"<>\|]*\\[^,:\*\?"<>\|]*$'
   punct: '^;([0-9]0?|[A-Za-z]+)$'  # ';'开头触发输入扩展符号的正则表达式
   url: '^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$'
 
-"switcher/caption": '～Rime选项菜单～'
-"switcher/hotkeys":
+'switcher/caption': '～Rime选项菜单～'
+'switcher/hotkeys':
   - 'Control+8'  # 打开选项菜单的快捷键（候选：Control+Shift+asterisk）
 
+'ascii_composer/switch_key/Shift_R': commit_code  # 输入码上屏并切换为英文输入模式
 # ascii_composer:
 #   good_old_caps_lock: true  # true | false
 #   switch_key:
