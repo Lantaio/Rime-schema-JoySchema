@@ -4,7 +4,7 @@
 # 在用户使用「输入法设定」调整设置时，小狼毫会格式化 default.custom.yaml，删除所有注释。
 # 目前建议的自定义方法：在此文件修改，之后在 default.custom.yaml 用 `__include` 引入。示例 default.custom.yaml 如下：
 # patch:
-#   __include: joy.default:/
+#   __include: 'joy.default:/'
 
 key_binder:
   bindings:
@@ -24,14 +24,16 @@ punctuator:
 recognizer/patterns:
   # 中英混输时须要屏蔽默认设置中的uppercase规则
   email: '^[A-Za-z][-_.0-9A-Za-z]*@.*$'
-  punct: '^;([0-9]0?|[A-Za-z]+)$'  # ';'开头触发输入扩展符号的正则表达式
+  path1: '^~?/(([^/\\:]+/?)*|/)$'  # ‘/’或‘~/’开头触发输入 Linux 或 Mac目录路径
+  path2: '^([A-Za-z]:|([A-Za-z][^,.;/\\:*?"<>|]*)*)(\\[^,;/\\:*?"<>|]*)*$'  # Win目录路径（限制：如果不是以‘\’开头，则第1个目录名只能以数字开头）
+  punct: '^;([0-9]0?|[A-Za-z]+)$'  # ‘;’开头触发输入扩展符号
   url: '^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$'
 
 'switcher/caption': '～Rime选项菜单～'
 'switcher/hotkeys':
   - 'Control+8'  # 打开选项菜单的快捷键（候选：Control+Shift+asterisk）
 
-'ascii_composer/switch_key/Shift_R': commit_code  # 输入码上屏并切换为英文输入模式
+'ascii_composer/switch_key/Shift_R': commit_code
 # ascii_composer:
 #   good_old_caps_lock: true  # true | false
 #   switch_key:
