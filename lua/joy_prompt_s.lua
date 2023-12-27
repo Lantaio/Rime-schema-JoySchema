@@ -14,6 +14,10 @@ local function joy_prompt_segmentor(segs, env)
 			local seg = Segment(0, 1)
 			seg.prompt = '〔Linux/Mac目录路径〕'
 			segs:add_segment(seg)
+		elseif segs.input == '~/' then
+			local seg = Segment(0, 2)
+			seg.prompt = '〔Linux/Mac目录路径〕'
+			segs:add_segment(seg)
 		elseif segs.input == '\\' then
 			local seg = Segment(0, 1)
 			seg.prompt = '〔Win目录路径〕'
