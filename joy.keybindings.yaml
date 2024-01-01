@@ -17,12 +17,12 @@ paging_with_comma_period:  # 用','和'.'翻页
 
 paging_with_period_greater:  # 用'.'和'>'翻页
   __append:
-    - { when: has_menu, accept: 'Shift+greater', send: Page_Up }
+    - { when: paging, accept: 'Shift+greater', send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
 
 paging_with_semicolon_colon:  # 用';'和':'翻页
   __append:
-    - { when: has_menu, accept: 'Shift+colon', send: Page_Up }
+    - { when: paging, accept: 'Shift+colon', send: Page_Up }
     - { when: has_menu, accept: semicolon, send: Page_Down }
 
 select_with_comma_semicolon_slash:  # 用','、';'和'/'选择第2、第3和第4个候选项
