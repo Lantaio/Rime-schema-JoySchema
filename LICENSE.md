@@ -1,4 +1,4 @@
-🌏 [简体中文](#简体中文) | [English](JoyDoc/LICENSE.en.md)
+🌏 [简体中文](#简体中文) | [English](joy/LICENSE.en.md)
 
 <a id="简体中文" />
 
