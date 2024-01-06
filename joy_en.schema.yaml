@@ -5,7 +5,7 @@
 schema:
   schema_id: joy_en
   name: '😎Joy English'
-  version: '2023.12.3'
+  version: '2024.1.6'
   author:
     - Lantaio (lantaio@yeah.net)
   description: |
@@ -97,4 +97,5 @@ punctuator:
     __include: 'joy.symbols:/punctuator/symbols'  # 导入扩展符号表
 
 recognizer:
-  import_preset: default
+  patterns:
+    punct: '^;([0-9]0?|[A-Za-z]+)$'  # ‘;’开头触发输入扩展符号
