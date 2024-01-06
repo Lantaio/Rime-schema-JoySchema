@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: '😍惊喜拼音'
-  version: '2023.12.9'
+  version: '2024.1.6'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
@@ -27,6 +27,9 @@ switches:
     states: [ 繁體, 简体 ]
   - name: emoji
     states: [ 🖤, ❤ ]  # 禁用 / 启用
+  # - name: prediction  # 预测
+  #   states: [ 🎯, 🔮 ]  # 关闭 / 开启
+  #   reset: 0
   - name: ascii_punct
     reset: 0  # 重置为中文标点模式
     states: [ ￥, $ ]
@@ -36,6 +39,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - ascii_composer  # 處理英文模式及中英文切換
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
+    # - predictor  # 预测功能
     - lua_processor@*joy_period_p  # 优化数字后输入小数点或中文句号的情况
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
@@ -52,6 +56,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - punct_segmentor  # 標識句讀段落
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
+    # - predict_translator  # 预测功能
     - lua_translator@*joy_period_t  # 处理数字后跟小数点或句号的情况
     - punct_translator  # 轉換標點符號
     - table_translator@custom_phrase  # 自定义词典，用词典优先级实现常用字固顶功能
@@ -125,12 +130,24 @@ english:  # 中英文混输的英文词典设置项
   comment_format:  # 自定义提示码
     - xform/.*//  # 清空提示码
 
+# predictor:
+#   # predict db file in user directory/shared directory
+#   # default to 'predict.db'
+#   db: predict.db
+#   # max prediction candidates every time
+#   # default to 0, which means showing all candidates
+#   # you may set it the same with page_size so that period doesn't trigger next page
+#   max_candidates: 8
+#   # max continuous prediction times
+#   # default to 0, which means no limitation
+#   max_iterations: 1
+
 reverse_lookup:  # 笔画反查拼音
   dictionary: stroke
   enable_completion: true
   prefix: "~"
   suffix: "'"
-  tips: '〔笔画〕'
+  tips: '〔笔画反查〕'
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
   comment_format:  # 提示码显示正确的拼音
@@ -148,6 +165,3 @@ key_binder:
 
 recognizer:
   import_preset: default
-  patterns:
-    cn_numerals: '^>[0-9]+[.]?[0-9]*'  # '>'开头触发中文数字、金额的正则表达式
-    reverse_lookup: "~[a-z]*'?$"  # '~'开头触发笔画反查的正则表达式

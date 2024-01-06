@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_flypy
   name: '💕惊喜双拼'
-  version: '2023.12.9'
+  version: '2024.1.6'
   author:
     - '迷思 (lantaio@yeah.net) 创作Rime输入方案'
     - '双拼方案为小鹤双拼'
@@ -36,7 +36,6 @@ engine:
   processors:
     - ascii_composer
     - recognizer
-    # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
     - lua_processor@*joy_period_p  # 优化数字后输入小数点或中文句号的情况
     - key_binder
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
@@ -206,6 +205,3 @@ key_binder:
 
 recognizer:
   import_preset: default
-  patterns:
-    cn_numerals: '^>[0-9]+[.]?[0-9]*'  # '>'开头触发中文数字、金额的正则表达式
-    reverse_lookup: "~[a-z]*'?$" # '~'开头触发笔画反查的正则表达式
