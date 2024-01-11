@@ -187,7 +187,7 @@ reverse_lookup:  # 笔画反查拼音
   enable_completion: true
   prefix: "~"
   suffix: "'"
-  tips: '✒笔画反查'
+  tips: '🖌笔画查拼音'
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
   comment_format:  # 提示码显示正确的拼音
