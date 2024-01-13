@@ -12,13 +12,14 @@ local function joy_prompt_segmentor(segs, env)
 	if context:is_composing() then
 		local seg = Segment(0, 1)
 		local Switch = {
-			[';'] = function()  seg.prompt = '💲扩展符号'  end,
+			[';'] = function()  seg.prompt = '☮扩展符号'  end,
 			['/'] = function()  seg.prompt = '🐧Linux/Mac目录路径'  end,
 			['~/'] = function()
 				seg = Segment(0, 2)
 				seg.prompt = '🐧Linux/Mac目录路径'
 			end,
 			['\\'] = function()  seg.prompt = '📁Win目录路径'  end,
+			['{'] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 			['['] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 			['('] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 			['<'] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
