@@ -1,41 +1,25 @@
 # 键位名称参考网址https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
 numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到5~9，最常用的切换键用中指和无名指按，也可降低和其它软件的快捷键冲突。
   __append:
+    # - { when: always, accept: Control+5, toggle: extended_charset }
     - { when: always, accept: 'Control+6', toggle: simplification }
     - { when: always, accept: 'Control+7', toggle: emoji }
-    # - { when: always, accept: Control+5, toggle: extended_charset }
     - { when: always, accept: 'Control+9', select: .next }
     - { when: always, accept: Control+Shift+asciicircum, toggle: full_shape }  # 6
-    - { when: always, accept: Control+Shift+ampersand, toggle: prediction }  # 7
+    # - { when: always, accept: Control+Shift+ampersand, toggle: prediction }  # 7
     # - { when: always, accept: Control+Shift+asterisk, toggle: extended_charset }  # 8
     # - { when: always, accept: Control+Shift+parenleft, select: .next }  # 9
-
-paging_with_comma_period:  # 用','和'.'翻页
-  __append:
-    - { when: has_menu, accept: comma, send: Page_Up }
-    - { when: has_menu, accept: period, send: Page_Down }
 
 paging_with_period_greater:  # 用'.'和'>'翻页
   __append:
     - { when: paging, accept: 'Shift+greater', send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
 
-paging_with_semicolon_colon:  # 用';'和':'翻页
-  __append:
-    - { when: paging, accept: 'Shift+colon', send: Page_Up }
-    - { when: has_menu, accept: semicolon, send: Page_Down }
-
 select_with_comma_semicolon_slash:  # 用','、';'和'/'选择第2、第3和第4个候选项
   __append:
     - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
     - { when: has_menu, accept: semicolon, send_sequence: '{Down}{Down}{space}' }
     - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{Down}{space}' }
-
-select_with_comma_slash_semicolon:  # 用','、'/'和';'选择第2、第3和第4个候选项
-  __append:
-    - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
-    - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{space}' }
-    - { when: has_menu, accept: semicolon, send_sequence: '{Down}{Down}{Down}{space}' }
 
 select_with_shift_key:  # 用左shift键和右shift键选择第2和第3个候选项
   __append:
