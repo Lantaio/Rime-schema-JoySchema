@@ -13,6 +13,7 @@ key_binder:
       - 'joy.keybindings:/select_with_comma_semicolon_slash'
       - 'joy.keybindings:/numbered_mode_switch'
       - 'key_bindings:/move_by_word_with_tab'
+      # - 'key_bindings:/emacs_editing'
 
 menu:
   # alternative_select_keys: ":,;/"  # 自定义候选项上屏的按键序列
