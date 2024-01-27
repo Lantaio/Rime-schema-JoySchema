@@ -89,7 +89,7 @@
 
 其次要感谢[雾凇拼音](https://github.com/iDvel/rime-ice)输入法方案的作者 [iDvel](https://github.com/iDvel) 大神以及项目的其他贡献者，此项目有非常详尽的注释，让我这个小白从中学习到很多自定制Rime输入法方案的知识。如果你也想设计属于你自己的方案，定能从中获益良多。另外，如果你喜欢大而全的词库的话，那么雾凇拼音可能更适合你。
 
-还有一个对我帮助很大的项目是 [hchunhui](https://github.com/hchunhui) 大神开发的[librime-lua](https://github.com/hchunhui/librime-lua)项目。这个项目让用户可以使用Lua脚本语言来扩展Rime输入法的功能，非常简单方便，也大大降低了我这种小白用户扩展Rime输入法的门槛，强烈推荐。具体使用方法见其[wiki文档](https://github.com/hchunhui/librime-lua/wiki/Scripting)。
+还有一个对我帮助很大的项目是 [hchunhui](https://github.com/hchunhui) 大神以及项目的其他贡献者开发的[librime-lua](https://github.com/hchunhui/librime-lua)项目。这个项目让用户可以使用Lua脚本语言来扩展Rime输入法的功能，非常简单方便，也大大降低了我这种小白用户扩展Rime输入法的门槛，强烈推荐。具体使用方法见其[wiki文档](https://github.com/hchunhui/librime-lua/wiki/Scripting)。
 
 最后，感谢网络上众多Rime输入法使用教程和自定制教程的作者，还有各种词库的贡献者。有他们的热心指导和无私分享，这个项目才得以诞生💟
 
@@ -98,4 +98,4 @@
 * 如果有任何建议、改进或功能需求可在[Discussions](https://github.com/Lantaio/Rime-schema-JoySchema/discussions)中提出。
 
 ## 打赏支持
-除了商业用途需要购买使用许可之外，如果你觉得这个项目很赞，提高了你的码字效率，让你的生活变得更美好，也可以通过上面的付款码给我打赏支持，金额随喜。同样请备注“惊喜输入方案”，我也会按前面『[收费情形](#收费情形)』中所说的比例转账给『[致谢](#致谢)』中提及的几位大神。谢谢支持，希望此Rime输入方案会让你爱上码字！😉
+除了商业用途需要购买使用许可之外，如果你觉得这个项目很赞，提高了你的码字效率，让你喜出望外，也可以通过上面的付款码给我打赏支持，金额随喜。同样请备注“惊喜输入方案”，我也会按前面『[收费情形](#收费情形)』中所说的比例转账给『[致谢](#致谢)』中提及的几位大神。谢谢支持，希望此Rime输入方案能让你码不停提！😉
