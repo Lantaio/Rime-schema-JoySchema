@@ -89,7 +89,7 @@
 
 其次要感谢[雾凇拼音](https://github.com/iDvel/rime-ice)输入法方案的作者 [iDvel](https://github.com/iDvel) 大神以及项目的其他贡献者，此项目有非常详尽的注释，让我这个小白从中学习到很多自定制Rime输入法方案的知识。如果你也想设计属于你自己的方案，定能从中获益良多。另外，如果你喜欢大而全的词库的话，那么雾凇拼音可能更适合你。
 
-还有一个对我帮助很大的项目是 [hchunhui](https://github.com/hchunhui) 大神以及项目的其他贡献者开发的[librime-lua](https://github.com/hchunhui/librime-lua)项目。这个项目让用户可以使用Lua脚本语言来扩展Rime输入法的功能，非常简单方便，也大大降低了我这种小白用户扩展Rime输入法的门槛，强烈推荐。具体使用方法见其[wiki文档](https://github.com/hchunhui/librime-lua/wiki/Scripting)。
+还有一个对我帮助很大的项目是 [hchunhui](https://github.com/hchunhui) 大神以及项目的其他贡献者开发的[librime-lua](https://github.com/hchunhui/librime-lua)项目（已包含在Rime安装包中）。这个项目让用户可以使用Lua脚本语言来扩展Rime输入法的功能，非常简单方便，也大大降低了我这种小白用户扩展Rime输入法的门槛，强烈推荐。具体使用方法见其[wiki文档](https://github.com/hchunhui/librime-lua/wiki/Scripting)。
 
 最后，感谢网络上众多Rime输入法使用教程和自定制教程的作者，还有各种词库的贡献者。有他们的热心指导和无私分享，这个项目才得以诞生💟
 
