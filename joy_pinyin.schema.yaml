@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: '😍惊喜拼音'
-  version: '2024.1.6'
+  version: '2024.2.2'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
@@ -26,9 +26,9 @@ switches:
     # reset: 1  # 重置为简体字输入模式
     states: [ 繁體, 简体 ]
   - name: emoji
-    states: [ 👤, 🎅 ]  # 禁用 / 启用
+    states: [ 👤, 😜 ]  # 禁用 / 启用
   - name: prediction  # 预测
-    states: [ 🗑, 🔮 ]  # 关闭 / 开启
+    states: [ 🚫, 🔮 ]  # 关闭 / 开启
     reset: 1
   - name: ascii_punct
     reset: 0  # 重置为中文标点模式
@@ -145,11 +145,11 @@ predictor:
 reverse_lookup:  # 笔画反查拼音
   dictionary: stroke
   enable_completion: true
-  prefix: "~"
+  prefix: "|"
   suffix: "'"
   tips: '🖌笔画查拼音'
   preedit_format:
-    - xlit/hspnz/一丨丿丶乙/
+    - xlit/hspnz/一丨丿丶乚/
   comment_format:  # 提示码显示正确的拼音
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/  # 此项是我添加的
