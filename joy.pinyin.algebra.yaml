@@ -8,4 +8,4 @@ abbreviation:
 spelling_correction:
   __append:
     - derive/^([nl])ve$/$1ue/  # nve = nue, lve = lue
-    - derive/^([jqxy])u/$1v/  # ju = jv,
+    - derive/^([jqxy])u$/$1v/  # ju = jv, ...
