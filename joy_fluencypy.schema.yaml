@@ -6,7 +6,6 @@ __include: "joy_pinyin.schema:/"
 schema:
   schema_id: joy_fluencypy
   name: '💝惊喜語句流'
-  version: '2023.12.9'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
