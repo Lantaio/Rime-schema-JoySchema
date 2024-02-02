@@ -112,8 +112,8 @@ end
 -- '>'开头触发，须要在输入方案 recognizer/patterns 中定义 cn_numerals: "^>[0-9]+[.]?[0-9]*"
 local function cn_numerals(input, seg)
 	local str, num, numberPart
-	if string.match(input, "^>(%d+)(%.?)(%d*)$") ~= nil then
-		str = string.gsub(input, "^>", "")
+	if string.match(input, "^%$(%d+)(%.?)(%d*)$") ~= nil then
+		str = string.gsub(input, "^%$", "")
 		numberPart = number_translatorFunc(str)
 		if #numberPart > 0 then
 			for i = 1, #numberPart do

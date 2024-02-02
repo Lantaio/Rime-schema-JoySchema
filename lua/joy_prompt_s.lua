@@ -23,7 +23,7 @@ local function joy_prompt_segmentor(segs, env)
 			['['] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 			['('] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 			['<'] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
-			['>'] = function()  seg.prompt = '🀄中文数字金额'  end,
+			['$'] = function()  seg.prompt = '🀄中文数字金额'  end,
 		}
 		local case = Switch[segs.input]
 		if case then
