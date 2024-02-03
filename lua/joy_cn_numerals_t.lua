@@ -1,5 +1,5 @@
 -- 来源 https://github.com/yanhuacuo/98wubi-tables > http://98wb.ysepan.com/
--- 数字、金额大写 ('>'开头+数字)
+-- 数字、金额大写 ('$'开头+数字)
 
 local function splitNumPart(str)
 	local part = {}
@@ -24,7 +24,7 @@ local function decimal_func(str, posMap, valMap)
 	valMap = valMap or {[0]="零"; "壹"; "贰"; "叁" ;"肆"; "伍"; "陆"; "柒"; "捌"; "玖"}
 	if #str>4 then dec = string.sub(tostring(str), 1, 4) else dec =tostring(str) end
 	dec = string.gsub(dec, "0+$", "")
-	
+
 	if dec == "" then return "整" end
 
 	local result = ""
@@ -109,7 +109,7 @@ local function number_translatorFunc(str)
 	return result
 end
 
--- '>'开头触发，须要在输入方案 recognizer/patterns 中定义 cn_numerals: "^>[0-9]+[.]?[0-9]*"
+-- ‘$’开头触发，须要在输入方案 recognizer/patterns 中定义 cn_numerals: '^\$[0-9]+[.]?[0-9]*'
 local function cn_numerals(input, seg)
 	local str, num, numberPart
 	if string.match(input, "^%$(%d+)(%.?)(%d*)$") ~= nil then
