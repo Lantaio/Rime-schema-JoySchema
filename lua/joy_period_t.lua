@@ -1,7 +1,7 @@
 --[[
-功能：本程序优化数字后输入小数点或中文句号的情况，须要和joy_period_p.lua搭配使用
+说明：本程序优化数字后输入小数点或中文句号的情况，须要和joy_period_p.lua搭配使用。
 作者：Lantaio Joy
-版本：2024.1.5
+版本：2024.2.11
 ]]--
 local function joy_period_translator(input, seg, env)
 	local context = env.engine.context
