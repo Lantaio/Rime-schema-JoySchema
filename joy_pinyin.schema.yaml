@@ -4,7 +4,7 @@
 schema:
   schema_id: joy_pinyin
   name: '😍惊喜拼音'
-  version: '2024.2.11'
+  version: '2024.3.12'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
@@ -26,7 +26,7 @@ switches:
     # reset: 1  # 重置为简体字输入模式
     states: [ 繁體, 简体 ]
   - name: emoji
-    states: [ 👤, 😜 ]  # 禁用 / 启用
+    states: [ 🌚, 😃 ]  # 禁用 / 启用
   # - name: prediction  # 预测
   #   states: [ 🚫, 🔮 ]  # 关闭 / 开启
   #   reset: 1
@@ -40,7 +40,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - ascii_composer  # 處理英文模式及中英文切換
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     # - lua_processor@*joy_selector_p  # 有候选框时指定选字上屏按键。
-    - lua_processor@*joy_period_p  # 优化数字后输入小数点或中文句号的情况
+    # - lua_processor@*joy_period2_p  # 优化数字后输入小数点或中文句号的情况
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
     - speller  # 拼寫處理器，接受字符按鍵，編輯輸入碼
@@ -57,11 +57,12 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
     # - predict_translator  # 预测功能
-    - lua_translator@*joy_period_t  # 处理数字后跟小数点或句号的情况
+    # - lua_translator@*joy_period_t  # 处理数字后跟小数点或句号的情况
     - punct_translator  # 轉換標點符號
     - table_translator@custom_phrase  # 自定义词典，用词典优先级实现常用字固顶功能
     - lua_translator@*joy_date_t  # 当前时间、日期、星期
     - lua_translator@*joy_cn_numerals_t  # 中文数字、金额翻译器
+    # - lua_translator@*joy_prompt_t  # 为触发特定规则的输入码添加提示词
     - table_translator@english  # 中英文混输翻译器，载入取名为english的设置
     - reverse_lookup_translator  # 反查翻譯器，用另一種編碼方案查碼
     - script_translator  # 腳本翻譯器，用於拼音等基於音節表的輸入方案
@@ -84,7 +85,7 @@ translator:
   dictionary: luna_pinyin  # 指示此输入方案使用默认词库。
   prism: joy_pinyin
   packs:  # 扩充词库列表，注释掉某个词库并重新部署即可屏蔽那个词库。
-    - joy.pinyin_cn_en  # 中英混合词库
+    - joy.pinyin_cn_en  # 中英混合词词库
     - joy.pinyin_yueyu  # 粤语词库
     - joy.pinyin_guangfoditie  # 广佛地铁站名词库
     - joy.pinyin_hushengupiao  # 中国沪深股票名称词库
@@ -101,7 +102,7 @@ custom_phrase:
   user_dict: joy_custom_phrase
   db_class: stabledb  # 用户词典格式，stabledb（文本）或 userdb（二进制）
   enable_completion: false  # 是否开启逐键提示
-  enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
+  enable_sentence: false  # 是否整句连打，是否自动造词，否则为四码自动上屏，不可作用於拼音、注音、速成等輸入方案
   initial_quality: 2  # 此词库的优先级
 
 date_time:  # Lua 配置: 日期、时间、星期、ISO 8601、时间戳的触发关键字
@@ -124,13 +125,13 @@ english:  # 中英文混输的英文词典设置项
   spelling_hints: 9
   enable_completion: true  # 是否开启逐键提示（开启后英文候选的位置更合理）
   enable_encoder: false  #是否自动造词
-  enable_sentence: false  # 是否整句连打，是否自动造句，否则为四码自动上屏
+  enable_sentence: true  # 是否整句连打，是否自动造词，否则为四码自动上屏，不可作用於拼音、注音、速成等輸入方案
   enable_user_dict: true  # 是否开启用户词典，以记录动态字频和用户词词频
   initial_quality: -1
   comment_format:  # 自定义提示码
     - xform/.*//  # 清空提示码
 
-# predictor:
+# predictor:  # 预测功能
 #   # predict db file in user directory/shared directory
 #   # default to 'predict.db'
 #   db: predict.db
