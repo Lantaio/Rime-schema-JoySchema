@@ -1,12 +1,12 @@
 # 键位名称参考网址https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
-numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到5~9，最常用的切换键用中指和无名指按，也可降低和其它软件的快捷键冲突。
+numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到6~9，最常用的切换键用中指和无名指按，以减轻小指疼痛，也可降低和其它软件的快捷键冲突。
   __append:
     # - { when: always, accept: Control+5, toggle: extended_charset }
     - { when: always, accept: 'Control+6', toggle: simplification }
     - { when: always, accept: 'Control+7', toggle: emoji }
     - { when: always, accept: 'Control+9', select: .next }
     - { when: always, accept: Control+Shift+asciicircum, toggle: full_shape }  # 6
-    # - { when: always, accept: Control+Shift+ampersand, toggle: prediction }  # 7
+    - { when: always, accept: Control+Shift+ampersand, toggle: prediction }  # 7
     # - { when: always, accept: Control+Shift+asterisk, toggle: extended_charset }  # 8
     # - { when: always, accept: Control+Shift+parenleft, select: .next }  # 9
 
