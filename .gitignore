@@ -14,5 +14,5 @@ predict.db
 user.yaml
 # Other files that should not be included in this repository
 descript.ion
-Rime.sublime-workspace
+*.sublime-*
 *.bak
