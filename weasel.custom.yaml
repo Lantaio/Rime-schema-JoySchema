@@ -2,8 +2,8 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.15.0.0
   generator: "Weasel::UIStyleSettings"
-  modified_time: "Wed Sep 13 22:45:15 2023"
-  rime_version: 1.8.5
+  modified_time: "Wed Mar 13 13:16:40 2024"
+  rime_version: 1.10.0
 patch:
   "app_options/+":
     __include: "joy.theme:/app_options"
