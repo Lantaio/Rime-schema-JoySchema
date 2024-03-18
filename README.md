@@ -109,6 +109,6 @@
 
 还有一个对我帮助很大的项目是 [hchunhui](https://github.com/hchunhui) 大神以及项目的其他贡献者开发的[librime-lua](https://github.com/hchunhui/librime-lua)项目（已包含在Rime安装包中）。这个项目让用户可以使用Lua脚本语言来扩展Rime输入法的功能，非常简单方便，也大大降低了我这种小白用户扩展Rime输入法的门槛，强烈推荐。具体使用方法见其[wiki文档](https://github.com/hchunhui/librime-lua/wiki/Scripting)。
 
-还要感谢 @Shewer 大神，不但是多个Rime项目的贡献者，而且还非常热心解答大家提出的问题，对我的帮助很大。🤝
+还要感谢 @shewer 大神，不但是多个Rime项目的贡献者，而且还非常热心解答大家提出的问题，对我的帮助很大。🤝
 
 最后，感谢网络上众多Rime输入法使用教程和自定制教程的作者，还有各种词库的贡献者。🌹有他们的热心指导和无私分享，这个项目才得以诞生🌱希望此Rime输入方案能让你在通往梦想的路上码不停提！✌🏻️
