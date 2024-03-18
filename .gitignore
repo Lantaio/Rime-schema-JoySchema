@@ -1,18 +1,18 @@
-# Folders
+## Folders
 backup/
 build/
-# User vocabulary database folders
+### User vocabulary database folders
 *.userdb/
-# Sync folder
+### Sync folder
 sync/
 
-# Files
-# Files containing my personal data.
+## Files
+### Files containing my personal data.
 installation.yaml
 joy.symbols.custom.yaml
 predict.db
 user.yaml
-# Other files that should not be included in this repository
+### Other files that should not be included in this repository
 descript.ion
 *.sublime-*
 *.bak
