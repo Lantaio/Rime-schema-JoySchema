@@ -9,7 +9,7 @@ config_version: '1.6'
 
 # patch:
 #   punctuator/import_preset: symbols
-#   recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$'  # '^'表示“开头”，'/'即表示“以/号开头”，可改为其它符号
+#   recognizer/patterns/punct: '^/([0-9]0?|[A-Za-z]+)$'  # '^'表示“以..开头”，'^/'即表示“以/号开头”，可改为其它符号
 
 punctuator:
   full_shape:
