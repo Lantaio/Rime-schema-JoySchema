@@ -1,7 +1,7 @@
 --[[
 说明：本程序为触发特定规则的输入码添加提示语。
 作者：Lantaio Joy
-版本：2024.4.2
+版本：2024.4.3
 ]]--
 local function joy_prompt_segmentor(segs, env)
 	local context = env.engine.context
@@ -14,12 +14,12 @@ local function joy_prompt_segmentor(segs, env)
 		['['] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 		['('] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 		['<'] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
-		['>'] = function()  seg.prompt = '🀄中文数字金额'  end,
+		['$'] = function()  seg.prompt = '🀄中文数字金额'  end,
 	}
 	local first_char = context.input:sub(1, 1)
 	local switch = Cases[first_char]
-	-- 如果 不是全角模式 并且 输入码以Cases表中的标点符号开头 或者 输入码以‘^’或者‘>’开头，就...
-	if (not context:get_option('full_shape') and switch) or first_char == '^' or first_char == '>' then
+	-- 如果 不是全角模式 并且 输入码以Cases表中的标点符号开头 或者 输入码以‘^’或者‘$’开头，就...
+	if (not context:get_option('full_shape') and switch) or first_char == '^' or first_char == '$' then
 		switch()
 		segs:add_segment(seg)
 	-- 否则，如果是全角模式，就...

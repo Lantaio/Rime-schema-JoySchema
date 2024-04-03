@@ -6,7 +6,7 @@
 # patch:
 #   __include: 'joy.default:/'
 # 作者：Lantaio Joy
-# 版本：2024.4.2
+# 版本：2024.4.3
 
 key_binder:
   bindings:
@@ -26,7 +26,7 @@ punctuator:
 
 recognizer/patterns:
   # 中英混输时须要屏蔽默认设置中的uppercase规则
-  cn_numerals: '^>[0-9]+[.]?[0-9]*$'  # '>'开头触发中文数字、金额
+  cn_numerals: '^\$[0-9]+[.]?[0-9]*$'  # '>'开头触发中文数字、金额
   coding: '^([{[(][^,.;>/]|<[^,.;>]).*$'  # ‘{’、‘[’、‘(’、‘<’开头触发输入英文程序代码
   email: '^[A-Za-z][-_.0-9A-Za-z]*@.*$'
   mac_path: '^~?/([^,;/:]*/?)*$'  # ‘/’或‘~/’开头触发输入 Linux 或 Mac目录路径
@@ -39,7 +39,8 @@ recognizer/patterns:
 'switcher/hotkeys':
   - 'Control+8'  # 打开选项菜单的快捷键（候选：Control+Shift+asterisk）
 
-'ascii_composer/switch_key/Shift_R': commit_code  # 输入码上屏并切换为英文输入模式
+'ascii_composer/switch_key/Shift_L': noop  # 输入码上屏并切换为英文输入模式
+'ascii_composer/switch_key/Shift_R': noop  # 输入码上屏并切换为英文输入模式
 # ascii_composer:
 #   good_old_caps_lock: true  # true | false
 #   switch_key:
