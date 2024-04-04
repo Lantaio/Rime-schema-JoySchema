@@ -45,11 +45,11 @@ function M.func(input, seg, env)
 	-- 当前日期
 	if (input == M.date) then
 		yield_cand('date', seg, os.date('%Y年%m月%d日'):gsub('年0', '年'):gsub('月0', '月'))
-		yield_cand('date', seg, os.date('%m月%d日'):gsub('^0', ''):gsub('月0', '月'))
 		yield_cand('date', seg, os.date('%Y/%m/%d'):gsub('/0', '/'))
+		yield_cand('date', seg, os.date('%Y.%m.%d'):gsub('%.0', '.'))
 		yield_cand('date', seg, os.date('%Y%m%d'))
 		-- yield_cand('date', seg, os.date('%Y-%m-%d'):gsub('-0', '-'))
-		-- yield_cand('date', seg, os.date('%Y.%m.%d'):gsub('%.0', '.'))
+		-- yield_cand('date', seg, os.date('%m月%d日'):gsub('^0', ''):gsub('月0', '月'))
 	-- 指定月日
 	elseif input:match('^rq%d%d%d%d$') then
 		month, day = input:match('^rq(%d%d)(%d%d)$')
@@ -64,8 +64,8 @@ function M.func(input, seg, env)
 		if isDate(year, month, day) then
 			yield_cand('date', seg, (year..'年'..month..'月'..day..'日'))
 			yield_cand('date', seg, (year..'/'..month..'/'..day))
-			-- yield_cand('date', seg, (year..'-'..month..'-'..day))
-			-- yield_cand('date', seg, (year..'.'..month..'.'..day))
+			yield_cand('date', seg, (year..'.'..month..'.'..day))
+			yield_cand('date', seg, (year..'-'..month..'-'..day))
 		end
 	-- 当前时间
 	elseif (input == M.time) then
