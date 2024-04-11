@@ -6,7 +6,8 @@
 # patch:
 #   __include: 'joy.default:/'
 # 作者：Lantaio Joy
-# 版本：2024.4.3
+# 版本：2.0.2
+# 更新：2024/4/11
 
 key_binder:
   bindings:
@@ -39,8 +40,9 @@ recognizer/patterns:
 'switcher/hotkeys':
   - 'Control+8'  # 打开选项菜单的快捷键（候选：Control+Shift+asterisk）
 
-'ascii_composer/switch_key/Shift_L': noop  # 输入码上屏并切换为英文输入模式
-'ascii_composer/switch_key/Shift_R': noop  # 输入码上屏并切换为英文输入模式
+'ascii_composer/switch_key/Shift_L': noop  # 无操作，标点特工外挂须要禁用此键切换功能。
+'ascii_composer/switch_key/Shift_R': noop  # 无操作，标点特工外挂须要禁用此键切换功能。
+'ascii_composer/switch_key/Control_R': inline_ascii  # 临时切换为英文输入模式，上屏后恢复为中文输入模式。
 # ascii_composer:
 #   good_old_caps_lock: true  # true | false
 #   switch_key:
