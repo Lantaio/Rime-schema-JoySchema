@@ -3,7 +3,7 @@
 # 说明：Rime basic punctuation.
 # 作者：Lantaio Joy
 # 版本：3.3.7
-# 更新：2024.4.15
+# 更新：2024/4/15
 
 full_shape:
   ' ' : { commit: '　' }
