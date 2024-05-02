@@ -2,8 +2,8 @@
 #
 # 说明：Rime basic punctuation.
 # 作者：Lantaio Joy
-# 版本：3.3.8
-# 更新：2024/4/17
+# 版本：3.4.9
+# 更新：2024/5/2
 
 full_shape:
   ' ' : { commit: '　' }
