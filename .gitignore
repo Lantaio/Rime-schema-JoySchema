@@ -1,18 +1,19 @@
-## Folders
+## 不同步到远程仓库的目录列表
+.github/
 backup/
 build/
-### User vocabulary database folders
+### 用户词典目录
 *.userdb/
-### Sync folder
+### 同步目录
 sync/
 
-## Files
-### Files containing my personal data.
+## 不同步到远程仓库的文件列表
+### 包含个人信息的文件
 installation.yaml
 joy.symbols.custom.yaml
 predict.db
 user.yaml
-### Other files that should not be included in this repository
+### 其它不应该包含在此仓库的文件列表
 descript.ion
 *.sublime-*
 *.bak
