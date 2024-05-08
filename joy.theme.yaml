@@ -1,3 +1,7 @@
+# encoding: utf-8
+#
+# 说明：Rime 惊喜全拼输入法方案
+# 备注：
 # weasel.yaml 支持的所有选项及注释，用于配置参考
 # 感谢 @[Mirtle](https://github.com/mirtlecn) 整理
 # 定制化文档 https://github.com/rime/weasel/wiki/Weasel-定製化
@@ -10,12 +14,16 @@
 #   "style/+":
 #     __include: joy.theme:/style
 
-
 # 全部 style 选项
 # refer：<https://github.com/rime/weasel/blob/master/RimeWithWeasel/RimeWithWeasel.cpp>
 # updated：2023/11/10
 # Weasel 版本：15.0, CI #137 <https://github.com/rime/weasel/actions/runs/5912109600>
 # Commit: db79168
+#
+# 网址：https://github.com/Lantaio/Rime-schema-JoySchema
+# 作者：Lantaio Joy
+# 版本：1.10.30
+# 更新：2023/12/7
 
 style:  # 此处为完整列表及其缺省值，不要在此修改，看后面joy_style部分的说明。
   # 字体设定

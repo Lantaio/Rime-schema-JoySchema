@@ -1,10 +1,11 @@
-# Rime's punctuation and symbols
 # encoding: utf-8
 #
-# Usage: patch your Rime schema to enable /X symbols
+# 说明：Rime's punctuation and symbols
+# 备注: patch your Rime schema to enable /X symbols
+# 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
-# 版本：1.0.5
-# 更新：2024/4/17
+# 版本：1.0.7
+# 更新：2024/5/8
 
 config_version: '1.6'
 

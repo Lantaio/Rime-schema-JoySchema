@@ -1,13 +1,15 @@
-# Rime default settings
 # encoding: utf-8
 
 # 在用户使用「输入法设定」调整设置时，小狼毫会格式化 default.custom.yaml，删除所有注释。
 # 目前建议的自定义方法：在此文件修改，之后在 default.custom.yaml 用 `__include` 引入。示例 default.custom.yaml 如下：
 # patch:
 #   __include: 'joy.default:/'
+#
+# 说明：Rime 缺省设置
+# 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
 # 版本：2.0.2
-# 更新：2024/4/11
+# 更新：2024/5/8
 
 key_binder:
   bindings:

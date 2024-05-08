@@ -1,10 +1,14 @@
-# Rime schema
 # encoding: utf-8
+# 说明：Rime 惊喜全拼输入法方案
+# 网址：https://github.com/Lantaio/Rime-schema-JoySchema
+# 作者：Lantaio Joy
+# 版本：2.20.50
+# 更新：2024/4/11
 
 schema:
   schema_id: joy_pinyin
   name: '😍惊喜拼音'
-  version: '2024.4.3'
+  version: '2.20.50'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |

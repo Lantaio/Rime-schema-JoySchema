@@ -1,5 +1,9 @@
-# Rime schema
 # encoding: utf-8
+# 说明：Rime 惊喜（小鹤）双拼输入法方案
+# 网址：https://github.com/Lantaio/Rime-schema-JoySchema
+# 作者：Lantaio Joy
+# 版本：2.10.30
+# 更新：2024/5/8
 
 __include: "joy_pinyin.schema:/"
 

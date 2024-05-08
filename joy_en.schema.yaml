@@ -1,11 +1,15 @@
-# Rime schema
-# vim: set sw=2 sts=2 et:
 # encoding: utf-8
+# vim: set sw=2 sts=2 et:
+# 说明：Rime 惊喜英文输入法方案
+# 网址：https://github.com/Lantaio/Rime-schema-JoySchema
+# 作者：Lantaio Joy
+# 版本：2.10.30
+# 更新：2024/1/6
 
 schema:
   schema_id: joy_en
   name: '😎Joy English'
-  version: '2024.1.6'
+  version: '2.10.30'
   author:
     - Lantaio (lantaio@yeah.net)
   description: |
