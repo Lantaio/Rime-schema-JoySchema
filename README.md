@@ -82,8 +82,8 @@
 6. 勾选你希望使用的输入方案，选好后点〔中〕按钮。然后选择你喜欢的配色方案，选好后点〔中〕按钮。
 
 ## 欢迎反馈
-* 如果你在使用此Rime输入法方案的过程中发现有什么问题或者缺陷，请在[Issues](https://github.com/Lantaio/Rime-schema-JoySchema/issues)中反馈情况。
-* 如果有任何建议、改进或功能需求可在[Discussions](https://github.com/Lantaio/Rime-schema-JoySchema/discussions)中提出。
+* 如果你在使用此Rime输入法方案的过程中发现有什么问题、缺陷或功能需求，请在[议题（Issues)](https://github.com/Lantaio/Rime-schema-JoySchema/issues)中反馈情况。
+* 如果有任何疑问或建议可在[讨论区（Discussions)](https://github.com/Lantaio/Rime-schema-JoySchema/discussions)中提出。
 
 ## 致谢
 首先要感谢[Rime输入法引擎](https://github.com/rime)的主创 [lotem](https://github.com/lotem) 大神以及项目的其他贡献者奉献这么强大的输入法项目👍并且此项目还有十分详尽的[wiki文档](https://github.com/rime/home/wiki)，想自定制Rime输入方案的话必须去打卡。
