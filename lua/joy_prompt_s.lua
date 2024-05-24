@@ -30,11 +30,6 @@ local function joy_prompt_segmentor(segs, env)
 	elseif context.input == 'rq' then
 		seg.prompt = '📆日期 示例：20210601'
 		segs:add_segment(seg)
-	-- 否则，如果输入码以‘~/’开头，就...
-	elseif context.input:sub(1, 2) == '~/' then
-		seg.prompt = '🐧Linux/Mac目录路径'
-		segs:add_segment(seg)
-	-- 否则，如果输入码以字母+‘:’开头，就...
 	elseif context.input:match('^%a:') then
 		seg.prompt = '📁Win目录路径'
 		segs:add_segment(seg)
