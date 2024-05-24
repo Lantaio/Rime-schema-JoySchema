@@ -1,7 +1,8 @@
 --[[
 说明：本程序为触发特定规则的输入码添加提示语。
 作者：Lantaio Joy
-版本：2024.4.3
+版本：2.3.10
+更新：2024/5/24
 ]]--
 local function joy_prompt_segmentor(segs, env)
 	local context = env.engine.context
