@@ -1,9 +1,9 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.15.0.0
+  distribution_version: 0.16.0
   generator: "Rime::SwitcherSettings"
-  modified_time: "Sat Feb  3 01:15:18 2024"
-  rime_version: 1.9.0
+  modified_time: "Thu May 30 00:24:21 2024"
+  rime_version: 1.11.2
 patch:
   __include: "joy.default:/"
   schema_list:
