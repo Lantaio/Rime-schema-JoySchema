@@ -3,8 +3,8 @@
 # 说明：Rime快捷键设置
 # 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
-# 版本：2.0.2
-# 更新：2024/5/24
+# 版本：2.0.3
+# 更新：2024/5/30
 
 numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到6~9，最常用的切换键用中指和无名指按，以减轻小指疼痛，也可降低和其它软件的快捷键冲突。
   __append:
@@ -15,7 +15,7 @@ numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到6~9，最�
     - { when: always, accept: Control+Shift+asciicircum, toggle: extended_charset }  # 6
     # - { when: always, accept: Control+Shift+ampersand, toggle:  }  # 7
     - { when: always, accept: Control+Shift+asterisk, select: .next }  # 8
-    - { when: always, accept: Control+Shift+parenleft, select: prediction }  # 9
+    - { when: always, accept: Control+Shift+parenleft, toggle: prediction }  # 9
 
 paging_with_period_greater:  # 用'.'和'>'翻页
   __append:
