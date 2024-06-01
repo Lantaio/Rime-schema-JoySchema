@@ -4,12 +4,12 @@
 # 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
 # 版本：2.21.51
-# 更新：2024/5/30
+# 更新：2024/6/1
 
 schema:
   schema_id: joy_pinyin
   name: '😍惊喜拼音'
-  version: '2.20.50'
+  version: '2.21.51'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
@@ -23,28 +23,27 @@ schema:
 
 switches:
   - name: ascii_mode
-    reset: 0  # 重置为中文输入模式
     states: [ 中文, 英文 ]
+    reset: 0  # 重置为中文输入模式
+  - name: simplification
+    states: [ 繁體, 简体 ]
+    # reset: 1  # 重置为简体字输入模式
   - name: full_shape
     states: [ 🌙半角, 🌕全角 ]  # 半角 / 全角
-  - name: simplification
-    # reset: 1  # 重置为简体字输入模式
-    states: [ 繁體, 简体 ]
   - name: emoji
     states: [ 🌚关emoji, 😃开emoji ]  # 禁用 / 启用
   - name: prediction  # 预测
     states: [ ⛔禁预测, 🔮开预测 ]
-    reset: 1
-  - name: ascii_punct
-    reset: 0  # 重置为中文标点模式
-    states: [ ￥, $ ]
+    # reset: 0
+  # - name: ascii_punct
+  #   reset: 0  # 重置为中文标点模式
+  #   states: [ ￥, $ ]
 
 engine:  # 輸入引擎設定，即掛接組件的「處方」
   processors:  # 一、這批組件處理各類按鍵消息
-    - predictor
+    - predictor  # 预言功能处理器
     - ascii_composer  # 處理英文模式及中英文切換
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
-    # - lua_processor@*joy_period_p  # 优化输入标点符号的逻辑。
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
     - key_binder  # 在特定條件下將按鍵綁定到其他按鍵，如重定義逗號、句號爲候選翻頁鍵
     - speller  # 拼寫處理器，接受字符按鍵，編輯輸入碼
@@ -60,8 +59,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - punct_segmentor  # 標識句讀段落
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
-    - predict_translator
-    # - lua_translator@*joy_period_t  # 处理数字后跟小数点或句号的情况
+    - predict_translator  # 预言功能翻译器
     - punct_translator  # 轉換標點符號
     - table_translator@custom_phrase  # 自定义词典，用词典优先级实现常用字固顶功能
     - lua_translator@*joy_date_t  # 当前时间、日期、星期
@@ -141,7 +139,7 @@ predictor:
   # max prediction candidates every time
   # default to 0, which means showing all candidates
   # you may set it the same with page_size so that period doesn't trigger next page
-  max_candidates: 3
+  max_candidates: 7
   # max continuous prediction times
   # default to 0, which means no limitation
   max_iterations: 0
