@@ -32,7 +32,7 @@ local function joy_prompt_segmentor(segs, env)
 		seg.prompt = '📆日期 示例：20210601'
 		segs:add_segment(seg)
 	-- 否则，如果输入码以‘x:’ 或 ‘\’开头，则……
-	elseif input:find('^%a:') or input:sub(1, 1) == '\\' then
+	elseif input:find('^%a:') or input:find('\\', 1, true) then
 		seg.prompt = '📁Win目录路径'
 		-- 如果输入码包含[/*?"<>|] 或 从第3个字符起有‘:’号 或 以‘\:’开头，则显示警告信息
 		if input:find('[/*?"<>|]') or input:find(':', 3, true) or input:sub(1, 2) == '\\:' then
