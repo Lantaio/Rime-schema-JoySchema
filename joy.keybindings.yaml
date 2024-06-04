@@ -19,7 +19,7 @@ numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到6~9，最�
 
 paging_with_period_greater:  # 用'.'和'>'翻页
   __append:
-    - { when: paging, accept: 'Shift+greater', send: Page_Up }
+    - { when: has_menu, accept: 'Shift+greater', send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
 
 select_with_comma_semicolon_slash:  # 用','、';'和'/'选择第2、第3和第4个候选项
