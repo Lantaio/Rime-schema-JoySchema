@@ -4,8 +4,8 @@
 
 ### 新增功能
 * 🎊引入[FinalD/终点 外挂插件](https://github.com/Lantaio/IME-booster-FinalD)以提高输入标点符号的速度（2024/4/3）
-* 🐣️完全重构标点符号列表以适配 FinalD/终点 外挂插件（2024/4/3~5/8）
-* 🐣🧪加入🔮️[预言功能](https://github.com/rime/librime-predict)（2024/5/30）
+* 🐣️完全重构标点符号列表以适配 FinalD/终点 外挂插件（2024/4/3~5/24）
+* 🐣🧪加入🔮️[预言功能](https://github.com/rime/librime-predict)，通过<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd>开/关此功能（2024/5/30）
 
 ### 优化更改
 * ⚙️为配合 FinalD/终点 外挂插件，禁用<kbd>Shift</kbd>键切换中/英输入功能，改用右<kbd>Ctrl</kbd>键（2024/4/12）
