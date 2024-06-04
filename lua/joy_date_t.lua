@@ -1,8 +1,8 @@
 --[[
 说明：本程序使得在输入对应的拼音缩写时会生成日期、时间或星期等候选项。
 作者：Lantaio Joy
-版本：1.3.6
-更新：2024.3.5
+版本：1.4.8
+更新：2024.6.5
 ]]--
 local function isDate(year, month, day)
 	-- 如果年、月、日是有效数字，就...
@@ -57,6 +57,15 @@ function M.func(input, seg, env)
 		month = tonumber(month)  day = tonumber(day)
 		if isDate(1976, month, day) then
 			yield_cand('date', seg, (month..'月'..day..'日'))
+		end
+		if isDate(os.date('%Y'), month, day) then
+			yield_cand('date', seg, (os.date('%Y')..'年'..month..'月'..day..'日'))
+		end
+		if isDate(os.date('%Y')-1, month, day) then
+			yield_cand('date', seg, ((os.date('%Y')-1)..'年'..month..'月'..day..'日'))
+		end
+		if isDate(os.date('%Y')+1, month, day) then
+			yield_cand('date', seg, ((os.date('%Y')+1)..'年'..month..'月'..day..'日'))
 		end
 	-- 指定年月日
 	elseif input:match('^rq%d%d%d%d%d%d%d%d$') then
