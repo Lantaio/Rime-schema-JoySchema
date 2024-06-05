@@ -29,9 +29,9 @@
 * ⭐️如果是用<kbd>.</kbd>键向后翻页，则**在翻页后可以继续输入拼音来缩小候选范围，而不会出现英文句号的问题**。
 * 方便地**输入数字对应的中文数字和金额大写**（按<kbd>$</kbd>键后输入阿拉伯数字）。
 * **方便地输入当前日期、星期以及时间**等（输入‘rq’、‘xq’、‘sj’）。
-* **方便地输入指定的年月日或月日**（输入‘rq’后跟8位表示年月日的数字或4位表示月日的数字，只有输入合法的日期数字时才会显示对应的候选项）。
+* **⭐️方便地输入指定的月日或年月日**（输入‘rq’后跟4位表示月日的数字或8位表示年月日的数字，只有输入合法的日期数字时才会显示对应的候选项）。
 * **方便地输入大量扩展符号**（按<kbd>^</kbd>键后输入拼音简称，详见`joy.symbols.yaml`）。
-* **方便地输入emoji表情符号**😊，并可通过<kbd>Ctrl</kbd>+<kbd>9</kbd>开/关此功能（开启后输入表情对应的拼音，例如：‘xiaolian’笑脸）。
+* **方便地输入emoji表情符号**，并可通过<kbd>Ctrl</kbd>+<kbd>9</kbd>开/关此功能（开启后输入表情对应的拼音，例如：‘xiaolian’笑脸😊️）。
 * **方便地输入英文目录路径**（‘X:’或‘\’开头触发输入Windows目录路径，‘/’或开头触发输入Linux/Mac目录路径）。
 * **方便地输入网址和Email地址**。
 * 🧪实验性加入🔮️[预言功能](https://github.com/rime/librime-predict)，通过<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd>开/关此功能。（现阶段体验还不是很好。）
@@ -45,16 +45,16 @@
 1. **安装依赖软件**：如果未安装Rime输入法，先去[下载](https://github.com/rime/weasel/releases)并安装（建议安装最新的版本）。
 2. **备份你的Rime输入法个人设置**，以备移除此输入方案时还原设置：
 	1. 系统任务栏输入法图标右键菜单选择「退出算法服务」。
-	2. 备份你的Rime用户目录（一般是`C:\用户\%你的用户名%\AppData\Roaming\Rime`）中的`default.custom.yaml`和`weasel.custom.yaml`。注意，备份后**无须清空**你的Rime用户目录。
+	2. 备份你的Rime用户目录（一般是`C:\用户\%你的用户名%\AppData\Roaming\Rime`）中的default.custom.yaml和weasel.custom.yaml。注意，备份后**无须清空**你的Rime用户目录。
 3. **添加此Rime输入法方案**:
-	1. 下载最新的[Release](https://github.com/Lantaio/Rime-schema-JoySchema/releases)中Assets（附件）中的`JoySchema-x.x.x.zip`并解压到你的Rime用户目录。
+	1. 下载最新的[Release](https://github.com/Lantaio/Rime-schema-JoySchema/releases)中Assets（附件）中的JoySchema-x.x.x.zip并解压到你的Rime用户目录。
 	2. 系统任务栏输入法图标右键菜单选择「重启算法服务」。
 	3. 系统任务栏输入法图标右键菜单选择「输入法设定」。
 	4. 勾选“惊喜拼音”和“Joy English”，另外还有“惊喜双拼”（基于小鹤双拼方案）和“惊喜语句流”可供选择，选好后点〔中〕按钮。
 	5. 本方案配套的配色方案为“春光乍喜”，也可以根据你的喜好选用其它配色方案，选好后点〔中〕按钮。
 4. **强烈推荐安装 FinalD/终点 输入法插件**，具体安装方法请看其[项目说明](https://github.com/Lantaio/IME-booster-FinalD)。
 
-*本方案呼出选项菜单的快捷键为<kbd>Ctrl</kbd>+<kbd>8</kbd>，其它功能开关的快捷键请查看`joy.keybindings.yaml`文件。*
+*本方案呼出选项菜单的快捷键为<kbd>Ctrl</kbd>+<kbd>8</kbd>，其它功能开关的快捷键请查看joy.keybindings.yaml文件。*
 
 ## 注意事项⚡️
 * 为了使输入中文数字和金额时都能够正常上屏候选项。各候选按键的工作方式是假设当前高亮候选项是第1候选项时才可以正确上屏对应的候选项，因此要注意尽量不要使用<kbd>↑</kbd>和<kbd>↓</kbd>键改变当前高亮候选项的位置，否则须要通过按空格键来上屏当前高亮候选项，或者用鼠标点选候选项。
@@ -69,9 +69,9 @@
 虽然我希望你会喜欢此输入方案，但正如我有自己的想法一样，你也可能有更好的选择（提示：你可以直接在此方案之上进行修改），所以此项目也为方便你移除作了充分的考虑，步骤如下:
 1. **移除此惊喜输入法方案**：
 	1. 系统任务栏输入法图标右键菜单选择「退出算法服务」。
-	2. 删除你的Rime用户目录及build、Lua两个子目录中所有以“joy”开头的目录和文件。**无须**删除整个Rime用户目录！最后删除preview子目录中的`color_scheme_joy_light.png`文件（如果目录中只有这个文件，也可以删除整个preview目录）。
+	2. 删除你的Rime用户目录及build、Lua两个子目录中所有以“joy”开头的目录和文件。**无须**删除整个Rime用户目录！最后删除preview子目录中的color_scheme_joy_light.png文件（如果目录中只有这个文件，也可以删除整个preview目录）。
 2. **恢复之前备份的你的Rime输入法个人设置**：
-	1. 将之前安装此输入方案时备份的`default.custom.yaml`和`weasel.custom.yaml`恢复到你的Rime用户目录中。
+	1. 将之前安装此输入方案时备份的default.custom.yaml和weasel.custom.yaml恢复到你的Rime用户目录中。
 	2. 系统任务栏输入法图标右键菜单选择「重启算法服务」。
 	3. 系统任务栏输入法图标右键菜单选择「输入法设定」。
 	4. 勾选你希望使用的输入方案，选好后点〔中〕按钮。然后选择你喜欢的配色方案，选好后点〔中〕按钮。
