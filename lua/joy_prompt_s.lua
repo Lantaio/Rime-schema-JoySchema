@@ -1,8 +1,8 @@
 --[[
 说明：本程序为触发特定规则的输入码添加提示语。
 作者：Lantaio Joy
-版本：2.4.14
-更新：2024/6/4
+版本：2.4.15
+更新：2024/6/5
 ]]--
 local function joy_prompt_segmentor(segs, env)
 	local context = env.engine.context
@@ -13,7 +13,6 @@ local function joy_prompt_segmentor(segs, env)
 		['/'] = function()  seg.prompt = '🐧Linux/Mac目录路径'  end,
 		['{'] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 		['['] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
-		['('] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 		['<'] = function()  seg.prompt = '🐱‍💻英文程序代码'  end,
 		['$'] = function()  seg.prompt = '🀄中文数字金额'  end,
 	}
