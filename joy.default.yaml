@@ -42,9 +42,9 @@ recognizer/patterns:
 'switcher/hotkeys':
   - 'Control+8'  # 打开选项菜单的快捷键（候选：Control+Shift+asterisk）
 
-'ascii_composer/switch_key/Shift_L': noop  # 无操作，标点特工外挂须要禁用此键切换功能。
+'ascii_composer/switch_key/Shift_L': noop  # 临时切换为英文输入模式，上屏后恢复为中文输入模式。
 'ascii_composer/switch_key/Shift_R': noop  # 无操作，标点特工外挂须要禁用此键切换功能。
-'ascii_composer/switch_key/Control_R': inline_ascii  # 临时切换为英文输入模式，上屏后恢复为中文输入模式。
+'ascii_composer/switch_key/Control_L': inline_ascii  # 临时切换为英文输入模式，上屏后恢复为中文输入模式。
 # ascii_composer:
 #   good_old_caps_lock: true  # true | false
 #   switch_key:
