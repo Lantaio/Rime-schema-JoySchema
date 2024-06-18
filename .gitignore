@@ -11,7 +11,6 @@ sync/
 ### 包含个人信息的文件
 installation.yaml
 joy.symbols.custom.yaml
-predict.db
 user.yaml
 ### 其它不应该包含在此仓库的文件列表
 descript.ion
