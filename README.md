@@ -1,7 +1,7 @@
 # 😍惊喜输入方案
 *2024年6月19日*
 
-📣️**公告**:最新发布版可能存在崩溃的情况，如需紧急修复只需下载最新的[joy_pinyin.schema.yaml](https://github.com/Lantaio/Rime-schema-JoySchema/blob/main/joy_pinyin.schema.yaml)到你的Rime用户目录覆盖旧文件，然后「重新部署」即可。
+📣️**公告**：最新发布版可能存在崩溃的情况，如需紧急修复只需下载最新的[joy_pinyin.schema.yaml](https://github.com/Lantaio/Rime-schema-JoySchema/blob/main/joy_pinyin.schema.yaml)到你的Rime用户目录覆盖旧文件，然后「重新部署」即可。
 
 最新版本：[v2.47.206](https://github.com/Lantaio/Rime-schema-JoySchema/releases) (*2024/6/5*) [更新日志](joy/ChangeLog.md)
 
@@ -34,9 +34,9 @@
 * **⭐️方便地输入指定的月日或年月日**（输入‘rq’后跟4位表示月日的数字或8位表示年月日的数字，只有输入合法的日期数字时才会显示对应的候选项）。
 * **方便地输入大量扩展符号**（按<kbd>^</kbd>键后输入拼音简称，详见 joy.symbols.yaml）。
 * **方便地输入emoji表情符号**，并可通过<kbd>Ctrl</kbd>+<kbd>9</kbd>开/关此功能（开启后输入表情对应的拼音，例如：‘xiaolian’笑脸😊️）。
-* **方便地输入英文目录路径**（‘X:’或‘\’开头触发输入Windows目录路径，‘/’或开头触发输入Linux/Mac目录路径）。
+* **方便地输入英文目录路径**（‘X:’或‘\’开头触发输入Windows目录路径，‘/’开头触发输入Linux/Mac目录路径）。
 * **方便地输入网址和Email地址**。
-* ~~🧪实验性加入🔮️[预言功能](https://github.com/rime/librime-predict)，通过<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd>开/关此功能。~~（现阶段体验还不是很好。）
+* ~~🧪实验性加入🔮️[预言功能](https://github.com/rime/librime-predict)，通过<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd>开/关此功能。~~（撤下，因现阶段体验还不是很好。）
 
 ## 安装需求⚡️
 * 使用此输入方案前须要先安装Rime输入法引擎，其所支持的系统及版本见其[下载页面](https://rime.im/download/)。
