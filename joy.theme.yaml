@@ -22,8 +22,8 @@
 #
 # 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
-# 版本：1.10.30
-# 更新：2023/12/7
+# 版本：1.10.31
+# 更新：2024/8/27
 
 style:  # 此处为完整列表及其缺省值，不要在此修改，看后面joy_style部分的说明。
   # 字体设定
@@ -89,6 +89,7 @@ joy_style:
   font_face: "Segoe UI Emoji:1f600, Microsoft YaHei UI"
   font_point: 12
   label_font_point: 11
+  label_format: "%s"
   comment_font_point: 11
   paging_on_scroll: true
   layout:
