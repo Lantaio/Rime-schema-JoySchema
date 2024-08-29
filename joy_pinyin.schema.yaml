@@ -75,7 +75,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - uniquifier  # 過濾重複的候選字，有可能來自繁簡轉換（必需）
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA  # 标记哪些按键属于输入码，从而不会是功能键
   delimiter: " '"  # 第一位"空格"是拼音之间的分隔符；第二位"'"表示可以手动输入单引号来分割拼音。
   algebra:  # 替代规则
     __patch:
