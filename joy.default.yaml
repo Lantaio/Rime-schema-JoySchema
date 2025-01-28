@@ -8,8 +8,8 @@
 # 说明：Rime 缺省设置
 # 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
-# 版本：2.1.7
-# 更新：2024/8/27
+# 版本：2.1.8
+# 更新：2025/1/27
 
 key_binder:
   bindings:
@@ -21,7 +21,7 @@ key_binder:
       # - 'key_bindings:/emacs_editing'
 
 menu:
-  alternative_select_keys: ".,;/"  # 自定义候选项上屏的按键序列，此设置只为改变标签，实际起作用的设置在joy.keybindings文件。
+  alternative_select_keys: "_,;/"  # 自定义候选项上屏的按键序列，此设置只为改变标签，实际起作用的设置在joy.keybindings文件。※ 第1个不能为空格，下划线代表空格。
   page_size: 4  # 候选窗口的候选项个数
 
 punctuator:
