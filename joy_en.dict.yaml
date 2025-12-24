@@ -15,7 +15,7 @@
 
 ---
 name: joy_en
-version: "2023.9.13"
+version: "2025.12.21"
 sort: by_weight
 import_tables:
   - joy.en_lite # 轻量版英文词库
