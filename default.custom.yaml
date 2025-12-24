@@ -1,12 +1,11 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.16.0
+  distribution_version: 0.17.4
   generator: "Rime::SwitcherSettings"
-  modified_time: "Thu May 30 00:24:21 2024"
-  rime_version: 1.11.2
+  modified_time: "Wed Oct  8 21:20:07 2025"
+  rime_version: 1.13.1
 patch:
   __include: "joy.default:/"
   schema_list:
     - {schema: joy_pinyin}
     - {schema: joy_en}
-    - {schema: joy_flypy}
