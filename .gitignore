@@ -1,6 +1,8 @@
 ## 不同步到远程仓库的目录列表
 .github/
+### 备份目录
 backup/
+### 编译结果目录
 build/
 ### 用户词典目录
 *.userdb/
@@ -12,6 +14,9 @@ sync/
 installation.yaml
 joy.symbols.custom.yaml
 user.yaml
+### 不包含个人信息的文件
+predict_zh-CN.db
+
 ### 其它不应该包含在此仓库的文件列表
 descript.ion
 *.sublime-*
