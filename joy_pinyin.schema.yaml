@@ -1,19 +1,19 @@
 # encoding: utf-8
 #
-# 说明：Rime 惊喜全拼输入法方案
+# 说明：Rime输入法·惊喜全拼方案
 # 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
-# 版本：2.21.52
-# 更新：2024/6/18
+# 版本：2.22.53
+# 更新：2025/12/25
 
 schema:
   schema_id: joy_pinyin
   name: '😍惊喜拼音'
-  version: '2.21.51'
+  version: '2.22.53'
   author:
     - '迷思 (lantaio@yeah.net)'
   description: |
-    惊喜拼音Rime输入方案。
+    Rime输入法·惊喜全拼方案。
     使用'.'和'Shift+.'来翻页。
     使用','、';'和'/'来选择第2、第3和第4个候选项。
     项目网址：https://github.com/Lantaio/Rime-schema-JoySchema
@@ -28,20 +28,23 @@ switches:
   - name: simplification
     states: [ 繁體, 简体 ]
     # reset: 1  # 重置为简体字输入模式
+  # - name: extended_charset
+  #   states: [ 🌏关扩展, ☀开扩展 ]  # 扩展字符集
   - name: full_shape
     states: [ 🌙半角, 🌕全角 ]  # 半角 / 全角
+    reset: 0  # 重置为半角输入模式
   - name: emoji
     states: [ 🌚关emoji, 😃开emoji ]  # 禁用 / 启用
-  # - name: prediction  # 预测
-  #   states: [ ⛔禁预测, 🔮开预测 ]
-  #   reset: 0
+  - name: prediction  # 预测
+    states: [ 🔮不预测, ✨开预测 ]
+    # reset: 1  # 重置为开启预测模式
   # - name: ascii_punct
   #   reset: 0  # 重置为中文标点模式
   #   states: [ ￥, $ ]
 
 engine:  # 輸入引擎設定，即掛接組件的「處方」
   processors:  # 一、這批組件處理各類按鍵消息
-    # - predictor  # 预言功能处理器
+    - predictor  # 预测功能处理器
     - ascii_composer  # 處理英文模式及中英文切換
     - recognizer  # 與 matcher 搭配，處理符合特定規則的輸入碼，如網址、反查等
     - lua_processor@*joy_select_character_p  # 用'['和']'来以词定字
@@ -59,7 +62,7 @@ engine:  # 輸入引擎設定，即掛接組件的「處方」
     - punct_segmentor  # 標識句讀段落
     - fallback_segmentor  # 標識其他未標識段落
   translators:  # 三、這批組件翻譯特定類型的編碼段爲一組候選文字
-    # - predict_translator  # 预言功能翻译器
+    - predict_translator  # 预测功能翻译器
     - punct_translator  # 轉換標點符號
     - table_translator@custom_phrase  # 自定义词典，用词典优先级实现常用字固顶功能
     - lua_translator@*joy_date_t  # 当前时间、日期、星期
@@ -135,7 +138,7 @@ english:  # 中英文混输的英文词典设置项
 predictor:
   # predict db file in user directory/shared directory
   # default to 'predict.db'
-  db: predict.db
+  db: predict_zh-CN.db
   # max prediction candidates every time
   # default to 0, which means showing all candidates
   # you may set it the same with page_size so that period doesn't trigger next page
