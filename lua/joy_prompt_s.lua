@@ -1,8 +1,8 @@
 --[[
 说明：本程序为触发特定规则的输入码添加提示语。
 作者：Lantaio Joy
-版本：2.5.16
-更新：2024/8/30
+版本：2.5.17
+更新：2026/1/15
 ]]--
 local function joy_prompt_segmentor(segs, env)
 	local context = env.engine.context
@@ -34,6 +34,9 @@ local function joy_prompt_segmentor(segs, env)
 		if input:find('[/*?"<>|]') or input:find(':', 3, true) or input:sub(1, 2) == '\\:' then
 			seg.prompt = '❌Win目录路径不能有/:*?"<>|'
 		end
+	-- 否则，如果输入码包含‘/’，则……
+	elseif input:find('/', 2, true) then
+		seg.prompt = '🐧Linux/Mac目录路径'
 	-- 否则，如果输入码从第2位开始有‘@’号，则……
 	elseif input:find('@', 2, true) then
 		seg.prompt = '📧email地址'
