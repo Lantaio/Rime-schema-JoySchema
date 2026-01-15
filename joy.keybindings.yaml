@@ -4,7 +4,7 @@
 # 网址：https://github.com/Lantaio/Rime-schema-JoySchema
 # 作者：Lantaio Joy
 # 版本：2.0.7
-# 更新：2025/12/20
+# 更新：2026/1/15
 
 numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到6~9，最常用的切换键用中指和无名指按，以减轻小指疼痛，也可降低和其它软件的快捷键冲突。
   __append:
@@ -16,18 +16,18 @@ numbered_mode_switch:  # 将数字模式转换快捷键从1~5调整到6~9，最�
     # - { when: always, accept: Control+Alt+7, toggle:  }  #
     - { when: always, accept: 'Control+Alt+8', select: .next }  # 快速切换到另一个常用的输入方案
 
-paging_with_period_greater:  # 用'.'和'>'翻页
+paging_with_period_greater:  # 用‘.’和‘>’翻页
   __append:
     - { when: paging, accept: 'Shift+greater', send: Page_Up }
     - { when: has_menu, accept: period, send: Page_Down }
 
-select_with_comma_semicolon_slash:  # 用','、';'和'/'选择第2、第3和第4个候选项
+select_with_comma_semicolon_slash:  # 用‘,’、‘;’和‘/’选择第2、第3和第4个候选项
   __append:
     - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
     - { when: has_menu, accept: semicolon, send_sequence: '{Down}{Down}{space}' }
     - { when: has_menu, accept: slash, send_sequence: '{Down}{Down}{Down}{space}' }
 
-select_with_shift_key:  # 用','、左shift键和右shift键选择第3和第4个候选项
+select_with_shift_key:  # 用‘,’、左shift键和右shift键选择第3和第4个候选项
   __append:
     - { when: has_menu, accept: comma, send_sequence: '{Down}{space}' }
     - { when: has_menu, accept: 'Shift+Shift_L', send_sequence: '{Down}{Down}{space}' }
